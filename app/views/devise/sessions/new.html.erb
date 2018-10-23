@@ -1,39 +1,53 @@
-<div class="col s5 m5 l5">
-  <h2>Log in</h2>
 
+<div class="section">
 
-
-
-
-  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-
-<div class="input-field">
-  <i class="material-icons prefix">account_circle</i>
-  <%= f.email_field :email, autofocus:true, class: "validate", id: "icon_prefix" %>
-
-  <label for="icon_prefix">E-mail</label>
 </div>
+<div class="col s6 offset-s3 ">
 
-<div class="input-field">
-  <i class="material-icons prefix">lock_outline</i>
-  <%= f.password_field :password, autofocus:true, class: "validate", id: "icon_prefix" %>
-  <label for="icon_prefix">Senha</label>
-</div>
-
-<% if devise_mapping.rememberable? -%>
-  <div class="field col s12 offset-s1">
-    <%= f.check_box :remember_me %>
-    <%= f.label :remember_me %>
-  </div>
-<% end -%>
+   <h5 class="center-align " >Fazer Login</h5>
+  <div class="card-panel minha-nav section ">
 
 
-    <div class="actions field col s12 offset-s1">
-      <p></p>
 
-      <%= f.submit "Fazer Login", class: 'btn col s12' %>
+
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+    <div class="input-field">
+      <i class="material-icons prefix">account_circle</i>
+      <%= f.email_field :email, autofocus:true, class: "validate", id: "icon_prefix" %>
+
+      <label for="icon_prefix">E-mail</label>
     </div>
-  <% end %>
-</div>
 
-<%= render "devise/shared/links" %>
+    <div class="input-field">
+      <i class="material-icons prefix">lock_outline</i>
+      <%= f.password_field :password, autofocus:true, class: "validate", id: "icon_prefix" %>
+      <label for="icon_prefix">Senha</label>
+    </div>
+
+    <% if devise_mapping.rememberable? -%>
+    <div class="col s12 offset-s1">
+      <%= f.check_box :remember_me %>
+      <%= f.label :remember_me %>
+      <p></p>
+    </div>
+    <% end -%>
+
+          <%= f.submit "Fazer Login", class: 'btn col s12' %>
+
+
+
+  <div class="divider "></div>
+
+<p></p>
+<p class="magin">
+    <%= render "devise/shared/links" %>
+</p>
+
+
+
+    <% end %>
+
+
+  </div>
+</div>
