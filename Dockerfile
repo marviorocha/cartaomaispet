@@ -9,4 +9,4 @@ COPY Gemfile.lock /cartaomaispet/Gemfile.lock
 RUN bundle install
 COPY . /cartaomaispet
 EXPOSE 3000
-CMD ["rails", "-b", "0.0.0.0"]
+CMD puma -C config/puma.rb
