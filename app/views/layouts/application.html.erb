@@ -5,16 +5,16 @@
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
 
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <%= stylesheet_link_tag    "application", :media => "all" %>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 
 <body>
 
   <%= render 'layouts/parts/menu' %>
-
+<div class="section"></div>
 
   <div class="container">
     <div class="row">
@@ -22,13 +22,15 @@
     </div>
 
   </div>
+
+  <div class="section"></div>
   <%= render 'layouts/parts/footer' %>
 
 
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
 <!-- Compiled and minified JavaScript -->
-<script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js'></script>
   </head>
 </body>
 </html>
