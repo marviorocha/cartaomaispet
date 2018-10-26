@@ -1,0 +1,2 @@
+class Petshop < ApplicationRecord
+end

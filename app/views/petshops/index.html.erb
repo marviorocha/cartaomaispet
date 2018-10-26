@@ -1,0 +1,40 @@
+<%= title('Lista Petshop') %>
+
+
+<p id="notice"><%= notice %></p>
+
+<h1>Petshops</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Address</th>
+      <th>Phone</th>
+      <th>Cep</th>
+      <th>Estado</th>
+      <th>Cidade</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @petshops.each do |petshop| %>
+      <tr>
+        <td><%= petshop.title %></td>
+        <td><%= petshop.address %></td>
+        <td><%= petshop.phone %></td>
+        <td><%= petshop.cep %></td>
+        <td><%= petshop.estado %></td>
+        <td><%= petshop.cidade %></td>
+        <td><%= link_to 'Show', petshop %></td>
+        <td><%= link_to 'Edit', edit_petshop_path(petshop) %></td>
+        <td><%= link_to 'Destroy', petshop, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Petshop', new_petshop_path %>

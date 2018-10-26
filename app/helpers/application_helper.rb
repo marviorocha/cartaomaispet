@@ -5,7 +5,7 @@ def title(page_title)
 end
 
 def company_name
-   "Cartão Mais Pet -"
+   "Cartão Mais Pet - "
 end
 
 end

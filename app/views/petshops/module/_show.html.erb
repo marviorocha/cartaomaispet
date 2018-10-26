@@ -1,0 +1,43 @@
+<ul class="collection">
+  <li class="collection-item">
+    <h4 class="title">  <%= @petshop.title %> </h4>
+    <div class="section"></div>
+    <div class="row">
+      <div class="col s3">
+        <%= image_tag ('https://picsum.photos/200/200/?image=57'),
+        class: "left responsive-img" %>
+      </div>
+
+      <span class="col s9">
+        <h4 class="right red-text"><i class=" material-icons">local_offer</i>30%</h4>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus placeat, amet quasi eum voluptas sunt ullam ex dolore velit eligendi quod optio dicta dolorem fuga nihil? Porro veritatis, incidunt quae!
+
+
+
+      </span>
+
+      <li class="collection-item">
+        <h5>  <i class="material-icons teal-text text-accent-4">phone</i> <%= @petshop.phone %></h5>
+      </li>
+      <li class="collection-item">
+        <i class="material-icons red-text text-darken-4">place</i> <%= @petshop.address %>
+      </li>
+      <li class="collection-item">
+
+
+                <i class="material-icons blue-text text-lighten-1 left">location_city</i> <%= @petshop.cidade %>
+<p></p>
+      </li>
+
+<div class="section"></div>
+
+            <iframe width="100%" height="450" id="gmap_canvas"
+            src="https://maps.google.com/maps?q=<%= @petshop.address %>&t=&z=19&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+              </span>
+
+
+    </div>
+
+
+
+</ul>

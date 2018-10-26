@@ -1,0 +1,29 @@
+<%= title(@petshop.title) %>
+<div class="section"></div>
+
+<!-- left col  -->
+
+  <div class="col s12 m3">
+
+
+  <%= render('layouts/parts/usernav') %>
+
+
+  </div> <!-- end left col -->
+
+<!-- col right -->
+
+<div class="col s12 m9">
+
+  <p id="notice"><%= notice %></p>
+
+
+  <%= render "petshops/module/show" %>
+</div>
+
+<!-- Mapa Google  -->
+<div class="col s12 m9">
+
+</div>
+<%= link_to 'Edit', edit_petshop_path(@petshop) %> |
+<%= link_to 'Back', petshops_path %>
