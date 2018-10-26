@@ -1,33 +1,19 @@
- <nav class="pet-blue menu-top">
-   <div class="row">
-  <div class="container">
+<nav class="pet-blue menu-top">
+  <div class="nav-wrapper">
+    <div class="container">
+    <a href="<%= root_path %>" class="brand-logo"><%= image_tag('logo.png', size:"135x74") %></a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
 
-    <div class="nav-wrapper">
-      <a href="<%= root_path %>" class="brand-logo"><%= image_tag('logo.png', size:"135x74") %></a>
-      <!-- activate side-bav in mobile view -->
-      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-      <ul class="right hide-on-med-and-down">
-
-        <!-- Sigout button -->
-
-       <% if user_signed_in? %>
-      <li>
-      <%= link_to('Logout', destroy_user_session_path, method: :delete, class: "btn blue lighten-2") %>
-      </li>
-    <% else %>
-      <li>
-      <%= link_to('Login', new_user_session_path, class: "btn blue lighten-2")  %>
-      </li>
-    <% end %>
-
-      </ul>
-      <!-- navbar for mobile -->
-      <ul class="side-nav" id="mobile-demo">
-        <li><a href="sass.html">Sass</a></li>
-        <li><a href="components.html">Components</a></li>
-      </ul>
-    </div>
+             <% if user_signed_in? %>
+            <li>
+            <%= link_to('Logout', destroy_user_session_path, method: :delete, class: "btn blue lighten-2") %>
+            </li>
+          <% else %>
+            <li>
+            <%= link_to('Login', new_user_session_path, class: "btn blue lighten-2")  %>
+            </li>
+          <% end %>
+    </ul>
   </div>
- </div>
-
- </nav>
+  </div>
+</nav>

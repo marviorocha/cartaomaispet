@@ -1,4 +1,4 @@
-
+<%= title(" #{current_user.name} #{current_user.last_name} Dashboard"  ) %>
 <div class="section"></div>
 
 <!-- left col  -->
@@ -17,12 +17,15 @@
   <div class="col s12 m9">
     <div class="card-panel white">
       <span class="darken-text">
-      <h3>Lorem ipsom</h3>
-        I am a very simple card. I am good at containing small bits of information.
-        I am convenient because I require little markup to use effectively. I am similar to what is called a panel in other frameworks.
+     <%= render "pages/module/search" %>
       </span>
     </div>
   </div>
 <div class="section"></div>
+
+<div class="col s12 m9">
+  <%= render "pages/module/liststore" %>
+</div>
+
 
 <!-- end col right  -->

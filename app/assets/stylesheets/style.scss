@@ -5,3 +5,26 @@
 .menu-top {
   height: 70px;
 }
+
+// custom form
+
+  /* label color */
+  .input-field label {
+     color: #141729 !important;
+   }
+   .input-field .material-icons {
+      color: #141729 !important;
+    }
+   /* label focus color */
+   .input-field input[type=text]:focus + label {
+     color: #141729 !important;
+   }
+   /* label underline focus color */
+   .input-field input:focus + label {
+    color: #141729 !important;
+  }
+  /* label underline focus color */
+    .input-field input:focus {
+    border-bottom: 1px solid #141729 !important;
+    box-shadow: 0 1px 0 0 #141729 !important
+  }
