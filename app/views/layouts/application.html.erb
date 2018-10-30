@@ -17,7 +17,17 @@
 <div class="section"></div>
 
   <div class="container">
-    <div class="row">
+
+<% if flash[:notice] %>
+      <div class="card-panel green panel lighten-2">
+      <h3>  <%= notice %></h3>
+      </div>
+<% end %>
+<% if flash[:alert] %>
+      <div class="card-panel red panel lighten-2">
+      <h3>  <%= alert %></h3>
+      </div>
+<% end %>
       <%= yield %>
     </div>
 
