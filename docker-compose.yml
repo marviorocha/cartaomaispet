@@ -1,10 +1,14 @@
 version: '3'
+networks:
+    RUBY:
 services:
   db:
     container_name: postgres
     image: postgres
     volumes:
       - 'postgres:/var/lib/postgresql/data'
+    networks:
+      - RUBY
   web:
     build: .
     container_name: ruby
@@ -15,5 +19,7 @@ services:
       - "3000:3000"
     depends_on:
       - db
+    networks:
+      - RUBY
 volumes:
   postgres:

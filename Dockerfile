@@ -1,7 +1,5 @@
-FROM ruby:2.5-slim
-RUN apt-get update -qq && apt-get install -y build-essential libpq-dev && apt-get install wget -y
-RUN wget -qO- https://deb.nodesource.com/setup_8.x
-RUN apt-get install -y nodejs
+FROM ruby:2.5
+RUN apt-get update -qq && apt-get install -y build-essential libpq-dev nodejs
 RUN mkdir /cartaomaispet
 WORKDIR /cartaomaispet
 COPY Gemfile /cartaomaispet/Gemfile
