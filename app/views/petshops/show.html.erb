@@ -25,5 +25,7 @@
 <div class="col s12 m9">
 
 </div>
+<% if can? :update, @petshop %>
 <%= link_to 'Edit', edit_petshop_path(@petshop) %> |
 <%= link_to 'Back', petshops_path %>
+<% end %>

@@ -10,6 +10,7 @@ class PetshopsController < ApplicationController
   # GET /petshops/1
   # GET /petshops/1.json
   def show
+  authorize! :read, @petshop
   end
 
   # GET /petshops/new

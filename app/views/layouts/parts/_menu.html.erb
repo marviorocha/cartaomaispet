@@ -8,6 +8,9 @@
             <li>
             <%= link_to('Logout', destroy_user_session_path, method: :delete, class: "btn blue lighten-2") %>
             </li>
+            <li>
+            <%= link_to('Admin', destroy_user_session_path, method: :delete, class: "btn blue lighten-2") %>
+            </li>
           <% else %>
             <li>
             <%= link_to('Login', new_user_session_path, class: "btn blue lighten-2")  %>
