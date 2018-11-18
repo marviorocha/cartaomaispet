@@ -9,7 +9,7 @@ services:
       - 'postgres:/var/lib/postgresql/data'
     networks:
       - RUBY
-  web:
+  app:
     build: .
     container_name: ruby
     command: bundle exec rails s -p 3000 -b '0.0.0.0'
