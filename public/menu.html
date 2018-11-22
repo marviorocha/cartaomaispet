@@ -2,7 +2,7 @@
   <html>
   <head>
   <!--Import materialize.css-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
   <!--Let browser know website is optimized for mobile-->
@@ -10,6 +10,7 @@
   </head>
 
   <body>
+ <a onclick="M.toast({html: 'I am a toast'})" class="btn">Toast!</a>
 
 <!-- Dropdown Structure -->
 <ul id="dropdown1" class="dropdown-content">
@@ -39,11 +40,14 @@
 
   <!--Import jQuery before materialize.js-->
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script type="text/javascript">
   $(document).ready(function(){
-$(".button-collapse").sideNav();
+  $(".button-collapse").sideNav();
+
   });
+
+
 
   </script>
   </body>

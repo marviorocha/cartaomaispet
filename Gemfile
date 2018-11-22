@@ -6,10 +6,7 @@ ruby '2.5.3'
 # My Gems Installer
 
 gem 'devise', '~> 4.5'
-gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
 gem 'cancancan', '~> 2.3'
-gem 'activeadmin'
-gem 'active_admin_theme'
 gem 'faker'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.1'

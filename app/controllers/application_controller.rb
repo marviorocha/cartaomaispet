@@ -1,8 +1,6 @@
 class ApplicationController < ActionController::Base
 
  before_action :authenticate_user!
- config.authentication_method = :authenticate_admin_user!
-
  
  before_action :configure_permitted_parameters, if: :devise_controller?
  helper :all

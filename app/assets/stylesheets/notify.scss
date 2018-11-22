@@ -1,0 +1,75 @@
+.notify{
+  position: relative;
+  display: block;
+  padding: 1rem;
+  margin: 1rem;
+  background: #E4EAEE;
+  border: 1px solid rgba(black,.15);
+  border-radius: 2px;
+  color: rgba(black,.5); // let the background color shine through
+
+  &.notify--pinned{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-top: 0;
+    border-top: none;
+    border-radius: 0 0 2px 2px;
+  }
+
+  &.notify--danger{
+    background: rgba(255, 0, 0, 0.5);
+  }
+  &.notify--warning{
+    background:#f76f00;
+  }
+  &.notify--success{
+    background: rgba(170, 226, 136,0.5);
+  }
+  &.notify--info{
+    background: rgba(15, 163, 226,0.5);
+  }
+
+  &.notify--dismissible{
+    padding-right: 2.5rem;
+  }
+
+  .notify-close{
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: block;
+    text-align: center;
+    padding: 1rem;
+    border: none;
+    background: none;
+    color: rgba(black,.2);
+
+    &:hover{
+      cursor: pointer;
+      color: rgba(black,.6);
+    }
+  }
+
+  .notify-undo{
+    position: absolute;
+    right: .5rem;
+    top: .7rem;
+    display: block;
+    text-align: center;
+    padding: .4rem 1rem;
+    border: none;
+    border-radius: 3px;
+    background: rgba(black,.05);
+    color: rgba(black,.5);
+    font-size:.9rem;
+
+    &:hover{
+      cursor: pointer;
+      background: rgba(black,.1);
+      color: rgba(black,.55);
+    }
+  }
+}

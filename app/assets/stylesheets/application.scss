@@ -11,5 +11,7 @@
  * It is generally better to create a new file per style scope.
  *
  *= require style
+ *= require materialize-css/sass/materialize
+ *= require notify
  *= require_self
  */

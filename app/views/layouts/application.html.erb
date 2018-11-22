@@ -4,11 +4,14 @@
   <title> <%= company_name + yield(:title) %></title>
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <%= stylesheet_link_tag    "application", :media => "all" %>
+<!-- Compiled and minified JavaScript -->
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
 </head>
 
 <body>
@@ -19,14 +22,15 @@
   <div class="container">
 
 <% if flash[:notice] %>
-      <div class="card-panel green panel lighten-2">
-      <h3>  <%= notice %></h3>
-      </div>
+<div id="notice" class="notify notify--success" role="alert">
+  <strong><%= notice %></strong>
+</div>
 <% end %>
 <% if flash[:alert] %>
-      <div class="card-panel red panel lighten-2">
-      <h3>  <%= alert %></h3>
-      </div>
+<div id="alert" class="notify notify--danger" role="alert">
+  <strong><%= alert %></strong>
+</div>
+
 <% end %>
 <div class="row">
       <%= yield %>
@@ -38,10 +42,6 @@
   <%= render 'layouts/parts/footer' %>
 
 
-  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-
-<!-- Compiled and minified JavaScript -->
- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   </head>
 </body>
 </html>
