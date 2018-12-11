@@ -8,4 +8,16 @@ def company_name
    "Cartão Mais Pet - "
 end
 
+def select_menu
+
+  if current_user.role == "user"
+  render('layouts/parts/usernav')
+  else
+  render('layouts/parts/storenav')
+  end
+end
+
+
+
+
 end

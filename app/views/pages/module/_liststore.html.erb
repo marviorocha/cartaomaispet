@@ -1,62 +1,29 @@
-<ul class="collection">
-  <li class="collection-item">
-    <h4 class="title">BotiÇão - Seu Animal Feliz </h4>
-    <h4 class="right red-text"><i class=" material-icons">local_offer</i>30%</h4>
-    <div class="row valign-wrapper">
-      <div class="col s6">
-        <%= image_tag ('https://picsum.photos/100/100/?image=57'),
-          class: "left circle responsive-img" %>
-      </div>
 
-      <span class="right">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        Dolore minus, sequi nihil consequuntur earum eos necessitatibus
-        nulla tenetur pariatur ipsam! Alias id sunt beatae odit eligendi modi, deleniti vero quibusdam!
-<p></p>
-  <a class="btn waves-effect waves-light  blue " href="/petshops/3"><i class="material-icons left">launch</i> Acessar </a>
-      </span>
-    </div>
+    <ul class="collection">
+    <% @petshops.each do |p| %>
 
-  </li>
-  <li class="collection-item">
-    <h4 class="title">Outro - Seu Animal Feliz </h4>
-    <h4 class="right red-text"><i class=" material-icons">local_offer</i>20%</h4>
-    <div class="row valign-wrapper">
-      <div class="col s6">
-        <%= image_tag ('https://picsum.photos/100/100/?image=157'),
-          class: "left circle responsive-img" %>
-      </div>
+      <li class="collection-item">
 
-      <span class="right">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        Dolore minus, sequi nihil consequuntur earum eos necessitatibus
-        nulla tenetur pariatur ipsam! Alias id sunt beatae odit eligendi modi, deleniti vero quibusdam!
-        <p></p>
-          <a class="btn waves-effect waves-light  blue " href="/petshops/2"><i class="material-icons left">launch</i> Acessar </a>
 
-  </span>
-    </div>
 
-  </li>
-  <li class="collection-item">
-    <h4 class="title"> Super Felipe Pet </h4>
-    <h4 class="right red-text"><i class=" material-icons">local_offer</i>10%</h4>
-    <div class="row valign-wrapper">
-      <div class="col s6">
-        <%= image_tag ('https://picsum.photos/100/100/?image=883'),
-          class: "left circle responsive-img" %>
-      </div>
+        <h4 class="title"><%= p.title %></h4>
+        <h4 class="right red-text"><i class=" material-icons">local_offer</i><%= Faker::Number.between(10,70) %></h4>
+        <div class="row valign-wrapper">
+          <div class="col s6">
 
-      <span class="right">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        Dolore minus, sequi nihil consequuntur earum eos necessitatibus
-        nulla tenetur pariatur ipsam! Alias id sunt beatae odit eligendi modi, deleniti vero quibusdam!
-        <p></p>
-          <a class="btn waves-effect waves-light  blue " href="/petshops/1"><i class="material-icons left">launch</i> Acessar </a>
+            <%=
 
-  </span>
-    </div>
 
-  </li>
+image_tag ('https://picsum.photos/300/300/?random'),
+              class: "left circle responsive-img" %>
+          </div>
 
-</ul>
+          <span class="right">
+          <%= truncate( p.descricao, length:180 ) %>
+    <p></p>
+      <a class="btn waves-effect waves-light  blue " href="<%= root_url %>petshops/<%= p.id %>"><i class="material-icons left">launch</i> Acessar </a>
+          </span>
+        </div>
+
+      </li>
+      <% end %>

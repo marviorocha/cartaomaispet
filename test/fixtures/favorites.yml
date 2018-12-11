@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  favorite_name: MyString
+  petshop: one
+  user: one
+
+two:
+  favorite_name: MyString
+  petshop: two
+  user: two

@@ -1,0 +1,11 @@
+  <ul class="collection with-header">
+  <li class="collection-header center-align">
+  <a class="modal-trigger"  href="<%= root_path %>"> <%= image_tag(current_user.avatar, size:"150x150", class: "responsive circle align-center") %></a>
+  <h5><%= saudacao() %></h5></li>
+  <li>
+  <a href="<%= edit_user_registration_path %>" class=" collection-item"><i class="tiny material-icons left">account_box</i> Minha Conta</a>
+  <a href="<%= descontos_path %>" class="teal-text collection-item"><i class="tiny material-icons left">local_offer</i> Criar Descontos</a>
+  <a href="<%= petshops_path %>" class="teal-text collection-item"><i class="tiny material-icons left">favorite</i>Rede Credenciadas</a>
+  <a href="<%= animals_path %>" class="teal-text collection-item"><i class="tiny material-icons left">pets</i> Meu Pets</a>
+  <a href="<%= agendamentos_path %>" class="teal-text collection-item"><i class="tiny material-icons left">perm_contact_calendar</i> Agendamentos</a>
+  </ul>

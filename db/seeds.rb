@@ -9,7 +9,7 @@
 user = User.create(name: 'Admin', last_name: 'Administrator', email: 'admin@admin.com', password: 'admin123',
         password_confirmation: 'admin123', role: 'user')
 
-
+# Send to users
 10.times do |i|
 User.create(
 name: Faker::Name.name,
@@ -20,14 +20,38 @@ password_confirmation:'123456',
 role: "user")
 end
 
+# Send to petshop
+# 25.times do |i|
+# Petshop.create(
+#   title:  Faker::Lorem.sentence(3),
+#   address: Faker::Address.street_address,
+#   phone:  Faker::PhoneNumber.phone_number,
+#   cep:    Faker::Address.zip_code,
+#   estado: Faker::Address.state,
+#   descricao: Faker::Lorem.sentence(80),
+#   cidade: Faker::Address.city,
+#
+# )
 
+# Send to categories
+
+category = Category.create([
+{ name: "Medicamento", petshop_id: "1" },
+{ name: "Banho", petshop_id: "3" },
+{ name: "Tosa", petshop_id: "1" },
+{ name: "Acessorios", petshop_id: "2" },
+{ name: "Acessorios", petshop_id: "1" },
+{ name: "Banho", petshop_id: "1" },
+
+])
+
+# Send To Discount
 25.times do |i|
-Petshop.create(
-  title:  Faker::Lorem.sentence(3),
-  address: Faker::Address.street_address,
-  phone:  Faker::PhoneNumber.phone_number,
-  cep:    Faker::Address.zip_code,
-  estado: Faker::Address.state,
-  cidade: Faker::Address.city
+Discount.create(
+valor: Faker::Number.between(10, 70),
+petshop_id: Faker::Number.between(1, 25)
 )
+end
+
+
 end

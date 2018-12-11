@@ -3,29 +3,28 @@
 
 <!-- left col  -->
 
-  <div class="col s12 m3">
-
-
-  <%= render('layouts/parts/usernav') %>
-
-
-  </div> <!-- end left col -->
+<div class="col s12 m3">
+<%=  select_menu()  %>
+</div>
 
 <!-- col right -->
 
 <div class="col s12 m9">
 
-  <p id="notice"><%= notice %></p>
+    <div class="row">
+      <% if can? :update, @petshop %>
+      <%= link_to '<i class="material-icons">edit</i> Editar'.html_safe, edit_petshop_path(current_user.petshop),
+      class: 'btn waves-effect waves-blue right' %>
 
+      <% end %>
+    </div>
+
+
+    <% if flash[:notice] %>
+    <div id="notice" class="notify notify--success" role="alert">
+      <strong><%= notice %></strong>
+    </div>
+    <% end %>
 
   <%= render "petshops/module/show" %>
 </div>
-
-<!-- Mapa Google  -->
-<div class="col s12 m9">
-
-</div>
-<% if can? :update, @petshop %>
-<%= link_to 'Edit', edit_petshop_path(@petshop) %> |
-<%= link_to 'Back', petshops_path %>
-<% end %>

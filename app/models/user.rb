@@ -1,9 +1,13 @@
 class User < ApplicationRecord
+
+  has_many :animals
+  has_one  :petshop
+  has_one_attached :avatar
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 # User Rules
- ROLES = %i[admin moderator author banned]
+ ROLES = %i[admin user store banned]
 
 end

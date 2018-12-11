@@ -1,1 +1,46 @@
+#notice {
+   color: #4ca54c;
+   padding: 1.3em;
+   background-color: #f5fff5;
+   border: 1px solid #c8ffce;
+}
+
+.field_with_errors {
+ padding: 2px;
+
+
+}
+
+#error_explanation {
+  position: relative;
+  display: block;
+  padding: 1rem;
+  margin: 1rem;
+  background: #E4EAEE;
+  border: 1px solid rgba(black,.15);
+  border-radius: 2px;
+
+ h2 {
+   text-align: left;
+   font-weight: bold;
+   padding: 5px 5px 5px 15px;
+   font-size: 18px;
+   margin: -7px -7px 0;
+   background-color:rgba(255,0,0, 0.5);
+   color: #fff;
+ }
+
+ ul li {
+   font-size: 14px;
+   text-align: left;
+    margin-left: 10px;
+font-weight: bold;
+  list-style: outside;
+ }
+}
+
+label {
+ display: block;
+}
+
  

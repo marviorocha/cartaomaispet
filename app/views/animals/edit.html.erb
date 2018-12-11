@@ -1,0 +1,20 @@
+<%= title(" #{current_user.name} #{current_user.last_name} Editar"  ) %>
+
+
+<div class="col s12 m3">
+
+
+<%= render('layouts/parts/usernav') %>
+
+
+</div> <!-- end left col -->
+
+<!-- col right -->
+<div class="col s12 m9">
+  <h1>Editar</h1>
+
+  <%= render 'form', animal: @animal %>
+
+<div class="section"></div>
+ 
+</div>

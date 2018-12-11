@@ -4,13 +4,16 @@ class PetshopsController < ApplicationController
   # GET /petshops
   # GET /petshops.json
   def index
-    @petshops = Petshop.all
+
+    @petshops = Petshop.search(params[:cidade])
+
+  authorize! :read, Animal
   end
 
   # GET /petshops/1
   # GET /petshops/1.json
   def show
-  authorize! :read, @petshop
+  #authorize! :read, @petshop
   end
 
   # GET /petshops/new
@@ -70,6 +73,6 @@ class PetshopsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def petshop_params
-      params.require(:petshop).permit(:title, :address, :phone, :cep, :estado, :cidade)
+      params.require(:petshop).permit(:title, :address, :phone, :cep, :estado, :cidade, :descricao)
     end
 end

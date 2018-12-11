@@ -1,0 +1,64 @@
+
+
+<% if flash[:notice] %>
+<p id="notice"><%= notice %></p>
+<% end %>
+
+<div class="col s12 m3">
+<%=  select_menu()  %>
+</div>
+
+<!-- col right -->
+
+
+  <div class="col s12 m9">
+
+
+      <span class="darken-text">
+         <h4>Meus Pets</h4>
+
+      </span>
+
+<table class="striped">
+<% if can? :create, Animal %>
+ <a href="<%=  new_animal_path %>"   class="btn waves-light waves-effect"> <i class="material-icons">add</i> Adicionar</a>
+<% end %>
+<thead>
+    <tr>
+      <th data-field="id">Foto</th>
+      <th data-field="name">Nome:</th>
+      <th data-field="price">Raça:</th>
+      <th data-field="price">Idade:</th>
+      <th data-field="descricao">Descrição:</th>
+      <th></th>
+
+    </tr>
+  </thead>
+
+  <tbody>
+<% @animals.each do |pet| %>
+    <tr>
+
+      <td><%= image_tag('https://loremflickr.com/320/240/dog', size: "150x150") %></td>
+      <td><%= pet.name %></td>
+      <td><%= pet.raca %></td>
+      <td><%= pet.age %></td>
+      <td><%= truncate(pet.descricao, leagh: 100) %></td>
+      <td>
+        <% if can? :update, Animal %>
+
+          <a href="<%=  edit_animal_path(@animals) %>" class="btn waves-effect waves light green lighten-1"> <i class="material-icons">edit</i> </a>
+          <% end %>
+      <% if can? :destroy, Animal %>
+          <%= link_to "<i class='material-icons'>delete</i>".html_safe, pet, method: :delete, data: {confirm: "Você realmente deseja deletar?", remote: true }, class: "delete btn waves-effect waves light red lighten-1" %>
+        <% end %>
+      </td>
+
+    </tr>
+<% end %>
+
+
+  </tbody>
+</table>
+
+  </div>

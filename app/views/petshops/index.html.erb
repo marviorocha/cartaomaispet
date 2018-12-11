@@ -1,40 +1,50 @@
 <%= title('Lista Petshop') %>
 
 
-<p id="notice"><%= notice %></p>
+<div class="section"></div>
+<% if flash[:notice] %>
+<div id="notice" class="notify notify--success" role="alert">
+  <strong><%= notice %></strong>
+</div>
+<% end %>
+<!-- left col  -->
 
-<h1>Petshops</h1>
+<div class="col s12 m3">
+<%=  select_menu()  %>
+</div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Address</th>
-      <th>Phone</th>
-      <th>Cep</th>
-      <th>Estado</th>
-      <th>Cidade</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @petshops.each do |petshop| %>
-      <tr>
-        <td><%= petshop.title %></td>
-        <td><%= petshop.address %></td>
-        <td><%= petshop.phone %></td>
-        <td><%= petshop.cep %></td>
-        <td><%= petshop.estado %></td>
-        <td><%= petshop.cidade %></td>
-        <td><%= link_to 'Show', petshop %></td>
-        <td><%= link_to 'Edit', edit_petshop_path(petshop) %></td>
-        <td><%= link_to 'Destroy', petshop, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+  <div class="col s12 m9">
+    <%= link_to '<i class="material-icons">add</i> Adicionar'.html_safe, new_petshop_path,
+    class: "right btn btn-small waves-effect waves-light green"  %>
 
-<br>
+<%= render "shered/search" %>
+<div class="section"></div>
+    <ul class="collection">
+    <% @petshops.each do |p| %>
+      <li class="collection-item">
 
-<%= link_to 'New Petshop', new_petshop_path %>
+        <h4 class="title"><%= p.title %></h4>
+        <h4 class="right red-text"><i class=" material-icons">local_offer</i></h4>
+        <div class="row valign-wrapper">
+          <div class="col s6">
+            <%= image_tag ('https://picsum.photos/100/100/?image=57'),
+              class: "left circle responsive-img" %>
+          </div>
+
+          <span class="right">
+
+      <b>Adicionado em: </b><%= p.created_at.strftime("%a %d-%m-%Y") %>
+    <p>     <%= truncate( p.descricao, length:180 ) %></p>
+      <a class="btn waves-effect waves-light  blue " href="<%= root_url %>petshops/<%= p.id %>"><i class="material-icons left">launch</i> Acessar </a>
+          </span>
+        </div>
+
+      </li>
+      <% end %>
+
+
+
+    </ul>
+
+  </div>

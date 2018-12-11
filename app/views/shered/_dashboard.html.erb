@@ -1,0 +1,32 @@
+
+
+<% if current_user.role == "store" %>
+<!-- for store dashboard -->
+<div class="col s12 m6">
+
+    <div class="card cyan darken-2">
+        <div class="card-action  cyan darken-4 white-text">
+          <span class="card-title"><i class="material-icons">add</i> Total de Desconto</span>
+        </div>
+      <div class="card-content white-text">
+        <h3> R$151 Economía</h3>
+      </div>
+    </div>
+
+</div>
+
+<% end %> <!-- end current user store -->
+
+<% if current_user.role == "user" %>
+<div class="col s12 m6">
+    <div class="card cyan darken-2">
+        <div class="card-action  cyan darken-4 white-text">
+          <span class="card-title"><i class="material-icons">add</i> Total de Desconto</span>
+        </div>
+      <div class="card-content white-text">
+        <h3> R$151 Economía</h3>
+      </div>
+    </div>
+</div>
+
+<% end %>

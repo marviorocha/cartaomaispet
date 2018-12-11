@@ -11,6 +11,7 @@
 // about supported directives.
 //= require jquery/dist/jquery
 //= require materialize-css/dist/js/materialize
+//= require dropzone/dist/dropzone
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks

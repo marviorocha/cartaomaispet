@@ -7,13 +7,9 @@
 
 <!-- left col  -->
 
-  <div class="col s12 m3">
-
-
-  <%= render('layouts/parts/usernav') %>
-
-
-  </div> <!-- end left col -->
+<div class="col s12 m3">
+<%=  select_menu()  %>
+</div>
 
 
   <!-- col right -->
@@ -71,6 +67,24 @@
           <%= f.label :current_password %> <i>(precisamos que você confirme sua senha para confirmar as alterações)</i>
 
         </div>
+        <div class="input-field col s12">
+        <div class="file-field input-field">
+             <div class="btn">
+               <span>Selecionar Foto</span>
+              <%= f.file_field :avatar %>
+             </div>
+             <div class="file-path-wrapper">
+               <input class="file-path validate" type="text" placeholder="Enviar sua foto">
+             </div>
+        </div>
+        </div>
+
+
+        <div class="input-field col s12">
+          <%= f.collection_select(:role, User::ROLES, :to_s, lambda{|i| i.to_s.humanize}) %>
+        </div>
+
+
 
         <div class="actions">
           <%= f.submit "Atualizar", class:"btn green darken-2" %>

@@ -1,0 +1,14 @@
+
+<div class="fixed-action-btn">
+  <a id="menu" class="waves-effect waves-light btn btn-floating" ><i class="material-icons">menu</i></a>
+
+</div>
+
+<% if flash[:notice] %>
+  <div class="tap-target  lighten-4 teal" data-target="menu">
+    <div class="tap-target-content">
+      <h5>Olá <%= current_user.name %> Bem-vindo ao Cartão Mais Pet</h5>
+      <p>Aqui você tem vantagem e desconto para seu Pet</p>
+    </div>
+  </div>
+<% end %>

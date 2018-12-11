@@ -7,7 +7,7 @@ class CreatePetshops < ActiveRecord::Migration[5.2]
       t.integer :cep
       t.string :estado
       t.string :cidade
-
+      t.text :descricao
       t.timestamps
     end
   end

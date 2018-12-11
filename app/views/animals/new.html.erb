@@ -1,0 +1,22 @@
+<%= title(" #{current_user.name} #{current_user.last_name} Novo"  ) %>
+
+
+
+<div class="col s12 m3">
+
+
+<%= render('layouts/parts/usernav') %>
+
+
+</div> <!-- end left col -->
+
+<!-- col right -->
+<div class="col s12 m9">
+  <h1>Adicionar Novo</h1>
+
+  <%= render 'form', animal: @animal %>
+
+  <%= link_to 'Back', animals_path %>
+
+
+</div>

@@ -1,20 +1,29 @@
 <nav class="pet-blue menu-top">
   <div class="nav-wrapper">
     <div class="container">
-    <a href="<%= root_path %>" class="brand-logo"><%= image_tag('logo.png', size:"135x74") %></a>
-    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <div class="col s3">
+     <a href="<%= root_path %>" class="brand-logo"><%= image_tag('logo.png', size:"135x65") %></a>
+      </div>
 
-             <% if user_signed_in? %>
+
+<ul id="nav-mobile" class="right hide-on-med-and-down">
+           <% if user_signed_in? %>
+
+            <li>
+              <i class="material-icons">pets</i>
+            </li>
+            <li>
+              <i class="material-icons">heart</i>
+            </li>
             <li>
             <%= link_to('Logout', destroy_user_session_path, method: :delete, class: "btn blue lighten-2") %>
             </li>
-            <li>
-            <%= link_to('Admin', destroy_user_session_path, method: :delete, class: "btn blue lighten-2") %>
-            </li>
+
           <% else %>
             <li>
             <%= link_to('Login', new_user_session_path, class: "btn blue lighten-2")  %>
             </li>
+
           <% end %>
     </ul>
   </div>

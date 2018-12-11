@@ -1,0 +1,87 @@
+<%= title(" #{current_user.name} #{current_user.last_name} Meus Descontos"  ) %>
+<div class="section"></div>
+
+<!-- left col  -->
+
+  <div class="col s12 m3">
+
+
+  <%= render('layouts/parts/usernav') %>
+
+
+  </div> <!-- end left col -->
+
+<!-- col right -->
+
+
+  <div class="col s12 m9">
+
+
+
+      <span class="darken-text">
+         <h4>Meus Descontos</h4>
+      </span>
+
+  </div>
+<div class="section"></div>
+
+<div class="col s12 m3">
+  <div class="card">
+    <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" src="https://picsum.photos/300/300/?random">
+    </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">Nome da loja adicionada<i class="material-icons right red-text">local_offer</i></span>
+      <p>
+  <p><%= truncate("Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus",length: 50) %></p>
+</p>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Por <p></p>      <a class="btn btn-small green darken-4" href="#"> <i class="material-icons">insert_invitation</i> Contato</a>
+
+    </div>
+  </div>
+</div>
+
+<div class="col s12 m3">
+  <div class="card">
+    <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" src="https://picsum.photos/300/300/?image=<%= Faker::Number.between(1,50) %>">
+    </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">Nome da loja adicionada<i class="material-icons right red-text">local_offer</i></span>
+      <p>
+  <p><%= truncate("Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus",length: 50) %></p>
+<a class="btn btn-small red darken-4" href="#">Remover</a></p>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">Card Title <i class="material-icons right">local_offer</i></span>
+      <p><%= truncate("Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus",length: 50) %></p>
+    </div>
+  </div>
+</div>
+<div class="col s12 m3">
+  <div class="card">
+    <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" src="https://picsum.photos/300/300/?image=<%= Faker::Number.between(1,50) %>">
+    </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">Nome da loja adicionada<i class="material-icons right red-text">local_offer</i></span>
+      <p>
+  <p><%= truncate("Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus",length: 50) %></p>
+<a class="btn btn-small red darken-4" href="#">Remover</a></p>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">Card Title <i class="material-icons right">local_offer</i></span>
+      <p>Here is some more information about this product that is only revealed once clicked on.</p>
+    </div>
+  </div>
+</div>
+
+
+</div>
+
+
+
+<!-- end col right  -->

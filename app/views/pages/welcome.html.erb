@@ -6,7 +6,10 @@
   <div class="col s12 m3">
 
 
-  <%= render('layouts/parts/usernav') %>
+  <%=  select_menu()  %>
+  <!-- Element Showed -->
+
+
 
 
   </div> <!-- end left col -->
@@ -15,17 +18,19 @@
 
 
   <div class="col s12 m9">
-    <div class="card-panel white">
-      <span class="darken-text">
-     <%= render "pages/module/search" %>
-      </span>
-    </div>
+<h3>Olá <%= current_user.name %></h3>
+     <%= render "shered/dashboard" %>
+
   </div>
 <div class="section"></div>
 
 <div class="col s12 m9">
+<h4>Destaque</h4>
   <%= render "pages/module/liststore" %>
 </div>
+
+
+
 
 
 <!-- end col right  -->

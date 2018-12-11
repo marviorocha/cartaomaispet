@@ -1,0 +1,63 @@
+<%= title(" #{current_user.name} #{current_user.last_name} Agendamentos"  ) %>
+<div class="section"></div>
+
+<!-- left col  -->
+
+  <div class="col s12 m3">
+
+
+  <%= render('layouts/parts/usernav') %>
+
+
+  </div> <!-- end left col -->
+
+<!-- col right -->
+
+
+  <div class="col s12 m9">
+
+
+
+      <span class="darken-text">
+         <h4>Agendamentos</h4><a class="btn-floating btn-small waves-effect pulse waves-light teal darken-4 right"><i class="material-icons">add</i></a>
+      </span>
+
+       <table class="striped">
+         <thead>
+           <tr>
+             <th data-field="id">Loja</th>
+             <th data-field="name">Data</th>
+             <th data-field="price">Horário</th>
+             <th data-field="periodo">Periodo</th>
+             <th data-field="btn">Lembrar</th>
+           </tr>
+         </thead>
+
+         <tbody>
+           <tr>
+             <td><%= image_tag('https://picsum.photos/100/100/?random') %></td>
+             <td>88-05-2019</td>
+             <td>15.45</td>
+            <td>Tarde</td>
+            <td> <a class=" btn-small waves-effect waves-light" href="#"> <i class="material-icons">access_alarm</i> Agendar </a> </td>
+
+           </tr>
+           <tr>
+             <td><%= image_tag('https://picsum.photos/100/100/?random') %></td>
+             <td>88-11-2019</td>
+             <td>10:30</td>
+             <td>Manhã</td>
+  <td> <a class=" btn-small waves-effect waves-light" href="#"> <i class="material-icons">access_alarm</i> Agendar </a> </td>
+
+           </tr>
+         </tbody>
+       </table>
+  </div>
+<div class="section"></div>
+
+
+</div>
+
+
+
+<!-- end col right  -->

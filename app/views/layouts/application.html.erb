@@ -10,7 +10,6 @@
 <!-- Compiled and minified JavaScript -->
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
 </head>
 
@@ -42,6 +41,8 @@
   <%= render 'layouts/parts/footer' %>
 
 
-  </head>
+
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
 </body>
 </html>

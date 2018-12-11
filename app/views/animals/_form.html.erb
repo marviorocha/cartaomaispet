@@ -1,0 +1,54 @@
+<%= form_with(model: animal, local: true) do |form| %>
+  <% if animal.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(animal.errors.count, "error") %> prohibited this animal from being saved:</h2>
+
+      <ul>
+      <% animal.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="input-field col s12"><%= form.label :name %><% %><%= form.text_field :name %></div>
+
+  <div class="input-field col s12">
+    <%= form.number_field :age, in: 1...30 %>
+    <%= form.label "Idade:" %>
+  </div>
+
+  <div class="input-field col s12">
+    <%= form.text_field :dog %>
+    <%= form.label 'Raça' %>
+  </div>
+
+  <div class="input-field col s12">
+    <%= form.text_field :vacinacao %>
+    <%= form.label :vacinacao %>
+  </div>
+
+  <div class="input-field col s12">
+    <p>
+        <label>
+          <span>Mascolino</span>
+          <%= form.check_box :sexo %>
+        </label>
+      </p>
+
+  </div>
+
+  <div class="input-field col s12">
+    <%= form.text_field :descricao %>
+    <%= form.label :descricao %>
+  </div>
+
+  <div class="input-field col s12">
+    <%= form.hidden_field :user_id, value: current_user.id %>
+    <%= form.label :user_id %>
+  </div>
+  <div class="fixed-action">
+    <%= form.submit class: "btn waves-light waves-effect green darken-2" %>  <%= link_to 'Cancelar', animals_path, class: "btn-small waves-effect waves-light red lighten-1 right" %>
+
+  </div>
+<% end %>
