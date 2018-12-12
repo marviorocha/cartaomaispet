@@ -85,4 +85,4 @@ production:
   <<: *default
   database: cartaomaispet_production
   username: cartaomaispet
-  password: <%= ENV['CARTAOMAISPET_DATABASE_PASSWORD'] %>
+  password: admin123
