@@ -31,3 +31,5 @@ drop:
 				$(RUN) bundle exec rake db:drop
 reset:
 				$(RUN) bundle exec rake db:drop db:create db:migrate db:seed
+prod:
+				docker-compose -f prod-compose.yml up
