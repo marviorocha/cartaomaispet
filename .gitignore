@@ -16,7 +16,7 @@
 # Ignore uploaded files in development
 /storage/*
 !/storage/.keep
-
+.bash_history
 /node_modules
 /yarn-error.log
 
