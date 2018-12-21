@@ -5,3 +5,8 @@ log/*
 tmp/*
 Dockerfile
 README.rdoc
+/config/master.key
+.git
+.dockerignore
+Gemfile.lock
+.bash_history

@@ -3,8 +3,14 @@ RUN := docker-compose run --rm $(APP)
 spec := spec
 env := development
 
+down:
+				docker-compose down
+new:
+				$(RUN) rails new . --database=postgresql
 rails:
-				$(RUN) rails 
+				$(RUN) rails
+precompile:
+				$(RUN) rake assets:precompile RAILS_ENV=production
 bundle:
 				$(RUN) bundle install
 up:
@@ -25,5 +31,3 @@ drop:
 				$(RUN) bundle exec rake db:drop
 reset:
 				$(RUN) bundle exec rake db:drop db:create db:migrate db:seed
-run:
-				$(RUN) bundle exec $(c)

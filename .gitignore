@@ -12,11 +12,12 @@
 /tmp/*
 !/log/.keep
 !/tmp/.keep
-
+id_rsa
+id_rsa.pub
 # Ignore uploaded files in development
 /storage/*
 !/storage/.keep
-
+.bash_history
 /node_modules
 /yarn-error.log
 
