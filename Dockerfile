@@ -5,13 +5,13 @@ RUN apt-get update -qq && apt-get install -y build-essential libpq-dev nodejs ya
 ENV HOME /var/www/myapp/
 
 RUN mkdir -p $HOME
-RUN mkdir -p /root/.ssh
+
 
 WORKDIR $HOME
 
 COPY Gemfile* ./
 COPY . .
-COPY id_rsa* /root/.ssh/
+
 ENV GEM_HOME="/usr/local/bundle"
 ENV PATH $GEM_HOME/bin:$GEM_HOME/gems/bin:$PATH
 
