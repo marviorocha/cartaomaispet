@@ -2457,3 +2457,1670 @@ You can enable  auto-update  with:    echo rvm_autoupdate_flag=2 >> ~/.rvmrc
 /var/www/cartaomaispet/shared/bundle/ruby/2.6.0/bin/ruby_executable_hooks:24:in `<main>'
  DEBUG [3b2f0d28] 	Tasks: TOP => environment
  DEBUG [3b2f0d28] 	(See full trace by running task with --trace)
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-12-28 18:24:42 -0200 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [e3163f37] Running /usr/bin/env which passenger as root@178.128.129.173
+ DEBUG [e3163f37] Command: /usr/bin/env which passenger
+ DEBUG [82ad172e] 	/usr/bin/passenger
+ DEBUG [82ad172e] Finished in 6.962 seconds with exit status 0 (successful).
+ DEBUG [92a76606] Running [ -d ~/.rvm ] as root@178.128.129.173
+ DEBUG [92a76606] Command: [ -d ~/.rvm ]
+ DEBUG [f8543184] Finished in 0.622 seconds with exit status 1 (failed).
+ DEBUG [59f066b1] Running [ -d /usr/local/rvm ] as root@178.128.129.173
+ DEBUG [59f066b1] Command: [ -d /usr/local/rvm ]
+ DEBUG [c4e0a0b5] Finished in 1.007 seconds with exit status 0 (successful).
+ DEBUG [31def302] Running /usr/local/rvm/bin/rvm version as root@178.128.129.173
+ DEBUG [31def302] Command: /usr/local/rvm/bin/rvm version
+ DEBUG [8385e123] 	rvm 1.29.6 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [8385e123] Finished in 0.879 seconds with exit status 0 (successful).
+ DEBUG [4c7d75c2] Running /usr/local/rvm/bin/rvm current as root@178.128.129.173
+ DEBUG [4c7d75c2] Command: /usr/local/rvm/bin/rvm current
+ DEBUG [8b790636] 	ruby-2.6.0
+ DEBUG [8b790636] Finished in 0.908 seconds with exit status 0 (successful).
+ DEBUG [7b6ae798] Running /usr/local/rvm/bin/rvm default do ruby --version as root@178.128.129.173
+ DEBUG [7b6ae798] Command: /usr/local/rvm/bin/rvm default do ruby --version
+ DEBUG [960bdfec] 	ruby 2.6.0p0 (2018-12-25 revision 66547) [x86_64-linux]
+ DEBUG [960bdfec] Finished in 1.031 seconds with exit status 0 (successful).
+  INFO [19d0f3c7] Running /usr/bin/env mkdir -p /tmp as root@178.128.129.173
+ DEBUG [19d0f3c7] Command: /usr/bin/env mkdir -p /tmp
+  INFO [07e4dbe4] Finished in 0.653 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-cartaomaispet-production-marviorocha.sh 0.0%
+  INFO Uploading /tmp/git-ssh-cartaomaispet-production-marviorocha.sh 100.0%
+  INFO [a24a440d] Running /usr/bin/env chmod 700 /tmp/git-ssh-cartaomaispet-production-marviorocha.sh as root@178.128.129.173
+ DEBUG [a24a440d] Command: /usr/bin/env chmod 700 /tmp/git-ssh-cartaomaispet-production-marviorocha.sh
+  INFO [94e88363] Finished in 0.604 seconds with exit status 0 (successful).
+  INFO [06170a87] Running /usr/bin/env git ls-remote https://github.com/marviorocha/cartaomaispet.git HEAD as root@178.128.129.173
+ DEBUG [06170a87] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cartaomaispet-production-marviorocha.sh" ; /usr/bin/env git ls-remote https://github.com/marviorocha/cartaomaispet.git HEAD )
+ DEBUG [b50dfb99] 	021c9bb12f330e2ac7ef89baf7fe719cd272601d	HEAD
+  INFO [b50dfb99] Finished in 0.782 seconds with exit status 0 (successful).
+  INFO [b4beeccf] Running /usr/bin/env mkdir -p /var/www/cartaomaispet/shared /var/www/cartaomaispet/releases as root@178.128.129.173
+ DEBUG [b4beeccf] Command: /usr/bin/env mkdir -p /var/www/cartaomaispet/shared /var/www/cartaomaispet/releases
+  INFO [705ea77f] Finished in 0.604 seconds with exit status 0 (successful).
+  INFO [739f403f] Running /usr/bin/env mkdir -p /var/www/cartaomaispet/shared/log /var/www/cartaomaispet/shared/tmp/pids /var/www/cartaomaispet/shared/tmp/cache /var/www/cartaomaispet/shared/tmp/sockets /var/www/cartaomaispet/shared/public/system /var/www/cartaomaispet/shared/public/assets as root@178.128.129.173
+ DEBUG [739f403f] Command: /usr/bin/env mkdir -p /var/www/cartaomaispet/shared/log /var/www/cartaomaispet/shared/tmp/pids /var/www/cartaomaispet/shared/tmp/cache /var/www/cartaomaispet/shared/tmp/sockets /var/www/cartaomaispet/shared/public/system /var/www/cartaomaispet/shared/public/assets
+  INFO [2fe42991] Finished in 0.617 seconds with exit status 0 (successful).
+  INFO [d449e532] Running /usr/bin/env mkdir -p /var/www/cartaomaispet/shared/config as root@178.128.129.173
+ DEBUG [d449e532] Command: /usr/bin/env mkdir -p /var/www/cartaomaispet/shared/config
+  INFO [1d301f5c] Finished in 0.626 seconds with exit status 0 (successful).
+ DEBUG [9b35c816] Running [ -f /var/www/cartaomaispet/shared/config/database.yml ] as root@178.128.129.173
+ DEBUG [9b35c816] Command: [ -f /var/www/cartaomaispet/shared/config/database.yml ]
+ DEBUG [82add2c5] Finished in 0.612 seconds with exit status 0 (successful).
+ DEBUG [70299cc5] Running [ -f /var/www/cartaomaispet/shared/config/master.key ] as root@178.128.129.173
+ DEBUG [70299cc5] Command: [ -f /var/www/cartaomaispet/shared/config/master.key ]
+ DEBUG [c466a02d] Finished in 1.192 seconds with exit status 0 (successful).
+ DEBUG [e633bd0f] Running [ -f /var/www/cartaomaispet/current/REVISION ] as root@178.128.129.173
+ DEBUG [e633bd0f] Command: [ -f /var/www/cartaomaispet/current/REVISION ]
+ DEBUG [a46f43a9] Finished in 0.749 seconds with exit status 0 (successful).
+ DEBUG [40ec2745] Running /usr/bin/env cat /var/www/cartaomaispet/current/REVISION 2>/dev/null as root@178.128.129.173
+ DEBUG [40ec2745] Command: /usr/bin/env cat /var/www/cartaomaispet/current/REVISION 2>/dev/null
+ DEBUG [74e77aae] 	fcce1baa2c2c523fdc8fd9a8ada24ec1e73b6256
+ DEBUG [74e77aae] Finished in 0.651 seconds with exit status 0 (successful).
+ DEBUG [91e53d73] Running [ -f /var/www/cartaomaispet/repo/HEAD ] as root@178.128.129.173
+ DEBUG [91e53d73] Command: [ -f /var/www/cartaomaispet/repo/HEAD ]
+ DEBUG [6ca41a71] Finished in 0.593 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /var/www/cartaomaispet/repo
+ DEBUG [3c6b69c5] Running if test ! -d /var/www/cartaomaispet/repo; then echo "Directory does not exist '/var/www/cartaomaispet/repo'" 1>&2; false; fi as root@178.128.129.173
+ DEBUG [3c6b69c5] Command: if test ! -d /var/www/cartaomaispet/repo; then echo "Directory does not exist '/var/www/cartaomaispet/repo'" 1>&2; false; fi
+ DEBUG [cbfd8b6e] Finished in 0.689 seconds with exit status 0 (successful).
+  INFO [7b092eba] Running /usr/bin/env git remote set-url origin https://github.com/marviorocha/cartaomaispet.git as root@178.128.129.173
+ DEBUG [7b092eba] Command: cd /var/www/cartaomaispet/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cartaomaispet-production-marviorocha.sh" ; /usr/bin/env git remote set-url origin https://github.com/marviorocha/cartaomaispet.git )
+  INFO [07d4ef48] Finished in 0.730 seconds with exit status 0 (successful).
+  INFO [aff8522e] Running /usr/bin/env git remote update --prune as root@178.128.129.173
+ DEBUG [aff8522e] Command: cd /var/www/cartaomaispet/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cartaomaispet-production-marviorocha.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [5e03319a] 	Fetching origin
+ DEBUG [5e03319a] 	From https://github.com/marviorocha/cartaomaispet
+   fcce1ba..021c9bb  master     -> master
+  INFO [5e03319a] Finished in 1.241 seconds with exit status 0 (successful).
+ DEBUG [73f77b63] Running if test ! -d /var/www/cartaomaispet/repo; then echo "Directory does not exist '/var/www/cartaomaispet/repo'" 1>&2; false; fi as root@178.128.129.173
+ DEBUG [73f77b63] Command: if test ! -d /var/www/cartaomaispet/repo; then echo "Directory does not exist '/var/www/cartaomaispet/repo'" 1>&2; false; fi
+ DEBUG [460301d8] Finished in 0.917 seconds with exit status 0 (successful).
+  INFO [ccbc4202] Running /usr/bin/env mkdir -p /var/www/cartaomaispet/releases/20181228202502 as root@178.128.129.173
+ DEBUG [ccbc4202] Command: cd /var/www/cartaomaispet/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cartaomaispet-production-marviorocha.sh" ; /usr/bin/env mkdir -p /var/www/cartaomaispet/releases/20181228202502 )
+  INFO [fb98370c] Finished in 0.805 seconds with exit status 0 (successful).
+  INFO [f674a4ed] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/cartaomaispet/releases/20181228202502 as root@178.128.129.173
+ DEBUG [f674a4ed] Command: cd /var/www/cartaomaispet/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cartaomaispet-production-marviorocha.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/cartaomaispet/releases/20181228202502 )
+  INFO [b0220ffe] Finished in 0.713 seconds with exit status 0 (successful).
+ DEBUG [57ececed] Running if test ! -d /var/www/cartaomaispet/repo; then echo "Directory does not exist '/var/www/cartaomaispet/repo'" 1>&2; false; fi as root@178.128.129.173
+ DEBUG [57ececed] Command: if test ! -d /var/www/cartaomaispet/repo; then echo "Directory does not exist '/var/www/cartaomaispet/repo'" 1>&2; false; fi
+ DEBUG [7a070d33] Finished in 0.652 seconds with exit status 0 (successful).
+ DEBUG [3d725798] Running /usr/bin/env git rev-list --max-count=1 master as root@178.128.129.173
+ DEBUG [3d725798] Command: cd /var/www/cartaomaispet/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cartaomaispet-production-marviorocha.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [31c92ce6] 	021c9bb12f330e2ac7ef89baf7fe719cd272601d
+ DEBUG [31c92ce6] Finished in 0.670 seconds with exit status 0 (successful).
+ DEBUG [cb8a9800] Running if test ! -d /var/www/cartaomaispet/releases/20181228202502; then echo "Directory does not exist '/var/www/cartaomaispet/releases/20181228202502'" 1>&2; false; fi as root@178.128.129.173
+ DEBUG [cb8a9800] Command: if test ! -d /var/www/cartaomaispet/releases/20181228202502; then echo "Directory does not exist '/var/www/cartaomaispet/releases/20181228202502'" 1>&2; false; fi
+ DEBUG [fb78c7ac] Finished in 0.670 seconds with exit status 0 (successful).
+  INFO [b909dbc6] Running /usr/bin/env echo "021c9bb12f330e2ac7ef89baf7fe719cd272601d" > REVISION as root@178.128.129.173
+ DEBUG [b909dbc6] Command: cd /var/www/cartaomaispet/releases/20181228202502 && /usr/bin/env echo "021c9bb12f330e2ac7ef89baf7fe719cd272601d" > REVISION
+  INFO [f3a77cad] Finished in 0.840 seconds with exit status 0 (successful).
+  INFO [4bbf479f] Running /usr/bin/env mkdir -p /var/www/cartaomaispet/releases/20181228202502/config as root@178.128.129.173
+ DEBUG [4bbf479f] Command: /usr/bin/env mkdir -p /var/www/cartaomaispet/releases/20181228202502/config
+  INFO [930d0a18] Finished in 0.741 seconds with exit status 0 (successful).
+ DEBUG [d7ee1bc1] Running [ -L /var/www/cartaomaispet/releases/20181228202502/config/database.yml ] as root@178.128.129.173
+ DEBUG [d7ee1bc1] Command: [ -L /var/www/cartaomaispet/releases/20181228202502/config/database.yml ]
+ DEBUG [8810cd6a] Finished in 0.673 seconds with exit status 1 (failed).
+ DEBUG [f9099790] Running [ -f /var/www/cartaomaispet/releases/20181228202502/config/database.yml ] as root@178.128.129.173
+ DEBUG [f9099790] Command: [ -f /var/www/cartaomaispet/releases/20181228202502/config/database.yml ]
+ DEBUG [0ab1ac85] Finished in 0.674 seconds with exit status 0 (successful).
+  INFO [3b41c18e] Running /usr/bin/env rm /var/www/cartaomaispet/releases/20181228202502/config/database.yml as root@178.128.129.173
+ DEBUG [3b41c18e] Command: /usr/bin/env rm /var/www/cartaomaispet/releases/20181228202502/config/database.yml
+  INFO [a1226e4f] Finished in 0.600 seconds with exit status 0 (successful).
+  INFO [e30ee749] Running /usr/bin/env ln -s /var/www/cartaomaispet/shared/config/database.yml /var/www/cartaomaispet/releases/20181228202502/config/database.yml as root@178.128.129.173
+ DEBUG [e30ee749] Command: /usr/bin/env ln -s /var/www/cartaomaispet/shared/config/database.yml /var/www/cartaomaispet/releases/20181228202502/config/database.yml
+  INFO [060bdc8c] Finished in 0.659 seconds with exit status 0 (successful).
+ DEBUG [f72985b9] Running [ -L /var/www/cartaomaispet/releases/20181228202502/config/master.key ] as root@178.128.129.173
+ DEBUG [f72985b9] Command: [ -L /var/www/cartaomaispet/releases/20181228202502/config/master.key ]
+ DEBUG [c6232eca] Finished in 0.798 seconds with exit status 1 (failed).
+ DEBUG [2b9527f9] Running [ -f /var/www/cartaomaispet/releases/20181228202502/config/master.key ] as root@178.128.129.173
+ DEBUG [2b9527f9] Command: [ -f /var/www/cartaomaispet/releases/20181228202502/config/master.key ]
+ DEBUG [5d885e52] Finished in 0.793 seconds with exit status 1 (failed).
+  INFO [2bb11c96] Running /usr/bin/env ln -s /var/www/cartaomaispet/shared/config/master.key /var/www/cartaomaispet/releases/20181228202502/config/master.key as root@178.128.129.173
+ DEBUG [2bb11c96] Command: /usr/bin/env ln -s /var/www/cartaomaispet/shared/config/master.key /var/www/cartaomaispet/releases/20181228202502/config/master.key
+  INFO [a11e74e7] Finished in 0.847 seconds with exit status 0 (successful).
+  INFO [ab5749ec] Running /usr/bin/env mkdir -p /var/www/cartaomaispet/releases/20181228202502 /var/www/cartaomaispet/releases/20181228202502/tmp /var/www/cartaomaispet/releases/20181228202502/public as root@178.128.129.173
+ DEBUG [ab5749ec] Command: /usr/bin/env mkdir -p /var/www/cartaomaispet/releases/20181228202502 /var/www/cartaomaispet/releases/20181228202502/tmp /var/www/cartaomaispet/releases/20181228202502/public
+  INFO [6fda3ccf] Finished in 0.748 seconds with exit status 0 (successful).
+ DEBUG [833d9ee1] Running [ -L /var/www/cartaomaispet/releases/20181228202502/log ] as root@178.128.129.173
+ DEBUG [833d9ee1] Command: [ -L /var/www/cartaomaispet/releases/20181228202502/log ]
+ DEBUG [22a778be] Finished in 0.712 seconds with exit status 1 (failed).
+ DEBUG [7d33749f] Running [ -d /var/www/cartaomaispet/releases/20181228202502/log ] as root@178.128.129.173
+ DEBUG [7d33749f] Command: [ -d /var/www/cartaomaispet/releases/20181228202502/log ]
+ DEBUG [3c256dd1] Finished in 0.798 seconds with exit status 0 (successful).
+  INFO [10f8e8ba] Running /usr/bin/env rm -rf /var/www/cartaomaispet/releases/20181228202502/log as root@178.128.129.173
+ DEBUG [10f8e8ba] Command: /usr/bin/env rm -rf /var/www/cartaomaispet/releases/20181228202502/log
+  INFO [4f4fa7be] Finished in 0.826 seconds with exit status 0 (successful).
+  INFO [c7acb3ba] Running /usr/bin/env ln -s /var/www/cartaomaispet/shared/log /var/www/cartaomaispet/releases/20181228202502/log as root@178.128.129.173
+ DEBUG [c7acb3ba] Command: /usr/bin/env ln -s /var/www/cartaomaispet/shared/log /var/www/cartaomaispet/releases/20181228202502/log
+  INFO [242479ab] Finished in 0.798 seconds with exit status 0 (successful).
+ DEBUG [58f2e2b1] Running [ -L /var/www/cartaomaispet/releases/20181228202502/tmp/pids ] as root@178.128.129.173
+ DEBUG [58f2e2b1] Command: [ -L /var/www/cartaomaispet/releases/20181228202502/tmp/pids ]
+ DEBUG [a2ca1885] Finished in 0.705 seconds with exit status 1 (failed).
+ DEBUG [746e339c] Running [ -d /var/www/cartaomaispet/releases/20181228202502/tmp/pids ] as root@178.128.129.173
+ DEBUG [746e339c] Command: [ -d /var/www/cartaomaispet/releases/20181228202502/tmp/pids ]
+ DEBUG [3ba2dc9a] Finished in 0.945 seconds with exit status 1 (failed).
+  INFO [86dcce9d] Running /usr/bin/env ln -s /var/www/cartaomaispet/shared/tmp/pids /var/www/cartaomaispet/releases/20181228202502/tmp/pids as root@178.128.129.173
+ DEBUG [86dcce9d] Command: /usr/bin/env ln -s /var/www/cartaomaispet/shared/tmp/pids /var/www/cartaomaispet/releases/20181228202502/tmp/pids
+  INFO [34162b4a] Finished in 1.083 seconds with exit status 0 (successful).
+ DEBUG [189066f1] Running [ -L /var/www/cartaomaispet/releases/20181228202502/tmp/cache ] as root@178.128.129.173
+ DEBUG [189066f1] Command: [ -L /var/www/cartaomaispet/releases/20181228202502/tmp/cache ]
+ DEBUG [b419973a] Finished in 0.778 seconds with exit status 1 (failed).
+ DEBUG [90778d7c] Running [ -d /var/www/cartaomaispet/releases/20181228202502/tmp/cache ] as root@178.128.129.173
+ DEBUG [90778d7c] Command: [ -d /var/www/cartaomaispet/releases/20181228202502/tmp/cache ]
+ DEBUG [c6fbd9a4] Finished in 0.696 seconds with exit status 1 (failed).
+  INFO [27bafce4] Running /usr/bin/env ln -s /var/www/cartaomaispet/shared/tmp/cache /var/www/cartaomaispet/releases/20181228202502/tmp/cache as root@178.128.129.173
+ DEBUG [27bafce4] Command: /usr/bin/env ln -s /var/www/cartaomaispet/shared/tmp/cache /var/www/cartaomaispet/releases/20181228202502/tmp/cache
+  INFO [4596b7f9] Finished in 0.715 seconds with exit status 0 (successful).
+ DEBUG [d26a2afc] Running [ -L /var/www/cartaomaispet/releases/20181228202502/tmp/sockets ] as root@178.128.129.173
+ DEBUG [d26a2afc] Command: [ -L /var/www/cartaomaispet/releases/20181228202502/tmp/sockets ]
+ DEBUG [af44797d] Finished in 0.689 seconds with exit status 1 (failed).
+ DEBUG [66248480] Running [ -d /var/www/cartaomaispet/releases/20181228202502/tmp/sockets ] as root@178.128.129.173
+ DEBUG [66248480] Command: [ -d /var/www/cartaomaispet/releases/20181228202502/tmp/sockets ]
+ DEBUG [b6963bd1] Finished in 0.674 seconds with exit status 1 (failed).
+  INFO [5cdf1250] Running /usr/bin/env ln -s /var/www/cartaomaispet/shared/tmp/sockets /var/www/cartaomaispet/releases/20181228202502/tmp/sockets as root@178.128.129.173
+ DEBUG [5cdf1250] Command: /usr/bin/env ln -s /var/www/cartaomaispet/shared/tmp/sockets /var/www/cartaomaispet/releases/20181228202502/tmp/sockets
+  INFO [2b6fc85d] Finished in 0.686 seconds with exit status 0 (successful).
+ DEBUG [ca76eda3] Running [ -L /var/www/cartaomaispet/releases/20181228202502/public/system ] as root@178.128.129.173
+ DEBUG [ca76eda3] Command: [ -L /var/www/cartaomaispet/releases/20181228202502/public/system ]
+ DEBUG [0c30ae35] Finished in 0.653 seconds with exit status 1 (failed).
+ DEBUG [3293c64b] Running [ -d /var/www/cartaomaispet/releases/20181228202502/public/system ] as root@178.128.129.173
+ DEBUG [3293c64b] Command: [ -d /var/www/cartaomaispet/releases/20181228202502/public/system ]
+ DEBUG [0b473c93] Finished in 0.658 seconds with exit status 1 (failed).
+  INFO [28f043e4] Running /usr/bin/env ln -s /var/www/cartaomaispet/shared/public/system /var/www/cartaomaispet/releases/20181228202502/public/system as root@178.128.129.173
+ DEBUG [28f043e4] Command: /usr/bin/env ln -s /var/www/cartaomaispet/shared/public/system /var/www/cartaomaispet/releases/20181228202502/public/system
+  INFO [74869963] Finished in 0.789 seconds with exit status 0 (successful).
+ DEBUG [821d9c3b] Running [ -L /var/www/cartaomaispet/releases/20181228202502/public/assets ] as root@178.128.129.173
+ DEBUG [821d9c3b] Command: [ -L /var/www/cartaomaispet/releases/20181228202502/public/assets ]
+ DEBUG [db44860e] Finished in 0.739 seconds with exit status 1 (failed).
+ DEBUG [a34198ff] Running [ -d /var/www/cartaomaispet/releases/20181228202502/public/assets ] as root@178.128.129.173
+ DEBUG [a34198ff] Command: [ -d /var/www/cartaomaispet/releases/20181228202502/public/assets ]
+ DEBUG [e4f30d6d] Finished in 0.771 seconds with exit status 1 (failed).
+  INFO [b9e0de33] Running /usr/bin/env ln -s /var/www/cartaomaispet/shared/public/assets /var/www/cartaomaispet/releases/20181228202502/public/assets as root@178.128.129.173
+ DEBUG [b9e0de33] Command: /usr/bin/env ln -s /var/www/cartaomaispet/shared/public/assets /var/www/cartaomaispet/releases/20181228202502/public/assets
+  INFO [9761298c] Finished in 0.710 seconds with exit status 0 (successful).
+ DEBUG [9560e85d] Running if test ! -d /var/www/cartaomaispet/releases/20181228202502; then echo "Directory does not exist '/var/www/cartaomaispet/releases/20181228202502'" 1>&2; false; fi as root@178.128.129.173
+ DEBUG [9560e85d] Command: if test ! -d /var/www/cartaomaispet/releases/20181228202502; then echo "Directory does not exist '/var/www/cartaomaispet/releases/20181228202502'" 1>&2; false; fi
+ DEBUG [24cd4e6a] Finished in 1.315 seconds with exit status 0 (successful).
+ DEBUG [597f88d1] Running /usr/local/rvm/bin/rvm default do bundle check --path /var/www/cartaomaispet/shared/bundle as root@178.128.129.173
+ DEBUG [597f88d1] Command: cd /var/www/cartaomaispet/releases/20181228202502 && /usr/local/rvm/bin/rvm default do bundle check --path /var/www/cartaomaispet/shared/bundle
+ DEBUG [f46b1fb3] 	To install do: 'rvm install "ruby-2.5.3"'
+ DEBUG [f46b1fb3] 	Required ruby-2.5.3 is not installed.
+ DEBUG [f46b1fb3] 	Your Gemfile lists the gem pg (>= 0.18, < 2.0) more than once.
+You should probably keep only one of them.
+Remove any duplicate entries and specify the gem only once (per group).
+While it's not a problem now, it could cause errors if you change the version of one of them later.
+ DEBUG [f46b1fb3] 	The dependency tzinfo-data (>= 0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for ruby but the dependency is only for x86-mingw32, x86-mswin32, x64-mingw32, java. To add those platforms to the bundle, run `bundle lock --add-platform x86-mingw32 x86-mswin32 x64-mingw32 java`.
+ DEBUG [f46b1fb3] 	The following gems are missing
+ DEBUG [f46b1fb3] 	 * public_suffix (3.0.3)
+ DEBUG [f46b1fb3] 	 * addressable (2.5.2)
+ DEBUG [f46b1fb3] 	 * net-ssh (5.1.0)
+ DEBUG [f46b1fb3] 	 * net-scp (1.2.1)
+ DEBUG [f46b1fb3] 	 * sshkit (1.18.0)
+ DEBUG [f46b1fb3] 	 * airbrussh (1.3.1)
+ DEBUG [f46b1fb3] 	 * io-like (0.3.0)
+ DEBUG [f46b1fb3] 	 * archive-zip (0.11.0)
+ DEBUG [f46b1fb3] 	 * bindex (0.5.0)
+ DEBUG [f46b1fb3] 	 * byebug (10.0.2)
+ DEBUG [f46b1fb3] 	 * capistrano (3.11.0)
+ DEBUG [f46b1fb3] 	 * capistrano-bundler (1.5.0)
+ DEBUG [f46b1fb3] 	 * capistrano-passenger (0.2.0)
+ DEBUG [f46b1fb3] 	 * capistrano-rails (1.4.0)
+ DEBUG [f46b1fb3] 	 * capistrano-rvm (0.1.2)
+ DEBUG [f46b1fb3] 	 * regexp_parser (1.3.0)
+ DEBUG [f46b1fb3] 	 * xpath (3.2.0)
+ DEBUG [f46b1fb3] 	 * capybara (3.12.0)
+ DEBUG [f46b1fb3] 	 * childprocess (0.9.0)
+ DEBUG [f46b1fb3] 	 * chromedriver-helper (2.1.0)
+ DEBUG [f46b1fb3] 	 * ruby_dep (1.5.0)
+ DEBUG [f46b1fb3] 	 * listen (3.1.5)
+ DEBUG [f46b1fb3] 	 * rubyzip (1.2.2)
+ DEBUG [f46b1fb3] 	 * selenium-webdriver (3.141.0)
+ DEBUG [f46b1fb3] 	 * spring (2.0.2)
+ DEBUG [f46b1fb3] 	 * spring-watcher-listen (2.0.1)
+ DEBUG [f46b1fb3] 	 * web-console (3.7.0)
+ DEBUG [f46b1fb3] 	Install missing gems with `bundle install`
+ DEBUG [f46b1fb3] Finished in 1.713 seconds with exit status 1 (failed).
+  INFO [4cf6f179] Running /usr/local/rvm/bin/rvm default do bundle install --path /var/www/cartaomaispet/shared/bundle --jobs 4 --without development test --deployment --quiet as root@178.128.129.173
+ DEBUG [4cf6f179] Command: cd /var/www/cartaomaispet/releases/20181228202502 && /usr/local/rvm/bin/rvm default do bundle install --path /var/www/cartaomaispet/shared/bundle --jobs 4 --without development test --deployment --quiet
+ DEBUG [43001e12] 	To install do: 'rvm install "ruby-2.5.3"'
+ DEBUG [43001e12] 	Required ruby-2.5.3 is not installed.
+ DEBUG [43001e12] 	Warning, new version of rvm available '1.29.7', you are using older version '1.29.6'.
+You can disable this warning with:    echo rvm_autoupdate_flag=0 >> ~/.rvmrc
+You can enable  auto-update  with:    echo rvm_autoupdate_flag=2 >> ~/.rvmrc
+  INFO [43001e12] Finished in 1.754 seconds with exit status 0 (successful).
+ DEBUG [36b9275d] Running if test ! -d /var/www/cartaomaispet/releases/20181228202502; then echo "Directory does not exist '/var/www/cartaomaispet/releases/20181228202502'" 1>&2; false; fi as root@178.128.129.173
+ DEBUG [36b9275d] Command: if test ! -d /var/www/cartaomaispet/releases/20181228202502; then echo "Directory does not exist '/var/www/cartaomaispet/releases/20181228202502'" 1>&2; false; fi
+ DEBUG [4386d086] Finished in 0.743 seconds with exit status 0 (successful).
+  INFO [fb83c48c] Running /usr/local/rvm/bin/rvm default do bundle exec rake assets:precompile as root@178.128.129.173
+ DEBUG [fb83c48c] Command: cd /var/www/cartaomaispet/releases/20181228202502 && ( export RAILS_ENV="production" RAILS_GROUPS="" ; /usr/local/rvm/bin/rvm default do bundle exec rake assets:precompile )
+ DEBUG [331a1de3] 	To install do: 'rvm install "ruby-2.5.3"'
+ DEBUG [331a1de3] 	Required ruby-2.5.3 is not installed.
+ DEBUG [331a1de3] 	rake aborted!
+ DEBUG [331a1de3] 	ActiveRecord::AdapterNotSpecified: 'production' database is not configured. Available: ["database", "username", "password"]
+ DEBUG [331a1de3] 	/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activerecord-5.2.2/lib/active_record/connection_adapters/connection_specification.rb:260:in `resolve_symbol_connection'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activerecord-5.2.2/lib/active_record/connection_adapters/connection_specification.rb:241:in `resolve_connection'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activerecord-5.2.2/lib/active_record/connection_adapters/connection_specification.rb:143:in `resolve'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activerecord-5.2.2/lib/active_record/connection_handling.rb:57:in `establish_connection'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activerecord-5.2.2/lib/active_record/railtie.rb:136:in `block (2 levels) in <class:Railtie>'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/lazy_load_hooks.rb:71:in `instance_eval'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/lazy_load_hooks.rb:71:in `block in execute_hook'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/lazy_load_hooks.rb:62:in `with_execution_control'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/lazy_load_hooks.rb:67:in `execute_hook'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/lazy_load_hooks.rb:52:in `block in run_load_hooks'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/lazy_load_hooks.rb:51:in `each'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/lazy_load_hooks.rb:51:in `run_load_hooks'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activerecord-5.2.2/lib/active_record/base.rb:328:in `<module:ActiveRecord>'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activerecord-5.2.2/lib/active_record/base.rb:27:in `<main>'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21:in `require'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21:in `block in require_with_bootsnap_lfi'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/loaded_features_index.rb:65:in `register'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:20:in `require_with_bootsnap_lfi'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:29:in `require'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:291:in `block in require'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:257:in `load_dependency'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:291:in `require'
+/var/www/cartaomaispet/releases/20181228202502/app/models/application_record.rb:1:in `<main>'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21:in `require'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21:in `block in require_with_bootsnap_lfi'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/loaded_features_index.rb:65:in `register'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:20:in `require_with_bootsnap_lfi'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:29:in `require'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:291:in `block in require'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:257:in `load_dependency'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:291:in `require'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:378:in `block in require_or_load'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:37:in `block in load_interlock'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies/interlock.rb:14:in `block in loading'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/concurrency/share_lock.rb:151:in `exclusive'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies/interlock.rb:13:in `loading'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:37:in `load_interlock'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:356:in `require_or_load'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/active_support.rb:46:in `block in require_or_load'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/active_support.rb:16:in `allow_bootsnap_retry'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/active_support.rb:45:in `require_or_load'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:510:in `load_missing_constant'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/active_support.rb:58:in `block in load_missing_constant'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/active_support.rb:16:in `allow_bootsnap_retry'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/active_support.rb:57:in `load_missing_constant'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:195:in `const_missing'
+/var/www/cartaomaispet/releases/20181228202502/app/models/user.rb:1:in `<main>'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21:in `require'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21:in `block in require_with_bootsnap_lfi'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/loaded_features_index.rb:65:in `register'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:20:in `require_with_bootsnap_lfi'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:29:in `require'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:291:in `block in require'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:257:in `load_dependency'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:291:in `require'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:378:in `block in require_or_load'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:37:in `block in load_interlock'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies/interlock.rb:14:in `block in loading'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/concurrency/share_lock.rb:151:in `exclusive'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies/interlock.rb:13:in `loading'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:37:in `load_interlock'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:356:in `require_or_load'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/active_support.rb:46:in `block in require_or_load'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/active_support.rb:16:in `allow_bootsnap_retry'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/active_support.rb:45:in `require_or_load'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:510:in `load_missing_constant'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/active_support.rb:58:in `block in load_missing_constant'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/active_support.rb:16:in `allow_bootsnap_retry'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/active_support.rb:57:in `load_missing_constant'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:195:in `const_missing'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/inflector/methods.rb:283:in `const_get'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/inflector/methods.rb:283:in `block in constantize'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/inflector/methods.rb:281:in `each'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/inflector/methods.rb:281:in `inject'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/inflector/methods.rb:281:in `constantize'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:582:in `get'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:613:in `constantize'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/devise-4.5.0/lib/devise.rb:316:in `get'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/devise-4.5.0/lib/devise/mapping.rb:83:in `to'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/devise-4.5.0/lib/devise/mapping.rb:78:in `modules'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/devise-4.5.0/lib/devise/mapping.rb:95:in `routes'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/devise-4.5.0/lib/devise/mapping.rb:162:in `default_used_route'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/devise-4.5.0/lib/devise/mapping.rb:72:in `initialize'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/devise-4.5.0/lib/devise.rb:346:in `new'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/devise-4.5.0/lib/devise.rb:346:in `add_mapping'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/devise-4.5.0/lib/devise/rails/routes.rb:243:in `block in devise_for'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/devise-4.5.0/lib/devise/rails/routes.rb:242:in `each'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/devise-4.5.0/lib/devise/rails/routes.rb:242:in `devise_for'
+/var/www/cartaomaispet/releases/20181228202502/config/routes.rb:9:in `block in <main>'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/actionpack-5.2.2/lib/action_dispatch/routing/route_set.rb:432:in `instance_exec'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/actionpack-5.2.2/lib/action_dispatch/routing/route_set.rb:432:in `eval_block'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/actionpack-5.2.2/lib/action_dispatch/routing/route_set.rb:414:in `draw'
+/var/www/cartaomaispet/releases/20181228202502/config/routes.rb:1:in `<main>'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:50:in `load'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:50:in `load'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:285:in `block in load'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:257:in `load_dependency'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:285:in `load'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/railties-5.2.2/lib/rails/application/routes_reloader.rb:41:in `block in load_paths'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/railties-5.2.2/lib/rails/application/routes_reloader.rb:41:in `each'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/railties-5.2.2/lib/rails/application/routes_reloader.rb:41:in `load_paths'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/railties-5.2.2/lib/rails/application/routes_reloader.rb:20:in `reload!'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/railties-5.2.2/lib/rails/application/routes_reloader.rb:30:in `block in updater'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/file_update_checker.rb:83:in `execute'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/railties-5.2.2/lib/rails/application/routes_reloader.rb:10:in `execute'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/railties-5.2.2/lib/rails/application/finisher.rb:130:in `block in <module:Finisher>'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/railties-5.2.2/lib/rails/initializable.rb:32:in `instance_exec'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/railties-5.2.2/lib/rails/initializable.rb:32:in `run'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/railties-5.2.2/lib/rails/initializable.rb:61:in `block in run_initializers'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/railties-5.2.2/lib/rails/initializable.rb:60:in `run_initializers'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/railties-5.2.2/lib/rails/application.rb:361:in `initialize!'
+/var/www/cartaomaispet/releases/20181228202502/config/environment.rb:5:in `<main>'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21:in `require'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21:in `block in require_with_bootsnap_lfi'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/loaded_features_index.rb:65:in `register'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:20:in `require_with_bootsnap_lfi'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:29:in `require'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:291:in `block in require'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:257:in `load_dependency'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:291:in `require'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/railties-5.2.2/lib/rails/application.rb:337:in `require_environment!'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/railties-5.2.2/lib/rails/application.rb:520:in `block in run_tasks_blocks'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/task.rb:62:in `block (2 levels) i
+ DEBUG [331a1de3] 	n define'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/rake-12.3.2/exe/rake:27:in `<top (required)>'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/bin/ruby_executable_hooks:24:in `eval'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/bin/ruby_executable_hooks:24:in `<main>'
+ DEBUG [331a1de3] 	Tasks: TOP => environment
+ DEBUG [331a1de3] 	(See full trace by running task with --trace)
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-12-28 18:28:31 -0200 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [088276ed] Running /usr/bin/env which passenger as root@178.128.129.173
+ DEBUG [088276ed] Command: /usr/bin/env which passenger
+ DEBUG [d1211bb1] 	/usr/bin/passenger
+ DEBUG [d1211bb1] Finished in 7.098 seconds with exit status 0 (successful).
+ DEBUG [92c10d6e] Running [ -d ~/.rvm ] as root@178.128.129.173
+ DEBUG [92c10d6e] Command: [ -d ~/.rvm ]
+ DEBUG [d4e8f6c8] Finished in 0.678 seconds with exit status 1 (failed).
+ DEBUG [e211ffc7] Running [ -d /usr/local/rvm ] as root@178.128.129.173
+ DEBUG [e211ffc7] Command: [ -d /usr/local/rvm ]
+ DEBUG [d40427db] Finished in 1.045 seconds with exit status 0 (successful).
+ DEBUG [c21379d0] Running /usr/local/rvm/bin/rvm version as root@178.128.129.173
+ DEBUG [c21379d0] Command: /usr/local/rvm/bin/rvm version
+ DEBUG [48fdbb44] 	rvm 1.29.6 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [48fdbb44] Finished in 0.917 seconds with exit status 0 (successful).
+ DEBUG [fdb51ccc] Running /usr/local/rvm/bin/rvm current as root@178.128.129.173
+ DEBUG [fdb51ccc] Command: /usr/local/rvm/bin/rvm current
+ DEBUG [c773132a] 	ruby-2.6.0
+ DEBUG [c773132a] Finished in 0.838 seconds with exit status 0 (successful).
+ DEBUG [59ddc384] Running /usr/local/rvm/bin/rvm default do ruby --version as root@178.128.129.173
+ DEBUG [59ddc384] Command: /usr/local/rvm/bin/rvm default do ruby --version
+ DEBUG [575dca1b] 	ruby 2.6.0p0 (2018-12-25 revision 66547) [x86_64-linux]
+ DEBUG [575dca1b] Finished in 1.085 seconds with exit status 0 (successful).
+  INFO [4da4a546] Running /usr/bin/env mkdir -p /tmp as root@178.128.129.173
+ DEBUG [4da4a546] Command: /usr/bin/env mkdir -p /tmp
+  INFO [86e961c0] Finished in 0.603 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-cartaomaispet-production-marviorocha.sh 0.0%
+  INFO Uploading /tmp/git-ssh-cartaomaispet-production-marviorocha.sh 100.0%
+  INFO [5f43bc36] Running /usr/bin/env chmod 700 /tmp/git-ssh-cartaomaispet-production-marviorocha.sh as root@178.128.129.173
+ DEBUG [5f43bc36] Command: /usr/bin/env chmod 700 /tmp/git-ssh-cartaomaispet-production-marviorocha.sh
+  INFO [6d6ec5a4] Finished in 0.642 seconds with exit status 0 (successful).
+  INFO [dc8ee16c] Running /usr/bin/env git ls-remote https://github.com/marviorocha/cartaomaispet.git HEAD as root@178.128.129.173
+ DEBUG [dc8ee16c] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cartaomaispet-production-marviorocha.sh" ; /usr/bin/env git ls-remote https://github.com/marviorocha/cartaomaispet.git HEAD )
+ DEBUG [f5aa660b] 	021c9bb12f330e2ac7ef89baf7fe719cd272601d	HEAD
+  INFO [f5aa660b] Finished in 0.990 seconds with exit status 0 (successful).
+  INFO [3a5dad1c] Running /usr/bin/env mkdir -p /var/www/cartaomaispet/shared /var/www/cartaomaispet/releases as root@178.128.129.173
+ DEBUG [3a5dad1c] Command: /usr/bin/env mkdir -p /var/www/cartaomaispet/shared /var/www/cartaomaispet/releases
+  INFO [52e9a3ed] Finished in 0.714 seconds with exit status 0 (successful).
+  INFO [66e98dc2] Running /usr/bin/env mkdir -p /var/www/cartaomaispet/shared/log /var/www/cartaomaispet/shared/tmp/pids /var/www/cartaomaispet/shared/tmp/cache /var/www/cartaomaispet/shared/tmp/sockets /var/www/cartaomaispet/shared/public/system /var/www/cartaomaispet/shared/public/assets as root@178.128.129.173
+ DEBUG [66e98dc2] Command: /usr/bin/env mkdir -p /var/www/cartaomaispet/shared/log /var/www/cartaomaispet/shared/tmp/pids /var/www/cartaomaispet/shared/tmp/cache /var/www/cartaomaispet/shared/tmp/sockets /var/www/cartaomaispet/shared/public/system /var/www/cartaomaispet/shared/public/assets
+  INFO [8c29bd37] Finished in 0.649 seconds with exit status 0 (successful).
+  INFO [d24776fa] Running /usr/bin/env mkdir -p /var/www/cartaomaispet/shared/config as root@178.128.129.173
+ DEBUG [d24776fa] Command: /usr/bin/env mkdir -p /var/www/cartaomaispet/shared/config
+  INFO [310e64ad] Finished in 0.734 seconds with exit status 0 (successful).
+ DEBUG [73912593] Running [ -f /var/www/cartaomaispet/shared/config/database.yml ] as root@178.128.129.173
+ DEBUG [73912593] Command: [ -f /var/www/cartaomaispet/shared/config/database.yml ]
+ DEBUG [29b59a90] Finished in 0.663 seconds with exit status 0 (successful).
+ DEBUG [f541df07] Running [ -f /var/www/cartaomaispet/shared/config/master.key ] as root@178.128.129.173
+ DEBUG [f541df07] Command: [ -f /var/www/cartaomaispet/shared/config/master.key ]
+ DEBUG [57b387c9] Finished in 0.706 seconds with exit status 0 (successful).
+ DEBUG [09538146] Running [ -f /var/www/cartaomaispet/current/REVISION ] as root@178.128.129.173
+ DEBUG [09538146] Command: [ -f /var/www/cartaomaispet/current/REVISION ]
+ DEBUG [c9c80b3e] Finished in 0.643 seconds with exit status 1 (failed).
+ DEBUG [a2d26e3a] Running [ -f /var/www/cartaomaispet/repo/HEAD ] as root@178.128.129.173
+ DEBUG [a2d26e3a] Command: [ -f /var/www/cartaomaispet/repo/HEAD ]
+ DEBUG [19d1efcc] Finished in 0.692 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /var/www/cartaomaispet/repo
+ DEBUG [ed08564a] Running if test ! -d /var/www/cartaomaispet/repo; then echo "Directory does not exist '/var/www/cartaomaispet/repo'" 1>&2; false; fi as root@178.128.129.173
+ DEBUG [ed08564a] Command: if test ! -d /var/www/cartaomaispet/repo; then echo "Directory does not exist '/var/www/cartaomaispet/repo'" 1>&2; false; fi
+ DEBUG [41b32c6d] Finished in 0.661 seconds with exit status 0 (successful).
+  INFO [5208b6ef] Running /usr/bin/env git remote set-url origin https://github.com/marviorocha/cartaomaispet.git as root@178.128.129.173
+ DEBUG [5208b6ef] Command: cd /var/www/cartaomaispet/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cartaomaispet-production-marviorocha.sh" ; /usr/bin/env git remote set-url origin https://github.com/marviorocha/cartaomaispet.git )
+  INFO [91790a54] Finished in 0.672 seconds with exit status 0 (successful).
+  INFO [15f86a48] Running /usr/bin/env git remote update --prune as root@178.128.129.173
+ DEBUG [15f86a48] Command: cd /var/www/cartaomaispet/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cartaomaispet-production-marviorocha.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [a47e0f28] 	Fetching origin
+  INFO [a47e0f28] Finished in 0.827 seconds with exit status 0 (successful).
+ DEBUG [6b2e08a6] Running if test ! -d /var/www/cartaomaispet/repo; then echo "Directory does not exist '/var/www/cartaomaispet/repo'" 1>&2; false; fi as root@178.128.129.173
+ DEBUG [6b2e08a6] Command: if test ! -d /var/www/cartaomaispet/repo; then echo "Directory does not exist '/var/www/cartaomaispet/repo'" 1>&2; false; fi
+ DEBUG [2db9ef34] Finished in 0.630 seconds with exit status 0 (successful).
+  INFO [900ee993] Running /usr/bin/env mkdir -p /var/www/cartaomaispet/releases/20181228202851 as root@178.128.129.173
+ DEBUG [900ee993] Command: cd /var/www/cartaomaispet/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cartaomaispet-production-marviorocha.sh" ; /usr/bin/env mkdir -p /var/www/cartaomaispet/releases/20181228202851 )
+  INFO [b42a67cc] Finished in 0.665 seconds with exit status 0 (successful).
+  INFO [5d80f152] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/cartaomaispet/releases/20181228202851 as root@178.128.129.173
+ DEBUG [5d80f152] Command: cd /var/www/cartaomaispet/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cartaomaispet-production-marviorocha.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/cartaomaispet/releases/20181228202851 )
+  INFO [3d578aa7] Finished in 0.712 seconds with exit status 0 (successful).
+ DEBUG [515f024a] Running if test ! -d /var/www/cartaomaispet/repo; then echo "Directory does not exist '/var/www/cartaomaispet/repo'" 1>&2; false; fi as root@178.128.129.173
+ DEBUG [515f024a] Command: if test ! -d /var/www/cartaomaispet/repo; then echo "Directory does not exist '/var/www/cartaomaispet/repo'" 1>&2; false; fi
+ DEBUG [6e2a572a] Finished in 0.733 seconds with exit status 0 (successful).
+ DEBUG [c7d1986b] Running /usr/bin/env git rev-list --max-count=1 master as root@178.128.129.173
+ DEBUG [c7d1986b] Command: cd /var/www/cartaomaispet/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cartaomaispet-production-marviorocha.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [82b2f602] 	021c9bb12f330e2ac7ef89baf7fe719cd272601d
+ DEBUG [82b2f602] Finished in 0.700 seconds with exit status 0 (successful).
+ DEBUG [c9e2c242] Running if test ! -d /var/www/cartaomaispet/releases/20181228202851; then echo "Directory does not exist '/var/www/cartaomaispet/releases/20181228202851'" 1>&2; false; fi as root@178.128.129.173
+ DEBUG [c9e2c242] Command: if test ! -d /var/www/cartaomaispet/releases/20181228202851; then echo "Directory does not exist '/var/www/cartaomaispet/releases/20181228202851'" 1>&2; false; fi
+ DEBUG [04dea04b] Finished in 0.744 seconds with exit status 0 (successful).
+  INFO [389572dc] Running /usr/bin/env echo "021c9bb12f330e2ac7ef89baf7fe719cd272601d" > REVISION as root@178.128.129.173
+ DEBUG [389572dc] Command: cd /var/www/cartaomaispet/releases/20181228202851 && /usr/bin/env echo "021c9bb12f330e2ac7ef89baf7fe719cd272601d" > REVISION
+  INFO [c7739808] Finished in 0.629 seconds with exit status 0 (successful).
+  INFO [bbebd035] Running /usr/bin/env mkdir -p /var/www/cartaomaispet/releases/20181228202851/config as root@178.128.129.173
+ DEBUG [bbebd035] Command: /usr/bin/env mkdir -p /var/www/cartaomaispet/releases/20181228202851/config
+  INFO [b55ab2ef] Finished in 0.766 seconds with exit status 0 (successful).
+ DEBUG [8090da34] Running [ -L /var/www/cartaomaispet/releases/20181228202851/config/database.yml ] as root@178.128.129.173
+ DEBUG [8090da34] Command: [ -L /var/www/cartaomaispet/releases/20181228202851/config/database.yml ]
+ DEBUG [f0bbf685] Finished in 0.739 seconds with exit status 1 (failed).
+ DEBUG [366c99e9] Running [ -f /var/www/cartaomaispet/releases/20181228202851/config/database.yml ] as root@178.128.129.173
+ DEBUG [366c99e9] Command: [ -f /var/www/cartaomaispet/releases/20181228202851/config/database.yml ]
+ DEBUG [00aebbba] Finished in 0.765 seconds with exit status 0 (successful).
+  INFO [0d97f200] Running /usr/bin/env rm /var/www/cartaomaispet/releases/20181228202851/config/database.yml as root@178.128.129.173
+ DEBUG [0d97f200] Command: /usr/bin/env rm /var/www/cartaomaispet/releases/20181228202851/config/database.yml
+  INFO [670b8aeb] Finished in 0.787 seconds with exit status 0 (successful).
+  INFO [df1d271d] Running /usr/bin/env ln -s /var/www/cartaomaispet/shared/config/database.yml /var/www/cartaomaispet/releases/20181228202851/config/database.yml as root@178.128.129.173
+ DEBUG [df1d271d] Command: /usr/bin/env ln -s /var/www/cartaomaispet/shared/config/database.yml /var/www/cartaomaispet/releases/20181228202851/config/database.yml
+  INFO [5a5c754f] Finished in 0.716 seconds with exit status 0 (successful).
+ DEBUG [21604a95] Running [ -L /var/www/cartaomaispet/releases/20181228202851/config/master.key ] as root@178.128.129.173
+ DEBUG [21604a95] Command: [ -L /var/www/cartaomaispet/releases/20181228202851/config/master.key ]
+ DEBUG [15617fff] Finished in 0.916 seconds with exit status 1 (failed).
+ DEBUG [2cfcc489] Running [ -f /var/www/cartaomaispet/releases/20181228202851/config/master.key ] as root@178.128.129.173
+ DEBUG [2cfcc489] Command: [ -f /var/www/cartaomaispet/releases/20181228202851/config/master.key ]
+ DEBUG [12a8800c] Finished in 0.788 seconds with exit status 1 (failed).
+  INFO [c238c269] Running /usr/bin/env ln -s /var/www/cartaomaispet/shared/config/master.key /var/www/cartaomaispet/releases/20181228202851/config/master.key as root@178.128.129.173
+ DEBUG [c238c269] Command: /usr/bin/env ln -s /var/www/cartaomaispet/shared/config/master.key /var/www/cartaomaispet/releases/20181228202851/config/master.key
+  INFO [49152d8a] Finished in 0.842 seconds with exit status 0 (successful).
+  INFO [5df745d0] Running /usr/bin/env mkdir -p /var/www/cartaomaispet/releases/20181228202851 /var/www/cartaomaispet/releases/20181228202851/tmp /var/www/cartaomaispet/releases/20181228202851/public as root@178.128.129.173
+ DEBUG [5df745d0] Command: /usr/bin/env mkdir -p /var/www/cartaomaispet/releases/20181228202851 /var/www/cartaomaispet/releases/20181228202851/tmp /var/www/cartaomaispet/releases/20181228202851/public
+  INFO [a98bcff3] Finished in 0.756 seconds with exit status 0 (successful).
+ DEBUG [ea8b701b] Running [ -L /var/www/cartaomaispet/releases/20181228202851/log ] as root@178.128.129.173
+ DEBUG [ea8b701b] Command: [ -L /var/www/cartaomaispet/releases/20181228202851/log ]
+ DEBUG [8580daef] Finished in 0.744 seconds with exit status 1 (failed).
+ DEBUG [e8a125f4] Running [ -d /var/www/cartaomaispet/releases/20181228202851/log ] as root@178.128.129.173
+ DEBUG [e8a125f4] Command: [ -d /var/www/cartaomaispet/releases/20181228202851/log ]
+ DEBUG [a7a183f5] Finished in 0.718 seconds with exit status 0 (successful).
+  INFO [852f07f1] Running /usr/bin/env rm -rf /var/www/cartaomaispet/releases/20181228202851/log as root@178.128.129.173
+ DEBUG [852f07f1] Command: /usr/bin/env rm -rf /var/www/cartaomaispet/releases/20181228202851/log
+  INFO [740bd8d0] Finished in 0.675 seconds with exit status 0 (successful).
+  INFO [54cfbaed] Running /usr/bin/env ln -s /var/www/cartaomaispet/shared/log /var/www/cartaomaispet/releases/20181228202851/log as root@178.128.129.173
+ DEBUG [54cfbaed] Command: /usr/bin/env ln -s /var/www/cartaomaispet/shared/log /var/www/cartaomaispet/releases/20181228202851/log
+  INFO [99990545] Finished in 0.755 seconds with exit status 0 (successful).
+ DEBUG [18224bcf] Running [ -L /var/www/cartaomaispet/releases/20181228202851/tmp/pids ] as root@178.128.129.173
+ DEBUG [18224bcf] Command: [ -L /var/www/cartaomaispet/releases/20181228202851/tmp/pids ]
+ DEBUG [96e6f8d7] Finished in 0.667 seconds with exit status 1 (failed).
+ DEBUG [bf3a80a7] Running [ -d /var/www/cartaomaispet/releases/20181228202851/tmp/pids ] as root@178.128.129.173
+ DEBUG [bf3a80a7] Command: [ -d /var/www/cartaomaispet/releases/20181228202851/tmp/pids ]
+ DEBUG [580ade12] Finished in 0.690 seconds with exit status 1 (failed).
+  INFO [d240fe10] Running /usr/bin/env ln -s /var/www/cartaomaispet/shared/tmp/pids /var/www/cartaomaispet/releases/20181228202851/tmp/pids as root@178.128.129.173
+ DEBUG [d240fe10] Command: /usr/bin/env ln -s /var/www/cartaomaispet/shared/tmp/pids /var/www/cartaomaispet/releases/20181228202851/tmp/pids
+  INFO [ec744601] Finished in 0.720 seconds with exit status 0 (successful).
+ DEBUG [91540927] Running [ -L /var/www/cartaomaispet/releases/20181228202851/tmp/cache ] as root@178.128.129.173
+ DEBUG [91540927] Command: [ -L /var/www/cartaomaispet/releases/20181228202851/tmp/cache ]
+ DEBUG [a2a48a87] Finished in 0.653 seconds with exit status 1 (failed).
+ DEBUG [86a18431] Running [ -d /var/www/cartaomaispet/releases/20181228202851/tmp/cache ] as root@178.128.129.173
+ DEBUG [86a18431] Command: [ -d /var/www/cartaomaispet/releases/20181228202851/tmp/cache ]
+ DEBUG [13be7408] Finished in 0.712 seconds with exit status 1 (failed).
+  INFO [91998622] Running /usr/bin/env ln -s /var/www/cartaomaispet/shared/tmp/cache /var/www/cartaomaispet/releases/20181228202851/tmp/cache as root@178.128.129.173
+ DEBUG [91998622] Command: /usr/bin/env ln -s /var/www/cartaomaispet/shared/tmp/cache /var/www/cartaomaispet/releases/20181228202851/tmp/cache
+  INFO [3b0ea1f6] Finished in 0.718 seconds with exit status 0 (successful).
+ DEBUG [8c3306f0] Running [ -L /var/www/cartaomaispet/releases/20181228202851/tmp/sockets ] as root@178.128.129.173
+ DEBUG [8c3306f0] Command: [ -L /var/www/cartaomaispet/releases/20181228202851/tmp/sockets ]
+ DEBUG [108f7ddf] Finished in 0.747 seconds with exit status 1 (failed).
+ DEBUG [f38f0079] Running [ -d /var/www/cartaomaispet/releases/20181228202851/tmp/sockets ] as root@178.128.129.173
+ DEBUG [f38f0079] Command: [ -d /var/www/cartaomaispet/releases/20181228202851/tmp/sockets ]
+ DEBUG [af2c928b] Finished in 0.879 seconds with exit status 1 (failed).
+  INFO [b1af5dfa] Running /usr/bin/env ln -s /var/www/cartaomaispet/shared/tmp/sockets /var/www/cartaomaispet/releases/20181228202851/tmp/sockets as root@178.128.129.173
+ DEBUG [b1af5dfa] Command: /usr/bin/env ln -s /var/www/cartaomaispet/shared/tmp/sockets /var/www/cartaomaispet/releases/20181228202851/tmp/sockets
+  INFO [682ad7b6] Finished in 0.685 seconds with exit status 0 (successful).
+ DEBUG [e125e690] Running [ -L /var/www/cartaomaispet/releases/20181228202851/public/system ] as root@178.128.129.173
+ DEBUG [e125e690] Command: [ -L /var/www/cartaomaispet/releases/20181228202851/public/system ]
+ DEBUG [dc546276] Finished in 0.740 seconds with exit status 1 (failed).
+ DEBUG [cae43f01] Running [ -d /var/www/cartaomaispet/releases/20181228202851/public/system ] as root@178.128.129.173
+ DEBUG [cae43f01] Command: [ -d /var/www/cartaomaispet/releases/20181228202851/public/system ]
+ DEBUG [5ef2f224] Finished in 0.756 seconds with exit status 1 (failed).
+  INFO [cdd41ff3] Running /usr/bin/env ln -s /var/www/cartaomaispet/shared/public/system /var/www/cartaomaispet/releases/20181228202851/public/system as root@178.128.129.173
+ DEBUG [cdd41ff3] Command: /usr/bin/env ln -s /var/www/cartaomaispet/shared/public/system /var/www/cartaomaispet/releases/20181228202851/public/system
+  INFO [8afa7ad7] Finished in 0.754 seconds with exit status 0 (successful).
+ DEBUG [a0a95397] Running [ -L /var/www/cartaomaispet/releases/20181228202851/public/assets ] as root@178.128.129.173
+ DEBUG [a0a95397] Command: [ -L /var/www/cartaomaispet/releases/20181228202851/public/assets ]
+ DEBUG [d651c015] Finished in 0.687 seconds with exit status 1 (failed).
+ DEBUG [f15af2eb] Running [ -d /var/www/cartaomaispet/releases/20181228202851/public/assets ] as root@178.128.129.173
+ DEBUG [f15af2eb] Command: [ -d /var/www/cartaomaispet/releases/20181228202851/public/assets ]
+ DEBUG [02bccd58] Finished in 0.882 seconds with exit status 1 (failed).
+  INFO [417bbd62] Running /usr/bin/env ln -s /var/www/cartaomaispet/shared/public/assets /var/www/cartaomaispet/releases/20181228202851/public/assets as root@178.128.129.173
+ DEBUG [417bbd62] Command: /usr/bin/env ln -s /var/www/cartaomaispet/shared/public/assets /var/www/cartaomaispet/releases/20181228202851/public/assets
+  INFO [9095a4a0] Finished in 0.750 seconds with exit status 0 (successful).
+ DEBUG [d9b1ee75] Running if test ! -d /var/www/cartaomaispet/releases/20181228202851; then echo "Directory does not exist '/var/www/cartaomaispet/releases/20181228202851'" 1>&2; false; fi as root@178.128.129.173
+ DEBUG [d9b1ee75] Command: if test ! -d /var/www/cartaomaispet/releases/20181228202851; then echo "Directory does not exist '/var/www/cartaomaispet/releases/20181228202851'" 1>&2; false; fi
+ DEBUG [f42e7929] Finished in 0.745 seconds with exit status 0 (successful).
+ DEBUG [4a393cf9] Running /usr/local/rvm/bin/rvm default do bundle check --path /var/www/cartaomaispet/shared/bundle as root@178.128.129.173
+ DEBUG [4a393cf9] Command: cd /var/www/cartaomaispet/releases/20181228202851 && /usr/local/rvm/bin/rvm default do bundle check --path /var/www/cartaomaispet/shared/bundle
+ DEBUG [5661b582] 	To install do: 'rvm install "ruby-2.5.3"'
+ DEBUG [5661b582] 	Required ruby-2.5.3 is not installed.
+ DEBUG [5661b582] 	Your Gemfile lists the gem pg (>= 0.18, < 2.0) more than once.
+You should probably keep only one of them.
+Remove any duplicate entries and specify the gem only once (per group).
+While it's not a problem now, it could cause errors if you change the version of one of them later.
+ DEBUG [5661b582] 	The dependency tzinfo-data (>= 0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for ruby but the dependency is only for x86-mingw32, x86-mswin32, x64-mingw32, java. To add those platforms to the bundle, run `bundle lock --add-platform x86-mingw32 x86-mswin32 x64-mingw32 java`.
+ DEBUG [5661b582] 	The following gems are missing
+ DEBUG [5661b582] 	 * rake (12.3.2)
+ DEBUG [5661b582] 	 * concurrent-ruby (1.1.4)
+ DEBUG [5661b582] 	 * i18n (1.3.0)
+ DEBUG [5661b582] 	 * minitest (5.11.3)
+ DEBUG [5661b582] 	 * thread_safe (0.3.6)
+ DEBUG [5661b582] 	 * tzinfo (1.2.5)
+ DEBUG [5661b582] 	 * activesupport (5.2.2)
+ DEBUG [5661b582] 	 * builder (3.2.3)
+ DEBUG [5661b582] 	 * erubi (1.8.0)
+ DEBUG [5661b582] 	 * mini_portile2 (2.4.0)
+ DEBUG [5661b582] 	 * nokogiri (1.9.1)
+ DEBUG [5661b582] 	 * rails-dom-testing (2.0.3)
+ DEBUG [5661b582] 	 * crass (1.0.4)
+ DEBUG [5661b582] 	 * loofah (2.2.3)
+ DEBUG [5661b582] 	 * rails-html-sanitizer (1.0.4)
+ DEBUG [5661b582] 	 * actionview (5.2.2)
+ DEBUG [5661b582] 	 * rack (2.0.6)
+ DEBUG [5661b582] 	 * rack-test (1.1.0)
+ DEBUG [5661b582] 	 * actionpack (5.2.2)
+ DEBUG [5661b582] 	 * nio4r (2.3.1)
+ DEBUG [5661b582] 	 * websocket-extensions (0.1.3)
+ DEBUG [5661b582] 	 * websocket-driver (0.7.0)
+ DEBUG [5661b582] 	 * actioncable (5.2.2)
+ DEBUG [5661b582] 	 * globalid (0.4.1)
+ DEBUG [5661b582] 	 * activejob (5.2.2)
+ DEBUG [5661b582] 	 * mini_mime (1.0.1)
+ DEBUG [5661b582] 	 * mail (2.7.1)
+ DEBUG [5661b582] 	 * actionmailer (5.2.2)
+ DEBUG [5661b582] 	 * activemodel (5.2.2)
+ DEBUG [5661b582] 	 * arel (9.0.0)
+ DEBUG [5661b582] 	 * activerecord (5.2.2)
+ DEBUG [5661b582] 	 * mimemagic (0.3.3)
+ DEBUG [5661b582] 	 * marcel (0.3.3)
+ DEBUG [5661b582] 	 * activestorage (5.2.2)
+ DEBUG [5661b582] 	 * public_suffix (3.0.3)
+ DEBUG [5661b582] 	 * addressable (2.5.2)
+ DEBUG [5661b582] 	 * net-ssh (5.1.0)
+ DEBUG [5661b582] 	 * net-scp (1.2.1)
+ DEBUG [5661b582] 	 * sshkit (1.18.0)
+ DEBUG [5661b582] 	 * airbrussh (1.3.1)
+ DEBUG [5661b582] 	 * io-like (0.3.0)
+ DEBUG [5661b582] 	 * archive-zip (0.11.0)
+ DEBUG [5661b582] 	 * bcrypt (3.1.12)
+ DEBUG [5661b582] 	 * bindex (0.5.0)
+ DEBUG [5661b582] 	 * msgpack (1.2.4)
+ DEBUG [5661b582] 	 * bootsnap (1.3.2)
+ DEBUG [5661b582] 	 * byebug (10.0.2)
+ DEBUG [5661b582] 	 * cancancan (2.3.0)
+ DEBUG [5661b582] 	 * capistrano (3.11.0)
+ DEBUG [5661b582] 	 * capistrano-bundler (1.5.0)
+ DEBUG [5661b582] 	 * capistrano-passenger (0.2.0)
+ DEBUG [5661b582] 	 * capistrano-rails (1.4.0)
+ DEBUG [5661b582] 	 * capistrano-rvm (0.1.2)
+ DEBUG [5661b582] 	 * regexp_parser (1.3.0)
+ DEBUG [5661b582] 	 * xpath (3.2.0)
+ DEBUG [5661b582] 	 * capybara (3.12.0)
+ DEBUG [5661b582] 	 * ffi (1.9.25)
+ DEBUG [5661b582] 	 * childprocess (0.9.0)
+ DEBUG [5661b582] 	 * chromedriver-helper (2.1.0)
+ DEBUG [5661b582] 	 * coffee-script-source (1.12.2)
+ DEBUG [5661b582] 	 * execjs (2.7.0)
+ DEBUG [5661b582] 	 * coffee-script (2.4.1)
+ DEBUG [5661b582] 	 * method_source (0.9.2)
+ DEBUG [5661b582] 	 * thor (0.20.3)
+ DEBUG [5661b582] 	 * railties (5.2.2)
+ DEBUG [5661b582] 	 * coffee-rails (4.2.2)
+ DEBUG [5661b582] 	 * orm_adapter (0.5.0)
+ DEBUG [5661b582] 	 * responders (2.4.0)
+ DEBUG [5661b582] 	 * warden (1.2.8)
+ DEBUG [5661b582] 	 * devise (4.5.0)
+ DEBUG [5661b582] 	 * faker (1.9.1)
+ DEBUG [5661b582] 	 * multi_json (1.13.1)
+ DEBUG [5661b582] 	 * jbuilder (2.8.0)
+ DEBUG [5661b582] 	 * rb-fsevent (0.10.3)
+ DEBUG [5661b582] 	 * rb-inotify (0.10.0)
+ DEBUG [5661b582] 	 * ruby_dep (1.5.0)
+ DEBUG [5661b582] 	 * listen (3.1.5)
+ DEBUG [5661b582] 	 * pg (1.1.3)
+ DEBUG [5661b582] 	 * puma (3.12.0)
+ DEBUG [5661b582] 	 * sprockets (3.7.2)
+ DEBUG [5661b582] 	 * sprockets-rails (3.2.1)
+ DEBUG [5661b582] 	 * rails (5.2.2)
+ DEBUG [5661b582] 	 * rails_serve_static_assets (0.0.5)
+ DEBUG [5661b582] 	 * rails_stdout_logging (0.0.5)
+ DEBUG [5661b582] 	 * rails_12factor (0.0.3)
+ DEBUG [5661b582] 	 * rubyzip (1.2.2)
+ DEBUG [5661b582] 	 * sass-listen (4.0.0)
+ DEBUG [5661b582] 	 * sass (3.7.2)
+ DEBUG [5661b582] 	 * tilt (2.0.9)
+ DEBUG [5661b582] 	 * sass-rails (5.0.7)
+ DEBUG [5661b582] 	 * selenium-webdriver (3.141.0)
+ DEBUG [5661b582] 	 * spring (2.0.2)
+ DEBUG [5661b582] 	 * spring-watcher-listen (2.0.1)
+ DEBUG [5661b582] 	 * turbolinks-source (5.2.0)
+ DEBUG [5661b582] 	 * turbolinks (5.2.0)
+ DEBUG [5661b582] 	 * uglifier (4.1.20)
+ DEBUG [5661b582] 	 * web-console (3.7.0)
+ DEBUG [5661b582] 	Install missing gems with `bundle install`
+ DEBUG [5661b582] Finished in 1.763 seconds with exit status 1 (failed).
+  INFO [c0d21c21] Running /usr/local/rvm/bin/rvm default do bundle install --path /var/www/cartaomaispet/shared/bundle --jobs 4 --without development test --deployment --quiet as root@178.128.129.173
+ DEBUG [c0d21c21] Command: cd /var/www/cartaomaispet/releases/20181228202851 && /usr/local/rvm/bin/rvm default do bundle install --path /var/www/cartaomaispet/shared/bundle --jobs 4 --without development test --deployment --quiet
+ DEBUG [a681e4e1] 	To install do: 'rvm install "ruby-2.5.3"'
+ DEBUG [a681e4e1] 	Required ruby-2.5.3 is not installed.
+ DEBUG [a681e4e1] 	Warning, new version of rvm available '1.29.7', you are using older version '1.29.6'.
+You can disable this warning with:    echo rvm_autoupdate_flag=0 >> ~/.rvmrc
+You can enable  auto-update  with:    echo rvm_autoupdate_flag=2 >> ~/.rvmrc
+  INFO [a681e4e1] Finished in 94.139 seconds with exit status 0 (successful).
+ DEBUG [b3fac299] Running if test ! -d /var/www/cartaomaispet/releases/20181228202851; then echo "Directory does not exist '/var/www/cartaomaispet/releases/20181228202851'" 1>&2; false; fi as root@178.128.129.173
+ DEBUG [b3fac299] Command: if test ! -d /var/www/cartaomaispet/releases/20181228202851; then echo "Directory does not exist '/var/www/cartaomaispet/releases/20181228202851'" 1>&2; false; fi
+ DEBUG [d7d745a4] Finished in 0.766 seconds with exit status 0 (successful).
+  INFO [1cdcc301] Running /usr/local/rvm/bin/rvm default do bundle exec rake assets:precompile as root@178.128.129.173
+ DEBUG [1cdcc301] Command: cd /var/www/cartaomaispet/releases/20181228202851 && ( export RAILS_ENV="production" RAILS_GROUPS="" ; /usr/local/rvm/bin/rvm default do bundle exec rake assets:precompile )
+ DEBUG [6c125c46] 	To install do: 'rvm install "ruby-2.5.3"'
+ DEBUG [6c125c46] 	Required ruby-2.5.3 is not installed.
+ DEBUG [6c125c46] 	rake aborted!
+ DEBUG [6c125c46] 	ActiveRecord::AdapterNotSpecified: 'production' database is not configured. Available: ["database", "username", "password"]
+ DEBUG [6c125c46] 	/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activerecord-5.2.2/lib/active_record/connection_adapters/connection_specification.rb:260:in `resolve_symbol_connection'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activerecord-5.2.2/lib/active_record/connection_adapters/connection_specification.rb:241:in `resolve_connection'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activerecord-5.2.2/lib/active_record/connection_adapters/connection_specification.rb:143:in `resolve'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activerecord-5.2.2/lib/active_record/connection_handling.rb:57:in `establish_connection'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activerecord-5.2.2/lib/active_record/railtie.rb:136:in `block (2 levels) in <class:Railtie>'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/lazy_load_hooks.rb:71:in `instance_eval'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/lazy_load_hooks.rb:71:in `block in execute_hook'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/lazy_load_hooks.rb:62:in `with_execution_control'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/lazy_load_hooks.rb:67:in `execute_hook'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/lazy_load_hooks.rb:52:in `block in run_load_hooks'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/lazy_load_hooks.rb:51:in `each'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/lazy_load_hooks.rb:51:in `run_load_hooks'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activerecord-5.2.2/lib/active_record/base.rb:328:in `<module:ActiveRecord>'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activerecord-5.2.2/lib/active_record/base.rb:27:in `<main>'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21:in `require'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21:in `block in require_with_bootsnap_lfi'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/loaded_features_index.rb:65:in `register'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:20:in `require_with_bootsnap_lfi'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:29:in `require'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:291:in `block in require'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:257:in `load_dependency'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:291:in `require'
+/var/www/cartaomaispet/releases/20181228202851/app/models/application_record.rb:1:in `<main>'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21:in `require'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21:in `block in require_with_bootsnap_lfi'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/loaded_features_index.rb:65:in `register'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:20:in `require_with_bootsnap_lfi'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:29:in `require'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:291:in `block in require'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:257:in `load_dependency'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:291:in `require'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:378:in `block in require_or_load'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:37:in `block in load_interlock'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies/interlock.rb:14:in `block in loading'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/concurrency/share_lock.rb:151:in `exclusive'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies/interlock.rb:13:in `loading'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:37:in `load_interlock'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:356:in `require_or_load'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/active_support.rb:46:in `block in require_or_load'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/active_support.rb:16:in `allow_bootsnap_retry'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/active_support.rb:45:in `require_or_load'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:510:in `load_missing_constant'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/active_support.rb:58:in `block in load_missing_constant'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/active_support.rb:16:in `allow_bootsnap_retry'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/active_support.rb:57:in `load_missing_constant'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:195:in `const_missing'
+/var/www/cartaomaispet/releases/20181228202851/app/models/user.rb:1:in `<main>'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21:in `require'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21:in `block in require_with_bootsnap_lfi'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/loaded_features_index.rb:65:in `register'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:20:in `require_with_bootsnap_lfi'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:29:in `require'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:291:in `block in require'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:257:in `load_dependency'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:291:in `require'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:378:in `block in require_or_load'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:37:in `block in load_interlock'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies/interlock.rb:14:in `block in loading'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/concurrency/share_lock.rb:151:in `exclusive'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies/interlock.rb:13:in `loading'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:37:in `load_interlock'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:356:in `require_or_load'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/active_support.rb:46:in `block in require_or_load'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/active_support.rb:16:in `allow_bootsnap_retry'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/active_support.rb:45:in `require_or_load'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:510:in `load_missing_constant'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/active_support.rb:58:in `block in load_missing_constant'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/active_support.rb:16:in `allow_bootsnap_retry'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/active_support.rb:57:in `load_missing_constant'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:195:in `const_missing'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/inflector/methods.rb:283:in `const_get'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/inflector/methods.rb:283:in `block in constantize'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/inflector/methods.rb:281:in `each'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/inflector/methods.rb:281:in `inject'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/inflector/methods.rb:281:in `constantize'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:582:in `get'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:613:in `constantize'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/devise-4.5.0/lib/devise.rb:316:in `get'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/devise-4.5.0/lib/devise/mapping.rb:83:in `to'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/devise-4.5.0/lib/devise/mapping.rb:78:in `modules'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/devise-4.5.0/lib/devise/mapping.rb:95:in `routes'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/devise-4.5.0/lib/devise/mapping.rb:162:in `default_used_route'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/devise-4.5.0/lib/devise/mapping.rb:72:in `initialize'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/devise-4.5.0/lib/devise.rb:346:in `new'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/devise-4.5.0/lib/devise.rb:346:in `add_mapping'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/devise-4.5.0/lib/devise/rails/routes.rb:243:in `block in devise_for'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/devise-4.5.0/lib/devise/rails/routes.rb:242:in `each'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/devise-4.5.0/lib/devise/rails/routes.rb:242:in `devise_for'
+/var/www/cartaomaispet/releases/20181228202851/config/routes.rb:9:in `block in <main>'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/actionpack-5.2.2/lib/action_dispatch/routing/route_set.rb:432:in `instance_exec'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/actionpack-5.2.2/lib/action_dispatch/routing/route_set.rb:432:in `eval_block'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/actionpack-5.2.2/lib/action_dispatch/routing/route_set.rb:414:in `draw'
+/var/www/cartaomaispet/releases/20181228202851/config/routes.rb:1:in `<main>'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:50:in `load'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:50:in `load'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:285:in `block in load'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:257:in `load_dependency'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:285:in `load'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/railties-5.2.2/lib/rails/application/routes_reloader.rb:41:in `block in load_paths'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/railties-5.2.2/lib/rails/application/routes_reloader.rb:41:in `each'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/railties-5.2.2/lib/rails/application/routes_reloader.rb:41:in `load_paths'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/railties-5.2.2/lib/rails/application/routes_reloader.rb:20:in `reload!'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/railties-5.2.2/lib/rails/application/routes_reloader.rb:30:in `block in updater'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/file_update_checker.rb:83:in `execute'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/railties-5.2.2/lib/rails/application/routes_reloader.rb:10:in `execute'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/railties-5.2.2/lib/rails/application/finisher.rb:130:in `block in <module:Finisher>'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/railties-5.2.2/lib/rails/initializable.rb:32:in `instance_exec'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/railties-5.2.2/lib/rails/initializable.rb:32:in `run'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/railties-5.2.2/lib/rails/initializable.rb:61:in `block in run_initializers'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/railties-5.2.2/lib/rails/initializable.rb:60:in `run_initializers'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/railties-5.2.2/lib/rails/application.rb:361:in `initialize!'
+/var/www/cartaomaispet/releases/20181228202851/config/environment.rb:5:in `<main>'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21:in `require'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21:in `block in require_with_bootsnap_lfi'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/loaded_features_index.rb:65:in `register'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:20:in `require_with_bootsnap_lfi'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:29:in `require'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:291:in `block in require'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:257:in `load_dependency'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:291:in `require'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/railties-5.2.2/lib/rails/application.rb:337:in `require_environment!'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/railties-5.2.2/lib/rails/application.rb:520:in `block in run_tasks_blocks'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/task.rb:62:in `block (2 levels) i
+ DEBUG [6c125c46] 	n define'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/rake-12.3.2/exe/rake:27:in `<top (required)>'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/bin/ruby_executable_hooks:24:in `eval'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/bin/ruby_executable_hooks:24:in `<main>'
+ DEBUG [6c125c46] 	Tasks: TOP => environment
+ DEBUG [6c125c46] 	(See full trace by running task with --trace)
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-12-28 18:47:33 -0200 cap production deploy:check
+  INFO ---------------------------------------------------------------------------
+ DEBUG [a35a6713] Running /usr/bin/env which passenger as root@178.128.129.173
+ DEBUG [a35a6713] Command: /usr/bin/env which passenger
+ DEBUG [13eae953] 	/usr/bin/passenger
+ DEBUG [13eae953] Finished in 27.199 seconds with exit status 0 (successful).
+ DEBUG [84ff8d3f] Running [ -d ~/.rvm ] as root@178.128.129.173
+ DEBUG [84ff8d3f] Command: [ -d ~/.rvm ]
+ DEBUG [a4f5feb3] Finished in 0.724 seconds with exit status 1 (failed).
+ DEBUG [fcdd3b76] Running [ -d /usr/local/rvm ] as root@178.128.129.173
+ DEBUG [fcdd3b76] Command: [ -d /usr/local/rvm ]
+ DEBUG [4e0f369a] Finished in 0.600 seconds with exit status 0 (successful).
+ DEBUG [c7945e38] Running /usr/local/rvm/bin/rvm version as root@178.128.129.173
+ DEBUG [c7945e38] Command: /usr/local/rvm/bin/rvm version
+ DEBUG [0fcc4a51] 	rvm 1.29.6 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [0fcc4a51] Finished in 0.879 seconds with exit status 0 (successful).
+ DEBUG [a4febe7e] Running /usr/local/rvm/bin/rvm current as root@178.128.129.173
+ DEBUG [a4febe7e] Command: /usr/local/rvm/bin/rvm current
+ DEBUG [2006541b] 	ruby-2.6.0
+ DEBUG [2006541b] Finished in 0.910 seconds with exit status 0 (successful).
+ DEBUG [b3095d02] Running /usr/local/rvm/bin/rvm default do ruby --version as root@178.128.129.173
+ DEBUG [b3095d02] Command: /usr/local/rvm/bin/rvm default do ruby --version
+ DEBUG [4cd0ddb6] 	ruby 2.6.0p0 (2018-12-25 revision 66547) [x86_64-linux]
+ DEBUG [4cd0ddb6] Finished in 1.156 seconds with exit status 0 (successful).
+  INFO [7514e861] Running /usr/bin/env mkdir -p /tmp as root@178.128.129.173
+ DEBUG [7514e861] Command: /usr/bin/env mkdir -p /tmp
+  INFO [7456498b] Finished in 0.640 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-cartaomaispet-production-marviorocha.sh 0.0%
+  INFO Uploading /tmp/git-ssh-cartaomaispet-production-marviorocha.sh 100.0%
+  INFO [b47d592b] Running /usr/bin/env chmod 700 /tmp/git-ssh-cartaomaispet-production-marviorocha.sh as root@178.128.129.173
+ DEBUG [b47d592b] Command: /usr/bin/env chmod 700 /tmp/git-ssh-cartaomaispet-production-marviorocha.sh
+  INFO [ec5237c4] Finished in 0.724 seconds with exit status 0 (successful).
+  INFO [b2f500f1] Running /usr/bin/env git ls-remote https://github.com/marviorocha/cartaomaispet.git HEAD as root@178.128.129.173
+ DEBUG [b2f500f1] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cartaomaispet-production-marviorocha.sh" ; /usr/bin/env git ls-remote https://github.com/marviorocha/cartaomaispet.git HEAD )
+ DEBUG [240aca3a] 	021c9bb12f330e2ac7ef89baf7fe719cd272601d	HEAD
+  INFO [240aca3a] Finished in 0.955 seconds with exit status 0 (successful).
+  INFO [6f1b9f27] Running /usr/bin/env mkdir -p /var/www/cartaomaispet/shared /var/www/cartaomaispet/releases as root@178.128.129.173
+ DEBUG [6f1b9f27] Command: /usr/bin/env mkdir -p /var/www/cartaomaispet/shared /var/www/cartaomaispet/releases
+  INFO [311777e7] Finished in 0.714 seconds with exit status 0 (successful).
+  INFO [85dea981] Running /usr/bin/env mkdir -p /var/www/cartaomaispet/shared/log /var/www/cartaomaispet/shared/tmp/pids /var/www/cartaomaispet/shared/tmp/cache /var/www/cartaomaispet/shared/tmp/sockets /var/www/cartaomaispet/shared/public/system /var/www/cartaomaispet/shared/public/assets as root@178.128.129.173
+ DEBUG [85dea981] Command: /usr/bin/env mkdir -p /var/www/cartaomaispet/shared/log /var/www/cartaomaispet/shared/tmp/pids /var/www/cartaomaispet/shared/tmp/cache /var/www/cartaomaispet/shared/tmp/sockets /var/www/cartaomaispet/shared/public/system /var/www/cartaomaispet/shared/public/assets
+  INFO [8465ab7e] Finished in 0.680 seconds with exit status 0 (successful).
+  INFO [45ed2353] Running /usr/bin/env mkdir -p /var/www/cartaomaispet/shared/config as root@178.128.129.173
+ DEBUG [45ed2353] Command: /usr/bin/env mkdir -p /var/www/cartaomaispet/shared/config
+  INFO [afa4086a] Finished in 0.641 seconds with exit status 0 (successful).
+ DEBUG [a1d34112] Running [ -f /var/www/cartaomaispet/shared/config/database.yml ] as root@178.128.129.173
+ DEBUG [a1d34112] Command: [ -f /var/www/cartaomaispet/shared/config/database.yml ]
+ DEBUG [bbd240d9] Finished in 0.672 seconds with exit status 0 (successful).
+ DEBUG [8d07c3da] Running [ -f /var/www/cartaomaispet/shared/config/master.key ] as root@178.128.129.173
+ DEBUG [8d07c3da] Command: [ -f /var/www/cartaomaispet/shared/config/master.key ]
+ DEBUG [851237f9] Finished in 0.664 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-12-28 18:49:05 -0200 cap production rvm:check
+  INFO ---------------------------------------------------------------------------
+ DEBUG [bfefcc4d] Running /usr/bin/env which passenger as root@178.128.129.173
+ DEBUG [bfefcc4d] Command: /usr/bin/env which passenger
+ DEBUG [7aba46da] 	/usr/bin/passenger
+ DEBUG [7aba46da] Finished in 88.392 seconds with exit status 0 (successful).
+ DEBUG [56c75d39] Running [ -d ~/.rvm ] as root@178.128.129.173
+ DEBUG [56c75d39] Command: [ -d ~/.rvm ]
+ DEBUG [85676372] Finished in 0.703 seconds with exit status 1 (failed).
+ DEBUG [33aefe78] Running [ -d /usr/local/rvm ] as root@178.128.129.173
+ DEBUG [33aefe78] Command: [ -d /usr/local/rvm ]
+ DEBUG [32099f32] Finished in 0.700 seconds with exit status 0 (successful).
+ DEBUG [9252d74e] Running /usr/local/rvm/bin/rvm version as root@178.128.129.173
+ DEBUG [9252d74e] Command: /usr/local/rvm/bin/rvm version
+ DEBUG [560c0e68] 	rvm 1.29.6 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [560c0e68] Finished in 0.852 seconds with exit status 0 (successful).
+ DEBUG [98882e0a] Running /usr/local/rvm/bin/rvm current as root@178.128.129.173
+ DEBUG [98882e0a] Command: /usr/local/rvm/bin/rvm current
+ DEBUG [028a81fb] 	ruby-2.6.0
+ DEBUG [028a81fb] Finished in 0.955 seconds with exit status 0 (successful).
+ DEBUG [aa0e8f19] Running /usr/local/rvm/bin/rvm default do ruby --version as root@178.128.129.173
+ DEBUG [aa0e8f19] Command: /usr/local/rvm/bin/rvm default do ruby --version
+ DEBUG [e39fc870] 	ruby 2.6.0p0 (2018-12-25 revision 66547) [x86_64-linux]
+ DEBUG [e39fc870] Finished in 1.072 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-12-28 18:50:58 -0200 cap production bundler:clean
+  INFO ---------------------------------------------------------------------------
+ DEBUG [ab7b5759] Running /usr/bin/env which passenger as root@178.128.129.173
+ DEBUG [ab7b5759] Command: /usr/bin/env which passenger
+ DEBUG [f08cc004] 	/usr/bin/passenger
+ DEBUG [f08cc004] Finished in 6.783 seconds with exit status 0 (successful).
+ DEBUG [5bb08f3d] Running [ -d ~/.rvm ] as root@178.128.129.173
+ DEBUG [5bb08f3d] Command: [ -d ~/.rvm ]
+ DEBUG [cb65e292] Finished in 0.627 seconds with exit status 1 (failed).
+ DEBUG [27e6cb38] Running [ -d /usr/local/rvm ] as root@178.128.129.173
+ DEBUG [27e6cb38] Command: [ -d /usr/local/rvm ]
+ DEBUG [09a2ed53] Finished in 0.606 seconds with exit status 0 (successful).
+ DEBUG [0b483657] Running /usr/local/rvm/bin/rvm version as root@178.128.129.173
+ DEBUG [0b483657] Command: /usr/local/rvm/bin/rvm version
+ DEBUG [7450d89c] 	rvm 1.29.6 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [7450d89c] Finished in 0.870 seconds with exit status 0 (successful).
+ DEBUG [ffe65c62] Running /usr/local/rvm/bin/rvm current as root@178.128.129.173
+ DEBUG [ffe65c62] Command: /usr/local/rvm/bin/rvm current
+ DEBUG [cfc6a525] 	ruby-2.6.0
+ DEBUG [cfc6a525] Finished in 0.883 seconds with exit status 0 (successful).
+ DEBUG [e43c2fe5] Running /usr/local/rvm/bin/rvm default do ruby --version as root@178.128.129.173
+ DEBUG [e43c2fe5] Command: /usr/local/rvm/bin/rvm default do ruby --version
+ DEBUG [92b5d5c2] 	ruby 2.6.0p0 (2018-12-25 revision 66547) [x86_64-linux]
+ DEBUG [92b5d5c2] Finished in 1.197 seconds with exit status 0 (successful).
+ DEBUG [85b93ffd] Running if test ! -d /var/www/cartaomaispet/current; then echo "Directory does not exist '/var/www/cartaomaispet/current'" 1>&2; false; fi as root@178.128.129.173
+ DEBUG [85b93ffd] Command: if test ! -d /var/www/cartaomaispet/current; then echo "Directory does not exist '/var/www/cartaomaispet/current'" 1>&2; false; fi
+ DEBUG [4d7494dc] 	Directory does not exist '/var/www/cartaomaispet/current'
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-12-28 18:51:36 -0200 cap production bundler:install
+  INFO ---------------------------------------------------------------------------
+ DEBUG [ed05084a] Running /usr/bin/env which passenger as root@178.128.129.173
+ DEBUG [ed05084a] Command: /usr/bin/env which passenger
+ DEBUG [9e219713] 	/usr/bin/passenger
+ DEBUG [9e219713] Finished in 6.717 seconds with exit status 0 (successful).
+ DEBUG [0a10f2cc] Running [ -d ~/.rvm ] as root@178.128.129.173
+ DEBUG [0a10f2cc] Command: [ -d ~/.rvm ]
+ DEBUG [7fceac7b] Finished in 0.733 seconds with exit status 1 (failed).
+ DEBUG [b0de49b6] Running [ -d /usr/local/rvm ] as root@178.128.129.173
+ DEBUG [b0de49b6] Command: [ -d /usr/local/rvm ]
+ DEBUG [12cda0ba] Finished in 0.673 seconds with exit status 0 (successful).
+ DEBUG [01504d25] Running /usr/local/rvm/bin/rvm version as root@178.128.129.173
+ DEBUG [01504d25] Command: /usr/local/rvm/bin/rvm version
+ DEBUG [ffc7bcdb] 	rvm 1.29.6 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [ffc7bcdb] Finished in 0.875 seconds with exit status 0 (successful).
+ DEBUG [332f790e] Running /usr/local/rvm/bin/rvm current as root@178.128.129.173
+ DEBUG [332f790e] Command: /usr/local/rvm/bin/rvm current
+ DEBUG [ef97772a] 	ruby-2.6.0
+ DEBUG [ef97772a] Finished in 0.831 seconds with exit status 0 (successful).
+ DEBUG [7459e295] Running /usr/local/rvm/bin/rvm default do ruby --version as root@178.128.129.173
+ DEBUG [7459e295] Command: /usr/local/rvm/bin/rvm default do ruby --version
+ DEBUG [4cdb8911] 	ruby 2.6.0p0 (2018-12-25 revision 66547) [x86_64-linux]
+ DEBUG [4cdb8911] Finished in 1.025 seconds with exit status 0 (successful).
+ DEBUG [8dffdc90] Running if test ! -d /var/www/cartaomaispet/current; then echo "Directory does not exist '/var/www/cartaomaispet/current'" 1>&2; false; fi as root@178.128.129.173
+ DEBUG [8dffdc90] Command: if test ! -d /var/www/cartaomaispet/current; then echo "Directory does not exist '/var/www/cartaomaispet/current'" 1>&2; false; fi
+ DEBUG [33552926] 	Directory does not exist '/var/www/cartaomaispet/current'
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-12-28 18:52:02 -0200 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [8609f3b6] Running /usr/bin/env which passenger as root@178.128.129.173
+ DEBUG [8609f3b6] Command: /usr/bin/env which passenger
+ DEBUG [c5f1118a] 	/usr/bin/passenger
+ DEBUG [c5f1118a] Finished in 7.140 seconds with exit status 0 (successful).
+ DEBUG [0af0d4ac] Running [ -d ~/.rvm ] as root@178.128.129.173
+ DEBUG [0af0d4ac] Command: [ -d ~/.rvm ]
+ DEBUG [ff751b33] Finished in 0.806 seconds with exit status 1 (failed).
+ DEBUG [8d528764] Running [ -d /usr/local/rvm ] as root@178.128.129.173
+ DEBUG [8d528764] Command: [ -d /usr/local/rvm ]
+ DEBUG [7c05b12f] Finished in 0.762 seconds with exit status 0 (successful).
+ DEBUG [81200e61] Running /usr/local/rvm/bin/rvm version as root@178.128.129.173
+ DEBUG [81200e61] Command: /usr/local/rvm/bin/rvm version
+ DEBUG [f9f6d731] 	rvm 1.29.6 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [f9f6d731] Finished in 1.151 seconds with exit status 0 (successful).
+ DEBUG [de122418] Running /usr/local/rvm/bin/rvm current as root@178.128.129.173
+ DEBUG [de122418] Command: /usr/local/rvm/bin/rvm current
+ DEBUG [05438132] 	ruby-2.6.0
+ DEBUG [05438132] Finished in 1.315 seconds with exit status 0 (successful).
+ DEBUG [78b532a9] Running /usr/local/rvm/bin/rvm default do ruby --version as root@178.128.129.173
+ DEBUG [78b532a9] Command: /usr/local/rvm/bin/rvm default do ruby --version
+ DEBUG [06cce9cc] 	ruby 2.6.0p0 (2018-12-25 revision 66547) [x86_64-linux]
+ DEBUG [06cce9cc] Finished in 1.683 seconds with exit status 0 (successful).
+  INFO [49868cce] Running /usr/bin/env mkdir -p /tmp as root@178.128.129.173
+ DEBUG [49868cce] Command: /usr/bin/env mkdir -p /tmp
+  INFO [0f1c34c4] Finished in 0.714 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-cartaomaispet-production-marviorocha.sh 0.0%
+  INFO Uploading /tmp/git-ssh-cartaomaispet-production-marviorocha.sh 100.0%
+  INFO [e621141b] Running /usr/bin/env chmod 700 /tmp/git-ssh-cartaomaispet-production-marviorocha.sh as root@178.128.129.173
+ DEBUG [e621141b] Command: /usr/bin/env chmod 700 /tmp/git-ssh-cartaomaispet-production-marviorocha.sh
+  INFO [772c9a74] Finished in 1.034 seconds with exit status 0 (successful).
+  INFO [d2af5111] Running /usr/bin/env git ls-remote https://github.com/marviorocha/cartaomaispet.git HEAD as root@178.128.129.173
+ DEBUG [d2af5111] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cartaomaispet-production-marviorocha.sh" ; /usr/bin/env git ls-remote https://github.com/marviorocha/cartaomaispet.git HEAD )
+ DEBUG [9a287dce] 	021c9bb12f330e2ac7ef89baf7fe719cd272601d	HEAD
+  INFO [9a287dce] Finished in 1.138 seconds with exit status 0 (successful).
+  INFO [7fc3f131] Running /usr/bin/env mkdir -p /var/www/cartaomaispet/shared /var/www/cartaomaispet/releases as root@178.128.129.173
+ DEBUG [7fc3f131] Command: /usr/bin/env mkdir -p /var/www/cartaomaispet/shared /var/www/cartaomaispet/releases
+  INFO [27fed326] Finished in 0.931 seconds with exit status 0 (successful).
+  INFO [745a7ebc] Running /usr/bin/env mkdir -p /var/www/cartaomaispet/shared/log /var/www/cartaomaispet/shared/tmp/pids /var/www/cartaomaispet/shared/tmp/cache /var/www/cartaomaispet/shared/tmp/sockets /var/www/cartaomaispet/shared/public/system /var/www/cartaomaispet/shared/public/assets as root@178.128.129.173
+ DEBUG [745a7ebc] Command: /usr/bin/env mkdir -p /var/www/cartaomaispet/shared/log /var/www/cartaomaispet/shared/tmp/pids /var/www/cartaomaispet/shared/tmp/cache /var/www/cartaomaispet/shared/tmp/sockets /var/www/cartaomaispet/shared/public/system /var/www/cartaomaispet/shared/public/assets
+  INFO [7c62a08e] Finished in 1.008 seconds with exit status 0 (successful).
+  INFO [fe33bbb1] Running /usr/bin/env mkdir -p /var/www/cartaomaispet/shared/config as root@178.128.129.173
+ DEBUG [fe33bbb1] Command: /usr/bin/env mkdir -p /var/www/cartaomaispet/shared/config
+  INFO [a2ea6ca6] Finished in 1.111 seconds with exit status 0 (successful).
+ DEBUG [4e954283] Running [ -f /var/www/cartaomaispet/shared/config/database.yml ] as root@178.128.129.173
+ DEBUG [4e954283] Command: [ -f /var/www/cartaomaispet/shared/config/database.yml ]
+ DEBUG [8dc4188d] Finished in 0.947 seconds with exit status 0 (successful).
+ DEBUG [220813d7] Running [ -f /var/www/cartaomaispet/shared/config/master.key ] as root@178.128.129.173
+ DEBUG [220813d7] Command: [ -f /var/www/cartaomaispet/shared/config/master.key ]
+ DEBUG [c0787d9d] Finished in 1.016 seconds with exit status 0 (successful).
+ DEBUG [953b056a] Running [ -f /var/www/cartaomaispet/current/REVISION ] as root@178.128.129.173
+ DEBUG [953b056a] Command: [ -f /var/www/cartaomaispet/current/REVISION ]
+ DEBUG [5e5a3e08] Finished in 1.019 seconds with exit status 1 (failed).
+ DEBUG [3f11242d] Running [ -f /var/www/cartaomaispet/repo/HEAD ] as root@178.128.129.173
+ DEBUG [3f11242d] Command: [ -f /var/www/cartaomaispet/repo/HEAD ]
+ DEBUG [737db03f] Finished in 0.993 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /var/www/cartaomaispet/repo
+ DEBUG [f207fa8d] Running if test ! -d /var/www/cartaomaispet/repo; then echo "Directory does not exist '/var/www/cartaomaispet/repo'" 1>&2; false; fi as root@178.128.129.173
+ DEBUG [f207fa8d] Command: if test ! -d /var/www/cartaomaispet/repo; then echo "Directory does not exist '/var/www/cartaomaispet/repo'" 1>&2; false; fi
+ DEBUG [d94e235c] Finished in 1.245 seconds with exit status 0 (successful).
+  INFO [5fd72c59] Running /usr/bin/env git remote set-url origin https://github.com/marviorocha/cartaomaispet.git as root@178.128.129.173
+ DEBUG [5fd72c59] Command: cd /var/www/cartaomaispet/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cartaomaispet-production-marviorocha.sh" ; /usr/bin/env git remote set-url origin https://github.com/marviorocha/cartaomaispet.git )
+  INFO [c9dfffd5] Finished in 1.341 seconds with exit status 0 (successful).
+  INFO [032f25f8] Running /usr/bin/env git remote update --prune as root@178.128.129.173
+ DEBUG [032f25f8] Command: cd /var/www/cartaomaispet/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cartaomaispet-production-marviorocha.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [cc28a0d9] 	Fetching origin
+  INFO [cc28a0d9] Finished in 1.253 seconds with exit status 0 (successful).
+ DEBUG [cc83c553] Running if test ! -d /var/www/cartaomaispet/repo; then echo "Directory does not exist '/var/www/cartaomaispet/repo'" 1>&2; false; fi as root@178.128.129.173
+ DEBUG [cc83c553] Command: if test ! -d /var/www/cartaomaispet/repo; then echo "Directory does not exist '/var/www/cartaomaispet/repo'" 1>&2; false; fi
+ DEBUG [a26cdb67] Finished in 1.052 seconds with exit status 0 (successful).
+  INFO [9effa0f7] Running /usr/bin/env mkdir -p /var/www/cartaomaispet/releases/20181228205226 as root@178.128.129.173
+ DEBUG [9effa0f7] Command: cd /var/www/cartaomaispet/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cartaomaispet-production-marviorocha.sh" ; /usr/bin/env mkdir -p /var/www/cartaomaispet/releases/20181228205226 )
+  INFO [5d05dbf0] Finished in 1.070 seconds with exit status 0 (successful).
+  INFO [c927eb45] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/cartaomaispet/releases/20181228205226 as root@178.128.129.173
+ DEBUG [c927eb45] Command: cd /var/www/cartaomaispet/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cartaomaispet-production-marviorocha.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/cartaomaispet/releases/20181228205226 )
+  INFO [466f55dc] Finished in 0.821 seconds with exit status 0 (successful).
+ DEBUG [9943b543] Running if test ! -d /var/www/cartaomaispet/repo; then echo "Directory does not exist '/var/www/cartaomaispet/repo'" 1>&2; false; fi as root@178.128.129.173
+ DEBUG [9943b543] Command: if test ! -d /var/www/cartaomaispet/repo; then echo "Directory does not exist '/var/www/cartaomaispet/repo'" 1>&2; false; fi
+ DEBUG [91afb702] Finished in 1.044 seconds with exit status 0 (successful).
+ DEBUG [4e41b5cd] Running /usr/bin/env git rev-list --max-count=1 master as root@178.128.129.173
+ DEBUG [4e41b5cd] Command: cd /var/www/cartaomaispet/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cartaomaispet-production-marviorocha.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [60fed425] 	021c9bb12f330e2ac7ef89baf7fe719cd272601d
+ DEBUG [60fed425] Finished in 1.045 seconds with exit status 0 (successful).
+ DEBUG [2028d0ff] Running if test ! -d /var/www/cartaomaispet/releases/20181228205226; then echo "Directory does not exist '/var/www/cartaomaispet/releases/20181228205226'" 1>&2; false; fi as root@178.128.129.173
+ DEBUG [2028d0ff] Command: if test ! -d /var/www/cartaomaispet/releases/20181228205226; then echo "Directory does not exist '/var/www/cartaomaispet/releases/20181228205226'" 1>&2; false; fi
+ DEBUG [ea066ce7] Finished in 0.840 seconds with exit status 0 (successful).
+  INFO [dfff04f4] Running /usr/bin/env echo "021c9bb12f330e2ac7ef89baf7fe719cd272601d" > REVISION as root@178.128.129.173
+ DEBUG [dfff04f4] Command: cd /var/www/cartaomaispet/releases/20181228205226 && /usr/bin/env echo "021c9bb12f330e2ac7ef89baf7fe719cd272601d" > REVISION
+  INFO [c025e3a8] Finished in 0.732 seconds with exit status 0 (successful).
+  INFO [74c858c9] Running /usr/bin/env mkdir -p /var/www/cartaomaispet/releases/20181228205226/config as root@178.128.129.173
+ DEBUG [74c858c9] Command: /usr/bin/env mkdir -p /var/www/cartaomaispet/releases/20181228205226/config
+  INFO [df6501de] Finished in 0.731 seconds with exit status 0 (successful).
+ DEBUG [321e8a6d] Running [ -L /var/www/cartaomaispet/releases/20181228205226/config/database.yml ] as root@178.128.129.173
+ DEBUG [321e8a6d] Command: [ -L /var/www/cartaomaispet/releases/20181228205226/config/database.yml ]
+ DEBUG [04f3324f] Finished in 0.808 seconds with exit status 1 (failed).
+ DEBUG [65ea71a2] Running [ -f /var/www/cartaomaispet/releases/20181228205226/config/database.yml ] as root@178.128.129.173
+ DEBUG [65ea71a2] Command: [ -f /var/www/cartaomaispet/releases/20181228205226/config/database.yml ]
+ DEBUG [d15b9326] Finished in 0.792 seconds with exit status 0 (successful).
+  INFO [0150bc20] Running /usr/bin/env rm /var/www/cartaomaispet/releases/20181228205226/config/database.yml as root@178.128.129.173
+ DEBUG [0150bc20] Command: /usr/bin/env rm /var/www/cartaomaispet/releases/20181228205226/config/database.yml
+  INFO [2230c46e] Finished in 0.747 seconds with exit status 0 (successful).
+  INFO [348c9fa1] Running /usr/bin/env ln -s /var/www/cartaomaispet/shared/config/database.yml /var/www/cartaomaispet/releases/20181228205226/config/database.yml as root@178.128.129.173
+ DEBUG [348c9fa1] Command: /usr/bin/env ln -s /var/www/cartaomaispet/shared/config/database.yml /var/www/cartaomaispet/releases/20181228205226/config/database.yml
+  INFO [6a6cad18] Finished in 0.995 seconds with exit status 0 (successful).
+ DEBUG [c37e3e9b] Running [ -L /var/www/cartaomaispet/releases/20181228205226/config/master.key ] as root@178.128.129.173
+ DEBUG [c37e3e9b] Command: [ -L /var/www/cartaomaispet/releases/20181228205226/config/master.key ]
+ DEBUG [68c0636d] Finished in 0.927 seconds with exit status 1 (failed).
+ DEBUG [073e5fd8] Running [ -f /var/www/cartaomaispet/releases/20181228205226/config/master.key ] as root@178.128.129.173
+ DEBUG [073e5fd8] Command: [ -f /var/www/cartaomaispet/releases/20181228205226/config/master.key ]
+ DEBUG [7dd4c946] Finished in 1.016 seconds with exit status 1 (failed).
+  INFO [eebbefcb] Running /usr/bin/env ln -s /var/www/cartaomaispet/shared/config/master.key /var/www/cartaomaispet/releases/20181228205226/config/master.key as root@178.128.129.173
+ DEBUG [eebbefcb] Command: /usr/bin/env ln -s /var/www/cartaomaispet/shared/config/master.key /var/www/cartaomaispet/releases/20181228205226/config/master.key
+  INFO [8d96a067] Finished in 0.939 seconds with exit status 0 (successful).
+  INFO [95911ae8] Running /usr/bin/env mkdir -p /var/www/cartaomaispet/releases/20181228205226 /var/www/cartaomaispet/releases/20181228205226/tmp /var/www/cartaomaispet/releases/20181228205226/public as root@178.128.129.173
+ DEBUG [95911ae8] Command: /usr/bin/env mkdir -p /var/www/cartaomaispet/releases/20181228205226 /var/www/cartaomaispet/releases/20181228205226/tmp /var/www/cartaomaispet/releases/20181228205226/public
+  INFO [471bb9d8] Finished in 0.905 seconds with exit status 0 (successful).
+ DEBUG [1215dc77] Running [ -L /var/www/cartaomaispet/releases/20181228205226/log ] as root@178.128.129.173
+ DEBUG [1215dc77] Command: [ -L /var/www/cartaomaispet/releases/20181228205226/log ]
+ DEBUG [54aead46] Finished in 0.800 seconds with exit status 1 (failed).
+ DEBUG [d5fe49d4] Running [ -d /var/www/cartaomaispet/releases/20181228205226/log ] as root@178.128.129.173
+ DEBUG [d5fe49d4] Command: [ -d /var/www/cartaomaispet/releases/20181228205226/log ]
+ DEBUG [953026a6] Finished in 1.119 seconds with exit status 0 (successful).
+  INFO [215ed08f] Running /usr/bin/env rm -rf /var/www/cartaomaispet/releases/20181228205226/log as root@178.128.129.173
+ DEBUG [215ed08f] Command: /usr/bin/env rm -rf /var/www/cartaomaispet/releases/20181228205226/log
+  INFO [5cb0f249] Finished in 0.771 seconds with exit status 0 (successful).
+  INFO [2c8cc939] Running /usr/bin/env ln -s /var/www/cartaomaispet/shared/log /var/www/cartaomaispet/releases/20181228205226/log as root@178.128.129.173
+ DEBUG [2c8cc939] Command: /usr/bin/env ln -s /var/www/cartaomaispet/shared/log /var/www/cartaomaispet/releases/20181228205226/log
+  INFO [b86688d5] Finished in 0.848 seconds with exit status 0 (successful).
+ DEBUG [99eae352] Running [ -L /var/www/cartaomaispet/releases/20181228205226/tmp/pids ] as root@178.128.129.173
+ DEBUG [99eae352] Command: [ -L /var/www/cartaomaispet/releases/20181228205226/tmp/pids ]
+ DEBUG [6dde69fd] Finished in 0.713 seconds with exit status 1 (failed).
+ DEBUG [8e0f90ff] Running [ -d /var/www/cartaomaispet/releases/20181228205226/tmp/pids ] as root@178.128.129.173
+ DEBUG [8e0f90ff] Command: [ -d /var/www/cartaomaispet/releases/20181228205226/tmp/pids ]
+ DEBUG [4d0542ec] Finished in 0.792 seconds with exit status 1 (failed).
+  INFO [996d3118] Running /usr/bin/env ln -s /var/www/cartaomaispet/shared/tmp/pids /var/www/cartaomaispet/releases/20181228205226/tmp/pids as root@178.128.129.173
+ DEBUG [996d3118] Command: /usr/bin/env ln -s /var/www/cartaomaispet/shared/tmp/pids /var/www/cartaomaispet/releases/20181228205226/tmp/pids
+  INFO [39efcfbb] Finished in 1.079 seconds with exit status 0 (successful).
+ DEBUG [31bcbb37] Running [ -L /var/www/cartaomaispet/releases/20181228205226/tmp/cache ] as root@178.128.129.173
+ DEBUG [31bcbb37] Command: [ -L /var/www/cartaomaispet/releases/20181228205226/tmp/cache ]
+ DEBUG [26a13cd9] Finished in 0.796 seconds with exit status 1 (failed).
+ DEBUG [4b30e53e] Running [ -d /var/www/cartaomaispet/releases/20181228205226/tmp/cache ] as root@178.128.129.173
+ DEBUG [4b30e53e] Command: [ -d /var/www/cartaomaispet/releases/20181228205226/tmp/cache ]
+ DEBUG [82ad5db7] Finished in 0.710 seconds with exit status 1 (failed).
+  INFO [c8d337bc] Running /usr/bin/env ln -s /var/www/cartaomaispet/shared/tmp/cache /var/www/cartaomaispet/releases/20181228205226/tmp/cache as root@178.128.129.173
+ DEBUG [c8d337bc] Command: /usr/bin/env ln -s /var/www/cartaomaispet/shared/tmp/cache /var/www/cartaomaispet/releases/20181228205226/tmp/cache
+  INFO [53ad8ede] Finished in 0.861 seconds with exit status 0 (successful).
+ DEBUG [14637428] Running [ -L /var/www/cartaomaispet/releases/20181228205226/tmp/sockets ] as root@178.128.129.173
+ DEBUG [14637428] Command: [ -L /var/www/cartaomaispet/releases/20181228205226/tmp/sockets ]
+ DEBUG [dc728b84] Finished in 0.815 seconds with exit status 1 (failed).
+ DEBUG [9c52c82f] Running [ -d /var/www/cartaomaispet/releases/20181228205226/tmp/sockets ] as root@178.128.129.173
+ DEBUG [9c52c82f] Command: [ -d /var/www/cartaomaispet/releases/20181228205226/tmp/sockets ]
+ DEBUG [e9939131] Finished in 0.935 seconds with exit status 1 (failed).
+  INFO [c0c84f8a] Running /usr/bin/env ln -s /var/www/cartaomaispet/shared/tmp/sockets /var/www/cartaomaispet/releases/20181228205226/tmp/sockets as root@178.128.129.173
+ DEBUG [c0c84f8a] Command: /usr/bin/env ln -s /var/www/cartaomaispet/shared/tmp/sockets /var/www/cartaomaispet/releases/20181228205226/tmp/sockets
+  INFO [49027836] Finished in 0.776 seconds with exit status 0 (successful).
+ DEBUG [d9c40a5c] Running [ -L /var/www/cartaomaispet/releases/20181228205226/public/system ] as root@178.128.129.173
+ DEBUG [d9c40a5c] Command: [ -L /var/www/cartaomaispet/releases/20181228205226/public/system ]
+ DEBUG [d052ef7c] Finished in 1.166 seconds with exit status 1 (failed).
+ DEBUG [46af1e4c] Running [ -d /var/www/cartaomaispet/releases/20181228205226/public/system ] as root@178.128.129.173
+ DEBUG [46af1e4c] Command: [ -d /var/www/cartaomaispet/releases/20181228205226/public/system ]
+ DEBUG [a91a5742] Finished in 0.806 seconds with exit status 1 (failed).
+  INFO [510637ab] Running /usr/bin/env ln -s /var/www/cartaomaispet/shared/public/system /var/www/cartaomaispet/releases/20181228205226/public/system as root@178.128.129.173
+ DEBUG [510637ab] Command: /usr/bin/env ln -s /var/www/cartaomaispet/shared/public/system /var/www/cartaomaispet/releases/20181228205226/public/system
+  INFO [c76a9317] Finished in 0.611 seconds with exit status 0 (successful).
+ DEBUG [ec44dc59] Running [ -L /var/www/cartaomaispet/releases/20181228205226/public/assets ] as root@178.128.129.173
+ DEBUG [ec44dc59] Command: [ -L /var/www/cartaomaispet/releases/20181228205226/public/assets ]
+ DEBUG [9fd0a693] Finished in 0.741 seconds with exit status 1 (failed).
+ DEBUG [1832a750] Running [ -d /var/www/cartaomaispet/releases/20181228205226/public/assets ] as root@178.128.129.173
+ DEBUG [1832a750] Command: [ -d /var/www/cartaomaispet/releases/20181228205226/public/assets ]
+ DEBUG [fb878db9] Finished in 1.037 seconds with exit status 1 (failed).
+  INFO [337bd5c8] Running /usr/bin/env ln -s /var/www/cartaomaispet/shared/public/assets /var/www/cartaomaispet/releases/20181228205226/public/assets as root@178.128.129.173
+ DEBUG [337bd5c8] Command: /usr/bin/env ln -s /var/www/cartaomaispet/shared/public/assets /var/www/cartaomaispet/releases/20181228205226/public/assets
+  INFO [ffffd3fa] Finished in 1.001 seconds with exit status 0 (successful).
+ DEBUG [4efd80a9] Running if test ! -d /var/www/cartaomaispet/releases/20181228205226; then echo "Directory does not exist '/var/www/cartaomaispet/releases/20181228205226'" 1>&2; false; fi as root@178.128.129.173
+ DEBUG [4efd80a9] Command: if test ! -d /var/www/cartaomaispet/releases/20181228205226; then echo "Directory does not exist '/var/www/cartaomaispet/releases/20181228205226'" 1>&2; false; fi
+ DEBUG [636cff80] Finished in 0.782 seconds with exit status 0 (successful).
+ DEBUG [77dbbae2] Running /usr/local/rvm/bin/rvm default do bundle check --path /var/www/cartaomaispet/shared/bundle as root@178.128.129.173
+ DEBUG [77dbbae2] Command: cd /var/www/cartaomaispet/releases/20181228205226 && /usr/local/rvm/bin/rvm default do bundle check --path /var/www/cartaomaispet/shared/bundle
+ DEBUG [be8c2a29] 	To install do: 'rvm install "ruby-2.5.3"'
+ DEBUG [be8c2a29] 	Required ruby-2.5.3 is not installed.
+ DEBUG [be8c2a29] 	Your Gemfile lists the gem pg (>= 0.18, < 2.0) more than once.
+You should probably keep only one of them.
+Remove any duplicate entries and specify the gem only once (per group).
+While it's not a problem now, it could cause errors if you change the version of one of them later.
+ DEBUG [be8c2a29] 	The dependency tzinfo-data (>= 0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for ruby but the dependency is only for x86-mingw32, x86-mswin32, x64-mingw32, java. To add those platforms to the bundle, run `bundle lock --add-platform x86-mingw32 x86-mswin32 x64-mingw32 java`.
+ DEBUG [be8c2a29] 	The following gems are missing
+ DEBUG [be8c2a29] 	 * public_suffix (3.0.3)
+ DEBUG [be8c2a29] 	 * addressable (2.5.2)
+ DEBUG [be8c2a29] 	 * net-ssh (5.1.0)
+ DEBUG [be8c2a29] 	 * net-scp (1.2.1)
+ DEBUG [be8c2a29] 	 * sshkit (1.18.0)
+ DEBUG [be8c2a29] 	 * airbrussh (1.3.1)
+ DEBUG [be8c2a29] 	 * io-like (0.3.0)
+ DEBUG [be8c2a29] 	 * archive-zip (0.11.0)
+ DEBUG [be8c2a29] 	 * bindex (0.5.0)
+ DEBUG [be8c2a29] 	 * byebug (10.0.2)
+ DEBUG [be8c2a29] 	 * capistrano (3.11.0)
+ DEBUG [be8c2a29] 	 * capistrano-bundler (1.5.0)
+ DEBUG [be8c2a29] 	 * capistrano-passenger (0.2.0)
+ DEBUG [be8c2a29] 	 * capistrano-rails (1.4.0)
+ DEBUG [be8c2a29] 	 * capistrano-rvm (0.1.2)
+ DEBUG [be8c2a29] 	 * regexp_parser (1.3.0)
+ DEBUG [be8c2a29] 	 * xpath (3.2.0)
+ DEBUG [be8c2a29] 	 * capybara (3.12.0)
+ DEBUG [be8c2a29] 	 * childprocess (0.9.0)
+ DEBUG [be8c2a29] 	 * chromedriver-helper (2.1.0)
+ DEBUG [be8c2a29] 	 * ruby_dep (1.5.0)
+ DEBUG [be8c2a29] 	 * listen (3.1.5)
+ DEBUG [be8c2a29] 	 * rubyzip (1.2.2)
+ DEBUG [be8c2a29] 	 * selenium-webdriver (3.141.0)
+ DEBUG [be8c2a29] 	 * spring (2.0.2)
+ DEBUG [be8c2a29] 	 * spring-watcher-listen (2.0.1)
+ DEBUG [be8c2a29] 	 * web-console (3.7.0)
+ DEBUG [be8c2a29] 	Install missing gems with `bundle install`
+ DEBUG [be8c2a29] Finished in 1.813 seconds with exit status 1 (failed).
+  INFO [1eb9c6b6] Running /usr/local/rvm/bin/rvm default do bundle install --path /var/www/cartaomaispet/shared/bundle --jobs 4 --without development test --deployment --quiet as root@178.128.129.173
+ DEBUG [1eb9c6b6] Command: cd /var/www/cartaomaispet/releases/20181228205226 && /usr/local/rvm/bin/rvm default do bundle install --path /var/www/cartaomaispet/shared/bundle --jobs 4 --without development test --deployment --quiet
+ DEBUG [18a6caec] 	To install do: 'rvm install "ruby-2.5.3"'
+ DEBUG [18a6caec] 	Required ruby-2.5.3 is not installed.
+ DEBUG [18a6caec] 	Warning, new version of rvm available '1.29.7', you are using older version '1.29.6'.
+You can disable this warning with:    echo rvm_autoupdate_flag=0 >> ~/.rvmrc
+You can enable  auto-update  with:    echo rvm_autoupdate_flag=2 >> ~/.rvmrc
+  INFO [18a6caec] Finished in 2.050 seconds with exit status 0 (successful).
+ DEBUG [950770a2] Running if test ! -d /var/www/cartaomaispet/releases/20181228205226; then echo "Directory does not exist '/var/www/cartaomaispet/releases/20181228205226'" 1>&2; false; fi as root@178.128.129.173
+ DEBUG [950770a2] Command: if test ! -d /var/www/cartaomaispet/releases/20181228205226; then echo "Directory does not exist '/var/www/cartaomaispet/releases/20181228205226'" 1>&2; false; fi
+ DEBUG [3ad9d332] Finished in 0.754 seconds with exit status 0 (successful).
+  INFO [03aa4755] Running /usr/local/rvm/bin/rvm default do bundle exec rake assets:precompile as root@178.128.129.173
+ DEBUG [03aa4755] Command: cd /var/www/cartaomaispet/releases/20181228205226 && ( export RAILS_ENV="production" RAILS_GROUPS="" ; /usr/local/rvm/bin/rvm default do bundle exec rake assets:precompile )
+ DEBUG [de2d0790] 	To install do: 'rvm install "ruby-2.5.3"'
+ DEBUG [de2d0790] 	Required ruby-2.5.3 is not installed.
+ DEBUG [de2d0790] 	rake aborted!
+ DEBUG [de2d0790] 	ActiveRecord::AdapterNotSpecified: 'production' database is not configured. Available: ["database", "username", "password"]
+ DEBUG [de2d0790] 	/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activerecord-5.2.2/lib/active_record/connection_adapters/connection_specification.rb:260:in `resolve_symbol_connection'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activerecord-5.2.2/lib/active_record/connection_adapters/connection_specification.rb:241:in `resolve_connection'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activerecord-5.2.2/lib/active_record/connection_adapters/connection_specification.rb:143:in `resolve'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activerecord-5.2.2/lib/active_record/connection_handling.rb:57:in `establish_connection'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activerecord-5.2.2/lib/active_record/railtie.rb:136:in `block (2 levels) in <class:Railtie>'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/lazy_load_hooks.rb:71:in `instance_eval'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/lazy_load_hooks.rb:71:in `block in execute_hook'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/lazy_load_hooks.rb:62:in `with_execution_control'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/lazy_load_hooks.rb:67:in `execute_hook'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/lazy_load_hooks.rb:52:in `block in run_load_hooks'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/lazy_load_hooks.rb:51:in `each'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/lazy_load_hooks.rb:51:in `run_load_hooks'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activerecord-5.2.2/lib/active_record/base.rb:328:in `<module:ActiveRecord>'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activerecord-5.2.2/lib/active_record/base.rb:27:in `<main>'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21:in `require'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21:in `block in require_with_bootsnap_lfi'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/loaded_features_index.rb:65:in `register'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:20:in `require_with_bootsnap_lfi'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:29:in `require'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:291:in `block in require'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:257:in `load_dependency'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:291:in `require'
+/var/www/cartaomaispet/releases/20181228205226/app/models/application_record.rb:1:in `<main>'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21:in `require'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21:in `block in require_with_bootsnap_lfi'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/loaded_features_index.rb:65:in `register'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:20:in `require_with_bootsnap_lfi'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:29:in `require'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:291:in `block in require'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:257:in `load_dependency'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:291:in `require'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:378:in `block in require_or_load'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:37:in `block in load_interlock'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies/interlock.rb:14:in `block in loading'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/concurrency/share_lock.rb:151:in `exclusive'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies/interlock.rb:13:in `loading'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:37:in `load_interlock'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:356:in `require_or_load'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/active_support.rb:46:in `block in require_or_load'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/active_support.rb:16:in `allow_bootsnap_retry'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/active_support.rb:45:in `require_or_load'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:510:in `load_missing_constant'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/active_support.rb:58:in `block in load_missing_constant'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/active_support.rb:16:in `allow_bootsnap_retry'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/active_support.rb:57:in `load_missing_constant'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:195:in `const_missing'
+/var/www/cartaomaispet/releases/20181228205226/app/models/user.rb:1:in `<main>'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21:in `require'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21:in `block in require_with_bootsnap_lfi'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/loaded_features_index.rb:65:in `register'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:20:in `require_with_bootsnap_lfi'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:29:in `require'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:291:in `block in require'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:257:in `load_dependency'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:291:in `require'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:378:in `block in require_or_load'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:37:in `block in load_interlock'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies/interlock.rb:14:in `block in loading'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/concurrency/share_lock.rb:151:in `exclusive'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies/interlock.rb:13:in `loading'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:37:in `load_interlock'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:356:in `require_or_load'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/active_support.rb:46:in `block in require_or_load'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/active_support.rb:16:in `allow_bootsnap_retry'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/active_support.rb:45:in `require_or_load'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:510:in `load_missing_constant'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/active_support.rb:58:in `block in load_missing_constant'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/active_support.rb:16:in `allow_bootsnap_retry'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/active_support.rb:57:in `load_missing_constant'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:195:in `const_missing'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/inflector/methods.rb:283:in `const_get'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/inflector/methods.rb:283:in `block in constantize'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/inflector/methods.rb:281:in `each'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/inflector/methods.rb:281:in `inject'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/inflector/methods.rb:281:in `constantize'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:582:in `get'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:613:in `constantize'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/devise-4.5.0/lib/devise.rb:316:in `get'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/devise-4.5.0/lib/devise/mapping.rb:83:in `to'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/devise-4.5.0/lib/devise/mapping.rb:78:in `modules'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/devise-4.5.0/lib/devise/mapping.rb:95:in `routes'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/devise-4.5.0/lib/devise/mapping.rb:162:in `default_used_route'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/devise-4.5.0/lib/devise/mapping.rb:72:in `initialize'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/devise-4.5.0/lib/devise.rb:346:in `new'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/devise-4.5.0/lib/devise.rb:346:in `add_mapping'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/devise-4.5.0/lib/devise/rails/routes.rb:243:in `block in devise_for'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/devise-4.5.0/lib/devise/rails/routes.rb:242:in `each'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/devise-4.5.0/lib/devise/rails/routes.rb:242:in `devise_for'
+/var/www/cartaomaispet/releases/20181228205226/config/routes.rb:9:in `block in <main>'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/actionpack-5.2.2/lib/action_dispatch/routing/route_set.rb:432:in `instance_exec'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/actionpack-5.2.2/lib/action_dispatch/routing/route_set.rb:432:in `eval_block'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/actionpack-5.2.2/lib/action_dispatch/routing/route_set.rb:414:in `draw'
+/var/www/cartaomaispet/releases/20181228205226/config/routes.rb:1:in `<main>'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:50:in `load'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:50:in `load'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:285:in `block in load'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:257:in `load_dependency'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:285:in `load'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/railties-5.2.2/lib/rails/application/routes_reloader.rb:41:in `block in load_paths'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/railties-5.2.2/lib/rails/application/routes_reloader.rb:41:in `each'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/railties-5.2.2/lib/rails/application/routes_reloader.rb:41:in `load_paths'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/railties-5.2.2/lib/rails/application/routes_reloader.rb:20:in `reload!'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/railties-5.2.2/lib/rails/application/routes_reloader.rb:30:in `block in updater'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/file_update_checker.rb:83:in `execute'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/railties-5.2.2/lib/rails/application/routes_reloader.rb:10:in `execute'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/railties-5.2.2/lib/rails/application/finisher.rb:130:in `block in <module:Finisher>'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/railties-5.2.2/lib/rails/initializable.rb:32:in `instance_exec'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/railties-5.2.2/lib/rails/initializable.rb:32:in `run'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/railties-5.2.2/lib/rails/initializable.rb:61:in `block in run_initializers'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/railties-5.2.2/lib/rails/initializable.rb:60:in `run_initializers'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/railties-5.2.2/lib/rails/application.rb:361:in `initialize!'
+/var/www/cartaomaispet/releases/20181228205226/config/environment.rb:5:in `<main>'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21:in `require'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21:in `block in require_with_bootsnap_lfi'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/loaded_features_index.rb:65:in `register'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:20:in `require_with_bootsnap_lfi'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:29:in `require'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:291:in `block in require'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:257:in `load_dependency'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:291:in `require'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/railties-5.2.2/lib/rails/application.rb:337:in `require_environment!'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/railties-5.2.2/lib/rails/application.rb:520:in `block in run_tasks_blocks'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/task.rb:62:in `block (2 levels) i
+ DEBUG [de2d0790] 	n define'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/rake-12.3.2/exe/rake:27:in `<top (required)>'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/bin/ruby_executable_hooks:24:in `eval'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/bin/ruby_executable_hooks:24:in `<main>'
+ DEBUG [de2d0790] 	Tasks: TOP => environment
+ DEBUG [de2d0790] 	(See full trace by running task with --trace)
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-12-28 18:54:30 -0200 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [9d737e39] Running /usr/bin/env which passenger as root@178.128.129.173
+ DEBUG [9d737e39] Command: /usr/bin/env which passenger
+ DEBUG [db6d7843] 	/usr/bin/passenger
+ DEBUG [db6d7843] Finished in 20.127 seconds with exit status 0 (successful).
+ DEBUG [32db161d] Running [ -d ~/.rvm ] as root@178.128.129.173
+ DEBUG [32db161d] Command: [ -d ~/.rvm ]
+ DEBUG [be542038] Finished in 2.828 seconds with exit status 1 (failed).
+ DEBUG [685e3723] Running [ -d /usr/local/rvm ] as root@178.128.129.173
+ DEBUG [685e3723] Command: [ -d /usr/local/rvm ]
+ DEBUG [893ad61f] Finished in 3.164 seconds with exit status 0 (successful).
+ DEBUG [266f341f] Running /usr/local/rvm/bin/rvm version as root@178.128.129.173
+ DEBUG [266f341f] Command: /usr/local/rvm/bin/rvm version
+ DEBUG [7811e25a] 	rvm 1.29.6 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [7811e25a] Finished in 2.367 seconds with exit status 0 (successful).
+ DEBUG [a1b627a3] Running /usr/local/rvm/bin/rvm current as root@178.128.129.173
+ DEBUG [a1b627a3] Command: /usr/local/rvm/bin/rvm current
+ DEBUG [527eb81f] 	ruby-2.6.0
+ DEBUG [527eb81f] Finished in 1.555 seconds with exit status 0 (successful).
+ DEBUG [9e65866a] Running /usr/local/rvm/bin/rvm default do ruby --version as root@178.128.129.173
+ DEBUG [9e65866a] Command: /usr/local/rvm/bin/rvm default do ruby --version
+ DEBUG [38c1c187] 	ruby 2.6.0p0 (2018-12-25 revision 66547) [x86_64-linux]
+ DEBUG [38c1c187] Finished in 2.471 seconds with exit status 0 (successful).
+  INFO [83172067] Running /usr/bin/env mkdir -p /tmp as root@178.128.129.173
+ DEBUG [83172067] Command: /usr/bin/env mkdir -p /tmp
+  INFO [4c939ac9] Finished in 3.685 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-cartaomaispet-production-marviorocha.sh 0.0%
+  INFO Uploading /tmp/git-ssh-cartaomaispet-production-marviorocha.sh 100.0%
+  INFO [9f259771] Running /usr/bin/env chmod 700 /tmp/git-ssh-cartaomaispet-production-marviorocha.sh as root@178.128.129.173
+ DEBUG [9f259771] Command: /usr/bin/env chmod 700 /tmp/git-ssh-cartaomaispet-production-marviorocha.sh
+  INFO [e82c5f0a] Finished in 2.656 seconds with exit status 0 (successful).
+  INFO [fe763016] Running /usr/bin/env git ls-remote https://github.com/marviorocha/cartaomaispet.git HEAD as root@178.128.129.173
+ DEBUG [fe763016] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cartaomaispet-production-marviorocha.sh" ; /usr/bin/env git ls-remote https://github.com/marviorocha/cartaomaispet.git HEAD )
+ DEBUG [7e4627b3] 	021c9bb12f330e2ac7ef89baf7fe719cd272601d	HEAD
+  INFO [7e4627b3] Finished in 3.542 seconds with exit status 0 (successful).
+  INFO [a7987416] Running /usr/bin/env mkdir -p /var/www/cartaomaispet/shared /var/www/cartaomaispet/releases as root@178.128.129.173
+ DEBUG [a7987416] Command: /usr/bin/env mkdir -p /var/www/cartaomaispet/shared /var/www/cartaomaispet/releases
+  INFO [9c365022] Finished in 1.541 seconds with exit status 0 (successful).
+  INFO [9a22ede7] Running /usr/bin/env mkdir -p /var/www/cartaomaispet/shared/log /var/www/cartaomaispet/shared/tmp/pids /var/www/cartaomaispet/shared/tmp/cache /var/www/cartaomaispet/shared/tmp/sockets /var/www/cartaomaispet/shared/public/system /var/www/cartaomaispet/shared/public/assets as root@178.128.129.173
+ DEBUG [9a22ede7] Command: /usr/bin/env mkdir -p /var/www/cartaomaispet/shared/log /var/www/cartaomaispet/shared/tmp/pids /var/www/cartaomaispet/shared/tmp/cache /var/www/cartaomaispet/shared/tmp/sockets /var/www/cartaomaispet/shared/public/system /var/www/cartaomaispet/shared/public/assets
+  INFO [a19616a6] Finished in 4.889 seconds with exit status 0 (successful).
+  INFO [aedcbc09] Running /usr/bin/env mkdir -p /var/www/cartaomaispet/shared/config as root@178.128.129.173
+ DEBUG [aedcbc09] Command: /usr/bin/env mkdir -p /var/www/cartaomaispet/shared/config
+  INFO [004bd0a3] Finished in 6.121 seconds with exit status 0 (successful).
+ DEBUG [1c62a3b0] Running [ -f /var/www/cartaomaispet/shared/config/database.yml ] as root@178.128.129.173
+ DEBUG [1c62a3b0] Command: [ -f /var/www/cartaomaispet/shared/config/database.yml ]
+ DEBUG [1ce04e78] Finished in 4.784 seconds with exit status 0 (successful).
+ DEBUG [93ea621c] Running [ -f /var/www/cartaomaispet/shared/config/master.key ] as root@178.128.129.173
+ DEBUG [93ea621c] Command: [ -f /var/www/cartaomaispet/shared/config/master.key ]
+ DEBUG [696a7690] Finished in 1.142 seconds with exit status 0 (successful).
+ DEBUG [8e62f498] Running [ -f /var/www/cartaomaispet/current/REVISION ] as root@178.128.129.173
+ DEBUG [8e62f498] Command: [ -f /var/www/cartaomaispet/current/REVISION ]
+ DEBUG [534d47b2] Finished in 0.632 seconds with exit status 1 (failed).
+ DEBUG [5e716725] Running [ -f /var/www/cartaomaispet/repo/HEAD ] as root@178.128.129.173
+ DEBUG [5e716725] Command: [ -f /var/www/cartaomaispet/repo/HEAD ]
+ DEBUG [40e58504] Finished in 2.601 seconds with exit status 1 (failed).
+ DEBUG [27df8404] Running if test ! -d /var/www/cartaomaispet; then echo "Directory does not exist '/var/www/cartaomaispet'" 1>&2; false; fi as root@178.128.129.173
+ DEBUG [27df8404] Command: if test ! -d /var/www/cartaomaispet; then echo "Directory does not exist '/var/www/cartaomaispet'" 1>&2; false; fi
+ DEBUG [74c4a4a7] Finished in 1.794 seconds with exit status 0 (successful).
+  INFO [f9232af7] Running /usr/bin/env git clone --mirror https://github.com/marviorocha/cartaomaispet.git /var/www/cartaomaispet/repo as root@178.128.129.173
+ DEBUG [f9232af7] Command: cd /var/www/cartaomaispet && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cartaomaispet-production-marviorocha.sh" ; /usr/bin/env git clone --mirror https://github.com/marviorocha/cartaomaispet.git /var/www/cartaomaispet/repo )
+ DEBUG [cd797bc6] 	Cloning into bare repository '/var/www/cartaomaispet/repo'...
+  INFO [cd797bc6] Finished in 4.746 seconds with exit status 0 (successful).
+ DEBUG [55145814] Running if test ! -d /var/www/cartaomaispet/repo; then echo "Directory does not exist '/var/www/cartaomaispet/repo'" 1>&2; false; fi as root@178.128.129.173
+ DEBUG [55145814] Command: if test ! -d /var/www/cartaomaispet/repo; then echo "Directory does not exist '/var/www/cartaomaispet/repo'" 1>&2; false; fi
+ DEBUG [c5e8e361] Finished in 1.604 seconds with exit status 0 (successful).
+  INFO [168bb149] Running /usr/bin/env git remote set-url origin https://github.com/marviorocha/cartaomaispet.git as root@178.128.129.173
+ DEBUG [168bb149] Command: cd /var/www/cartaomaispet/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cartaomaispet-production-marviorocha.sh" ; /usr/bin/env git remote set-url origin https://github.com/marviorocha/cartaomaispet.git )
+  INFO [f444a743] Finished in 0.662 seconds with exit status 0 (successful).
+  INFO [313e2a34] Running /usr/bin/env git remote update --prune as root@178.128.129.173
+ DEBUG [313e2a34] Command: cd /var/www/cartaomaispet/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cartaomaispet-production-marviorocha.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [150a54ec] 	Fetching origin
+  INFO [150a54ec] Finished in 0.984 seconds with exit status 0 (successful).
+ DEBUG [7ec42d7c] Running if test ! -d /var/www/cartaomaispet/repo; then echo "Directory does not exist '/var/www/cartaomaispet/repo'" 1>&2; false; fi as root@178.128.129.173
+ DEBUG [7ec42d7c] Command: if test ! -d /var/www/cartaomaispet/repo; then echo "Directory does not exist '/var/www/cartaomaispet/repo'" 1>&2; false; fi
+ DEBUG [4bb3f05e] Finished in 0.707 seconds with exit status 0 (successful).
+  INFO [721446a4] Running /usr/bin/env mkdir -p /var/www/cartaomaispet/releases/20181228205536 as root@178.128.129.173
+ DEBUG [721446a4] Command: cd /var/www/cartaomaispet/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cartaomaispet-production-marviorocha.sh" ; /usr/bin/env mkdir -p /var/www/cartaomaispet/releases/20181228205536 )
+  INFO [779868cf] Finished in 0.938 seconds with exit status 0 (successful).
+  INFO [9c8ee7c2] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/cartaomaispet/releases/20181228205536 as root@178.128.129.173
+ DEBUG [9c8ee7c2] Command: cd /var/www/cartaomaispet/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cartaomaispet-production-marviorocha.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/cartaomaispet/releases/20181228205536 )
+  INFO [08414dce] Finished in 1.046 seconds with exit status 0 (successful).
+ DEBUG [49470be4] Running if test ! -d /var/www/cartaomaispet/repo; then echo "Directory does not exist '/var/www/cartaomaispet/repo'" 1>&2; false; fi as root@178.128.129.173
+ DEBUG [49470be4] Command: if test ! -d /var/www/cartaomaispet/repo; then echo "Directory does not exist '/var/www/cartaomaispet/repo'" 1>&2; false; fi
+ DEBUG [4e077334] Finished in 0.966 seconds with exit status 0 (successful).
+ DEBUG [c4fc0d18] Running /usr/bin/env git rev-list --max-count=1 master as root@178.128.129.173
+ DEBUG [c4fc0d18] Command: cd /var/www/cartaomaispet/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cartaomaispet-production-marviorocha.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [6893890c] 	021c9bb12f330e2ac7ef89baf7fe719cd272601d
+ DEBUG [6893890c] Finished in 0.705 seconds with exit status 0 (successful).
+ DEBUG [f13941c9] Running if test ! -d /var/www/cartaomaispet/releases/20181228205536; then echo "Directory does not exist '/var/www/cartaomaispet/releases/20181228205536'" 1>&2; false; fi as root@178.128.129.173
+ DEBUG [f13941c9] Command: if test ! -d /var/www/cartaomaispet/releases/20181228205536; then echo "Directory does not exist '/var/www/cartaomaispet/releases/20181228205536'" 1>&2; false; fi
+ DEBUG [50483ee5] Finished in 0.668 seconds with exit status 0 (successful).
+  INFO [ae460e27] Running /usr/bin/env echo "021c9bb12f330e2ac7ef89baf7fe719cd272601d" > REVISION as root@178.128.129.173
+ DEBUG [ae460e27] Command: cd /var/www/cartaomaispet/releases/20181228205536 && /usr/bin/env echo "021c9bb12f330e2ac7ef89baf7fe719cd272601d" > REVISION
+  INFO [14ad6a9e] Finished in 0.779 seconds with exit status 0 (successful).
+  INFO [d0b39862] Running /usr/bin/env mkdir -p /var/www/cartaomaispet/releases/20181228205536/config as root@178.128.129.173
+ DEBUG [d0b39862] Command: /usr/bin/env mkdir -p /var/www/cartaomaispet/releases/20181228205536/config
+  INFO [99568a58] Finished in 0.610 seconds with exit status 0 (successful).
+ DEBUG [e89d69d7] Running [ -L /var/www/cartaomaispet/releases/20181228205536/config/database.yml ] as root@178.128.129.173
+ DEBUG [e89d69d7] Command: [ -L /var/www/cartaomaispet/releases/20181228205536/config/database.yml ]
+ DEBUG [eaba113c] Finished in 1.060 seconds with exit status 1 (failed).
+ DEBUG [0ba54d7b] Running [ -f /var/www/cartaomaispet/releases/20181228205536/config/database.yml ] as root@178.128.129.173
+ DEBUG [0ba54d7b] Command: [ -f /var/www/cartaomaispet/releases/20181228205536/config/database.yml ]
+ DEBUG [3829ce5e] Finished in 0.738 seconds with exit status 0 (successful).
+  INFO [4a1da00d] Running /usr/bin/env rm /var/www/cartaomaispet/releases/20181228205536/config/database.yml as root@178.128.129.173
+ DEBUG [4a1da00d] Command: /usr/bin/env rm /var/www/cartaomaispet/releases/20181228205536/config/database.yml
+  INFO [e6a7214f] Finished in 0.777 seconds with exit status 0 (successful).
+  INFO [5554d7d2] Running /usr/bin/env ln -s /var/www/cartaomaispet/shared/config/database.yml /var/www/cartaomaispet/releases/20181228205536/config/database.yml as root@178.128.129.173
+ DEBUG [5554d7d2] Command: /usr/bin/env ln -s /var/www/cartaomaispet/shared/config/database.yml /var/www/cartaomaispet/releases/20181228205536/config/database.yml
+  INFO [041b8f42] Finished in 0.848 seconds with exit status 0 (successful).
+ DEBUG [36ff43cb] Running [ -L /var/www/cartaomaispet/releases/20181228205536/config/master.key ] as root@178.128.129.173
+ DEBUG [36ff43cb] Command: [ -L /var/www/cartaomaispet/releases/20181228205536/config/master.key ]
+ DEBUG [7bc6d1cb] Finished in 0.977 seconds with exit status 1 (failed).
+ DEBUG [1e63d80a] Running [ -f /var/www/cartaomaispet/releases/20181228205536/config/master.key ] as root@178.128.129.173
+ DEBUG [1e63d80a] Command: [ -f /var/www/cartaomaispet/releases/20181228205536/config/master.key ]
+ DEBUG [5527269a] Finished in 1.044 seconds with exit status 1 (failed).
+  INFO [0823ecb8] Running /usr/bin/env ln -s /var/www/cartaomaispet/shared/config/master.key /var/www/cartaomaispet/releases/20181228205536/config/master.key as root@178.128.129.173
+ DEBUG [0823ecb8] Command: /usr/bin/env ln -s /var/www/cartaomaispet/shared/config/master.key /var/www/cartaomaispet/releases/20181228205536/config/master.key
+  INFO [977ede7f] Finished in 0.685 seconds with exit status 0 (successful).
+  INFO [603d0e76] Running /usr/bin/env mkdir -p /var/www/cartaomaispet/releases/20181228205536 /var/www/cartaomaispet/releases/20181228205536/tmp /var/www/cartaomaispet/releases/20181228205536/public as root@178.128.129.173
+ DEBUG [603d0e76] Command: /usr/bin/env mkdir -p /var/www/cartaomaispet/releases/20181228205536 /var/www/cartaomaispet/releases/20181228205536/tmp /var/www/cartaomaispet/releases/20181228205536/public
+  INFO [9e98a051] Finished in 0.611 seconds with exit status 0 (successful).
+ DEBUG [2111a7d4] Running [ -L /var/www/cartaomaispet/releases/20181228205536/log ] as root@178.128.129.173
+ DEBUG [2111a7d4] Command: [ -L /var/www/cartaomaispet/releases/20181228205536/log ]
+ DEBUG [95d913be] Finished in 0.721 seconds with exit status 1 (failed).
+ DEBUG [9168dadf] Running [ -d /var/www/cartaomaispet/releases/20181228205536/log ] as root@178.128.129.173
+ DEBUG [9168dadf] Command: [ -d /var/www/cartaomaispet/releases/20181228205536/log ]
+ DEBUG [9a1d3839] Finished in 0.731 seconds with exit status 0 (successful).
+  INFO [2c69a2b6] Running /usr/bin/env rm -rf /var/www/cartaomaispet/releases/20181228205536/log as root@178.128.129.173
+ DEBUG [2c69a2b6] Command: /usr/bin/env rm -rf /var/www/cartaomaispet/releases/20181228205536/log
+  INFO [8b57e975] Finished in 1.969 seconds with exit status 0 (successful).
+  INFO [0ee810d0] Running /usr/bin/env ln -s /var/www/cartaomaispet/shared/log /var/www/cartaomaispet/releases/20181228205536/log as root@178.128.129.173
+ DEBUG [0ee810d0] Command: /usr/bin/env ln -s /var/www/cartaomaispet/shared/log /var/www/cartaomaispet/releases/20181228205536/log
+  INFO [3ca257df] Finished in 1.074 seconds with exit status 0 (successful).
+ DEBUG [b9da0241] Running [ -L /var/www/cartaomaispet/releases/20181228205536/tmp/pids ] as root@178.128.129.173
+ DEBUG [b9da0241] Command: [ -L /var/www/cartaomaispet/releases/20181228205536/tmp/pids ]
+ DEBUG [d173ce6d] Finished in 0.868 seconds with exit status 1 (failed).
+ DEBUG [661c8ae9] Running [ -d /var/www/cartaomaispet/releases/20181228205536/tmp/pids ] as root@178.128.129.173
+ DEBUG [661c8ae9] Command: [ -d /var/www/cartaomaispet/releases/20181228205536/tmp/pids ]
+ DEBUG [1cd2e1ed] Finished in 0.725 seconds with exit status 1 (failed).
+  INFO [0e4e1398] Running /usr/bin/env ln -s /var/www/cartaomaispet/shared/tmp/pids /var/www/cartaomaispet/releases/20181228205536/tmp/pids as root@178.128.129.173
+ DEBUG [0e4e1398] Command: /usr/bin/env ln -s /var/www/cartaomaispet/shared/tmp/pids /var/www/cartaomaispet/releases/20181228205536/tmp/pids
+  INFO [91e22447] Finished in 0.726 seconds with exit status 0 (successful).
+ DEBUG [aeea88f8] Running [ -L /var/www/cartaomaispet/releases/20181228205536/tmp/cache ] as root@178.128.129.173
+ DEBUG [aeea88f8] Command: [ -L /var/www/cartaomaispet/releases/20181228205536/tmp/cache ]
+ DEBUG [4f280e53] Finished in 0.820 seconds with exit status 1 (failed).
+ DEBUG [de2b4a83] Running [ -d /var/www/cartaomaispet/releases/20181228205536/tmp/cache ] as root@178.128.129.173
+ DEBUG [de2b4a83] Command: [ -d /var/www/cartaomaispet/releases/20181228205536/tmp/cache ]
+ DEBUG [e734633c] Finished in 1.117 seconds with exit status 1 (failed).
+  INFO [c422ba0f] Running /usr/bin/env ln -s /var/www/cartaomaispet/shared/tmp/cache /var/www/cartaomaispet/releases/20181228205536/tmp/cache as root@178.128.129.173
+ DEBUG [c422ba0f] Command: /usr/bin/env ln -s /var/www/cartaomaispet/shared/tmp/cache /var/www/cartaomaispet/releases/20181228205536/tmp/cache
+  INFO [99115f03] Finished in 1.544 seconds with exit status 0 (successful).
+ DEBUG [d213c7c0] Running [ -L /var/www/cartaomaispet/releases/20181228205536/tmp/sockets ] as root@178.128.129.173
+ DEBUG [d213c7c0] Command: [ -L /var/www/cartaomaispet/releases/20181228205536/tmp/sockets ]
+ DEBUG [f310b36a] Finished in 0.998 seconds with exit status 1 (failed).
+ DEBUG [e1c9e01f] Running [ -d /var/www/cartaomaispet/releases/20181228205536/tmp/sockets ] as root@178.128.129.173
+ DEBUG [e1c9e01f] Command: [ -d /var/www/cartaomaispet/releases/20181228205536/tmp/sockets ]
+ DEBUG [28d214b5] Finished in 0.890 seconds with exit status 1 (failed).
+  INFO [bd0d2dac] Running /usr/bin/env ln -s /var/www/cartaomaispet/shared/tmp/sockets /var/www/cartaomaispet/releases/20181228205536/tmp/sockets as root@178.128.129.173
+ DEBUG [bd0d2dac] Command: /usr/bin/env ln -s /var/www/cartaomaispet/shared/tmp/sockets /var/www/cartaomaispet/releases/20181228205536/tmp/sockets
+  INFO [cc8123aa] Finished in 0.803 seconds with exit status 0 (successful).
+ DEBUG [884ae91d] Running [ -L /var/www/cartaomaispet/releases/20181228205536/public/system ] as root@178.128.129.173
+ DEBUG [884ae91d] Command: [ -L /var/www/cartaomaispet/releases/20181228205536/public/system ]
+ DEBUG [9872faa1] Finished in 0.797 seconds with exit status 1 (failed).
+ DEBUG [c7a49e48] Running [ -d /var/www/cartaomaispet/releases/20181228205536/public/system ] as root@178.128.129.173
+ DEBUG [c7a49e48] Command: [ -d /var/www/cartaomaispet/releases/20181228205536/public/system ]
+ DEBUG [2f7910a8] Finished in 0.705 seconds with exit status 1 (failed).
+  INFO [fdfd6d1f] Running /usr/bin/env ln -s /var/www/cartaomaispet/shared/public/system /var/www/cartaomaispet/releases/20181228205536/public/system as root@178.128.129.173
+ DEBUG [fdfd6d1f] Command: /usr/bin/env ln -s /var/www/cartaomaispet/shared/public/system /var/www/cartaomaispet/releases/20181228205536/public/system
+  INFO [08b40df1] Finished in 0.748 seconds with exit status 0 (successful).
+ DEBUG [6e0831ce] Running [ -L /var/www/cartaomaispet/releases/20181228205536/public/assets ] as root@178.128.129.173
+ DEBUG [6e0831ce] Command: [ -L /var/www/cartaomaispet/releases/20181228205536/public/assets ]
+ DEBUG [597f9991] Finished in 1.098 seconds with exit status 1 (failed).
+ DEBUG [016fc980] Running [ -d /var/www/cartaomaispet/releases/20181228205536/public/assets ] as root@178.128.129.173
+ DEBUG [016fc980] Command: [ -d /var/www/cartaomaispet/releases/20181228205536/public/assets ]
+ DEBUG [515dbb4f] Finished in 0.823 seconds with exit status 1 (failed).
+  INFO [d3e1810b] Running /usr/bin/env ln -s /var/www/cartaomaispet/shared/public/assets /var/www/cartaomaispet/releases/20181228205536/public/assets as root@178.128.129.173
+ DEBUG [d3e1810b] Command: /usr/bin/env ln -s /var/www/cartaomaispet/shared/public/assets /var/www/cartaomaispet/releases/20181228205536/public/assets
+  INFO [ae9a3697] Finished in 1.103 seconds with exit status 0 (successful).
+ DEBUG [0ec2c886] Running if test ! -d /var/www/cartaomaispet/releases/20181228205536; then echo "Directory does not exist '/var/www/cartaomaispet/releases/20181228205536'" 1>&2; false; fi as root@178.128.129.173
+ DEBUG [0ec2c886] Command: if test ! -d /var/www/cartaomaispet/releases/20181228205536; then echo "Directory does not exist '/var/www/cartaomaispet/releases/20181228205536'" 1>&2; false; fi
+ DEBUG [aa54d964] Finished in 0.903 seconds with exit status 0 (successful).
+ DEBUG [553d9f69] Running /usr/local/rvm/bin/rvm default do bundle check --path /var/www/cartaomaispet/shared/bundle as root@178.128.129.173
+ DEBUG [553d9f69] Command: cd /var/www/cartaomaispet/releases/20181228205536 && /usr/local/rvm/bin/rvm default do bundle check --path /var/www/cartaomaispet/shared/bundle
+ DEBUG [a3754a8d] 	To install do: 'rvm install "ruby-2.5.3"'
+ DEBUG [a3754a8d] 	Required ruby-2.5.3 is not installed.
+ DEBUG [a3754a8d] 	Your Gemfile lists the gem pg (>= 0.18, < 2.0) more than once.
+You should probably keep only one of them.
+Remove any duplicate entries and specify the gem only once (per group).
+While it's not a problem now, it could cause errors if you change the version of one of them later.
+ DEBUG [a3754a8d] 	The dependency tzinfo-data (>= 0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for ruby but the dependency is only for x86-mingw32, x86-mswin32, x64-mingw32, java. To add those platforms to the bundle, run `bundle lock --add-platform x86-mingw32 x86-mswin32 x64-mingw32 java`.
+ DEBUG [a3754a8d] 	The following gems are missing
+ DEBUG [a3754a8d] 	 * public_suffix (3.0.3)
+ DEBUG [a3754a8d] 	 * addressable (2.5.2)
+ DEBUG [a3754a8d] 	 * net-ssh (5.1.0)
+ DEBUG [a3754a8d] 	 * net-scp (1.2.1)
+ DEBUG [a3754a8d] 	 * sshkit (1.18.0)
+ DEBUG [a3754a8d] 	 * airbrussh (1.3.1)
+ DEBUG [a3754a8d] 	 * io-like (0.3.0)
+ DEBUG [a3754a8d] 	 * archive-zip (0.11.0)
+ DEBUG [a3754a8d] 	 * bindex (0.5.0)
+ DEBUG [a3754a8d] 	 * byebug (10.0.2)
+ DEBUG [a3754a8d] 	 * capistrano (3.11.0)
+ DEBUG [a3754a8d] 	 * capistrano-bundler (1.5.0)
+ DEBUG [a3754a8d] 	 * capistrano-passenger (0.2.0)
+ DEBUG [a3754a8d] 	 * capistrano-rails (1.4.0)
+ DEBUG [a3754a8d] 	 * capistrano-rvm (0.1.2)
+ DEBUG [a3754a8d] 	 * regexp_parser (1.3.0)
+ DEBUG [a3754a8d] 	 * xpath (3.2.0)
+ DEBUG [a3754a8d] 	 * capybara (3.12.0)
+ DEBUG [a3754a8d] 	 * childprocess (0.9.0)
+ DEBUG [a3754a8d] 	 * chromedriver-helper (2.1.0)
+ DEBUG [a3754a8d] 	 * ruby_dep (1.5.0)
+ DEBUG [a3754a8d] 	 * listen (3.1.5)
+ DEBUG [a3754a8d] 	 * rubyzip (1.2.2)
+ DEBUG [a3754a8d] 	 * selenium-webdriver (3.141.0)
+ DEBUG [a3754a8d] 	 * spring (2.0.2)
+ DEBUG [a3754a8d] 	 * spring-watcher-listen (2.0.1)
+ DEBUG [a3754a8d] 	 * web-console (3.7.0)
+ DEBUG [a3754a8d] 	Install missing gems with `bundle install`
+ DEBUG [a3754a8d] Finished in 1.985 seconds with exit status 1 (failed).
+  INFO [94708143] Running /usr/local/rvm/bin/rvm default do bundle install --path /var/www/cartaomaispet/shared/bundle --jobs 4 --without development test --deployment --quiet as root@178.128.129.173
+ DEBUG [94708143] Command: cd /var/www/cartaomaispet/releases/20181228205536 && /usr/local/rvm/bin/rvm default do bundle install --path /var/www/cartaomaispet/shared/bundle --jobs 4 --without development test --deployment --quiet
+ DEBUG [3fd6dfaa] 	To install do: 'rvm install "ruby-2.5.3"'
+ DEBUG [3fd6dfaa] 	Required ruby-2.5.3 is not installed.
+ DEBUG [3fd6dfaa] 	Warning, new version of rvm available '1.29.7', you are using older version '1.29.6'.
+You can disable this warning with:    echo rvm_autoupdate_flag=0 >> ~/.rvmrc
+You can enable  auto-update  with:    echo rvm_autoupdate_flag=2 >> ~/.rvmrc
+  INFO [3fd6dfaa] Finished in 2.281 seconds with exit status 0 (successful).
+ DEBUG [02a723f1] Running if test ! -d /var/www/cartaomaispet/releases/20181228205536; then echo "Directory does not exist '/var/www/cartaomaispet/releases/20181228205536'" 1>&2; false; fi as root@178.128.129.173
+ DEBUG [02a723f1] Command: if test ! -d /var/www/cartaomaispet/releases/20181228205536; then echo "Directory does not exist '/var/www/cartaomaispet/releases/20181228205536'" 1>&2; false; fi
+ DEBUG [b045b25c] Finished in 1.383 seconds with exit status 0 (successful).
+  INFO [794a22ec] Running /usr/local/rvm/bin/rvm default do bundle exec rake assets:precompile as root@178.128.129.173
+ DEBUG [794a22ec] Command: cd /var/www/cartaomaispet/releases/20181228205536 && ( export RAILS_ENV="production" RAILS_GROUPS="" ; /usr/local/rvm/bin/rvm default do bundle exec rake assets:precompile )
+ DEBUG [49512543] 	To install do: 'rvm install "ruby-2.5.3"'
+ DEBUG [49512543] 	Required ruby-2.5.3 is not installed.
+ DEBUG [49512543] 	rake aborted!
+ DEBUG [49512543] 	ActiveRecord::AdapterNotSpecified: 'production' database is not configured. Available: ["database", "username", "password"]
+ DEBUG [49512543] 	/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activerecord-5.2.2/lib/active_record/connection_adapters/connection_specification.rb:260:in `resolve_symbol_connection'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activerecord-5.2.2/lib/active_record/connection_adapters/connection_specification.rb:241:in `resolve_connection'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activerecord-5.2.2/lib/active_record/connection_adapters/connection_specification.rb:143:in `resolve'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activerecord-5.2.2/lib/active_record/connection_handling.rb:57:in `establish_connection'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activerecord-5.2.2/lib/active_record/railtie.rb:136:in `block (2 levels) in <class:Railtie>'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/lazy_load_hooks.rb:71:in `instance_eval'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/lazy_load_hooks.rb:71:in `block in execute_hook'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/lazy_load_hooks.rb:62:in `with_execution_control'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/lazy_load_hooks.rb:67:in `execute_hook'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/lazy_load_hooks.rb:52:in `block in run_load_hooks'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/lazy_load_hooks.rb:51:in `each'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/lazy_load_hooks.rb:51:in `run_load_hooks'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activerecord-5.2.2/lib/active_record/base.rb:328:in `<module:ActiveRecord>'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activerecord-5.2.2/lib/active_record/base.rb:27:in `<main>'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21:in `require'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21:in `block in require_with_bootsnap_lfi'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/loaded_features_index.rb:65:in `register'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:20:in `require_with_bootsnap_lfi'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:29:in `require'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:291:in `block in require'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:257:in `load_dependency'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:291:in `require'
+/var/www/cartaomaispet/releases/20181228205536/app/models/application_record.rb:1:in `<main>'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21:in `require'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21:in `block in require_with_bootsnap_lfi'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/loaded_features_index.rb:65:in `register'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:20:in `require_with_bootsnap_lfi'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:29:in `require'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:291:in `block in require'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:257:in `load_dependency'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:291:in `require'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:378:in `block in require_or_load'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:37:in `block in load_interlock'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies/interlock.rb:14:in `block in loading'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/concurrency/share_lock.rb:151:in `exclusive'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies/interlock.rb:13:in `loading'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:37:in `load_interlock'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:356:in `require_or_load'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/active_support.rb:46:in `block in require_or_load'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/active_support.rb:16:in `allow_bootsnap_retry'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/active_support.rb:45:in `require_or_load'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:510:in `load_missing_constant'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/active_support.rb:58:in `block in load_missing_constant'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/active_support.rb:16:in `allow_bootsnap_retry'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/active_support.rb:57:in `load_missing_constant'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:195:in `const_missing'
+/var/www/cartaomaispet/releases/20181228205536/app/models/user.rb:1:in `<main>'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21:in `require'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21:in `block in require_with_bootsnap_lfi'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/loaded_features_index.rb:65:in `register'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:20:in `require_with_bootsnap_lfi'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:29:in `require'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:291:in `block in require'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:257:in `load_dependency'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:291:in `require'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:378:in `block in require_or_load'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:37:in `block in load_interlock'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies/interlock.rb:14:in `block in loading'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/concurrency/share_lock.rb:151:in `exclusive'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies/interlock.rb:13:in `loading'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:37:in `load_interlock'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:356:in `require_or_load'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/active_support.rb:46:in `block in require_or_load'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/active_support.rb:16:in `allow_bootsnap_retry'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/active_support.rb:45:in `require_or_load'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:510:in `load_missing_constant'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/active_support.rb:58:in `block in load_missing_constant'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/active_support.rb:16:in `allow_bootsnap_retry'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/active_support.rb:57:in `load_missing_constant'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:195:in `const_missing'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/inflector/methods.rb:283:in `const_get'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/inflector/methods.rb:283:in `block in constantize'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/inflector/methods.rb:281:in `each'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/inflector/methods.rb:281:in `inject'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/inflector/methods.rb:281:in `constantize'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:582:in `get'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:613:in `constantize'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/devise-4.5.0/lib/devise.rb:316:in `get'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/devise-4.5.0/lib/devise/mapping.rb:83:in `to'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/devise-4.5.0/lib/devise/mapping.rb:78:in `modules'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/devise-4.5.0/lib/devise/mapping.rb:95:in `routes'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/devise-4.5.0/lib/devise/mapping.rb:162:in `default_used_route'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/devise-4.5.0/lib/devise/mapping.rb:72:in `initialize'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/devise-4.5.0/lib/devise.rb:346:in `new'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/devise-4.5.0/lib/devise.rb:346:in `add_mapping'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/devise-4.5.0/lib/devise/rails/routes.rb:243:in `block in devise_for'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/devise-4.5.0/lib/devise/rails/routes.rb:242:in `each'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/devise-4.5.0/lib/devise/rails/routes.rb:242:in `devise_for'
+/var/www/cartaomaispet/releases/20181228205536/config/routes.rb:9:in `block in <main>'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/actionpack-5.2.2/lib/action_dispatch/routing/route_set.rb:432:in `instance_exec'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/actionpack-5.2.2/lib/action_dispatch/routing/route_set.rb:432:in `eval_block'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/actionpack-5.2.2/lib/action_dispatch/routing/route_set.rb:414:in `draw'
+/var/www/cartaomaispet/releases/20181228205536/config/routes.rb:1:in `<main>'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:50:in `load'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:50:in `load'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:285:in `block in load'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:257:in `load_dependency'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:285:in `load'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/railties-5.2.2/lib/rails/application/routes_reloader.rb:41:in `block in load_paths'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/railties-5.2.2/lib/rails/application/routes_reloader.rb:41:in `each'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/railties-5.2.2/lib/rails/application/routes_reloader.rb:41:in `load_paths'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/railties-5.2.2/lib/rails/application/routes_reloader.rb:20:in `reload!'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/railties-5.2.2/lib/rails/application/routes_reloader.rb:30:in `block in updater'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/file_update_checker.rb:83:in `execute'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/railties-5.2.2/lib/rails/application/routes_reloader.rb:10:in `execute'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/railties-5.2.2/lib/rails/application/finisher.rb:130:in `block in <module:Finisher>'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/railties-5.2.2/lib/rails/initializable.rb:32:in `instance_exec'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/railties-5.2.2/lib/rails/initializable.rb:32:in `run'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/railties-5.2.2/lib/rails/initializable.rb:61:in `block in run_initializers'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/railties-5.2.2/lib/rails/initializable.rb:60:in `run_initializers'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/railties-5.2.2/lib/rails/application.rb:361:in `initialize!'
+/var/www/cartaomaispet/releases/20181228205536/config/environment.rb:5:in `<main>'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21:in `require'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21:in `block in require_with_bootsnap_lfi'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/loaded_features_index.rb:65:in `register'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:20:in `require_with_bootsnap_lfi'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:29:in `require'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:291:in `block in require'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:257:in `load_dependency'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.2/lib/active_support/dependencies.rb:291:in `require'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/railties-5.2.2/lib/rails/application.rb:337:in `require_environment!'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/railties-5.2.2/lib/rails/application.rb:520:in `block in run_tasks_blocks'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/task.rb:62:in `block (2 levels) i
+ DEBUG [49512543] 	n define'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/gems/rake-12.3.2/exe/rake:27:in `<top (required)>'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/bin/ruby_executable_hooks:24:in `eval'
+/var/www/cartaomaispet/shared/bundle/ruby/2.6.0/bin/ruby_executable_hooks:24:in `<main>'
+ DEBUG [49512543] 	Tasks: TOP => environment
+ DEBUG [49512543] 	(See full trace by running task with --trace)
