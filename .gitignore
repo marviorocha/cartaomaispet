@@ -8,7 +8,7 @@
 /.bundle
 
 # Ignore all logfiles and tempfiles.
-/log/*
+/node_modules/*
 /tmp/*
 !/log/.keep
 !/tmp/.keep
@@ -17,7 +17,7 @@
 /storage/*
 !/storage/.keep
 .bash_history
-/node_modules
+
 /yarn-error.log
 
 /public/assets

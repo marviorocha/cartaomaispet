@@ -1,0 +1,204 @@
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-12-28 17:47:23 -0200 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [c0446334] Running /usr/bin/env which passenger as root@178.128.129.173
+ DEBUG [c0446334] Command: /usr/bin/env which passenger
+ DEBUG [221ae9db] 	/usr/bin/passenger
+ DEBUG [221ae9db] Finished in 9.301 seconds with exit status 0 (successful).
+ DEBUG [1895df34] Running [ -d ~/.rvm ] as root@178.128.129.173
+ DEBUG [1895df34] Command: [ -d ~/.rvm ]
+ DEBUG [addb63bf] Finished in 0.754 seconds with exit status 1 (failed).
+ DEBUG [02a97c16] Running [ -d /usr/local/rvm ] as root@178.128.129.173
+ DEBUG [02a97c16] Command: [ -d /usr/local/rvm ]
+ DEBUG [d9d0ba29] Finished in 0.686 seconds with exit status 0 (successful).
+ DEBUG [7c7e69da] Running /usr/local/rvm/bin/rvm version as root@178.128.129.173
+ DEBUG [7c7e69da] Command: /usr/local/rvm/bin/rvm version
+ DEBUG [63976639] 	rvm 1.29.6 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [63976639] Finished in 0.876 seconds with exit status 0 (successful).
+ DEBUG [3b8448ba] Running /usr/local/rvm/bin/rvm current as root@178.128.129.173
+ DEBUG [3b8448ba] Command: /usr/local/rvm/bin/rvm current
+ DEBUG [1c7b5ec5] 	ruby-2.6.0
+ DEBUG [1c7b5ec5] Finished in 0.877 seconds with exit status 0 (successful).
+ DEBUG [90b07d69] Running /usr/local/rvm/bin/rvm default do ruby --version as root@178.128.129.173
+ DEBUG [90b07d69] Command: /usr/local/rvm/bin/rvm default do ruby --version
+ DEBUG [ec0a15f2] 	ruby 2.6.0p0 (2018-12-25 revision 66547) [x86_64-linux]
+ DEBUG [ec0a15f2] Finished in 1.043 seconds with exit status 0 (successful).
+  INFO [994e1dbe] Running /usr/bin/env mkdir -p /tmp as root@178.128.129.173
+ DEBUG [994e1dbe] Command: /usr/bin/env mkdir -p /tmp
+  INFO [7a321dc2] Finished in 0.781 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-cartaomaispet-production-marviorocha.sh 0.0%
+  INFO Uploading /tmp/git-ssh-cartaomaispet-production-marviorocha.sh 100.0%
+  INFO [92fa06a4] Running /usr/bin/env chmod 700 /tmp/git-ssh-cartaomaispet-production-marviorocha.sh as root@178.128.129.173
+ DEBUG [92fa06a4] Command: /usr/bin/env chmod 700 /tmp/git-ssh-cartaomaispet-production-marviorocha.sh
+  INFO [5ca6f149] Finished in 0.684 seconds with exit status 0 (successful).
+  INFO [346df401] Running /usr/bin/env git ls-remote https://github.com/marviorocha/cartaomaispet.git HEAD as root@178.128.129.173
+ DEBUG [346df401] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cartaomaispet-production-marviorocha.sh" ; /usr/bin/env git ls-remote https://github.com/marviorocha/cartaomaispet.git HEAD )
+ DEBUG [ed98857a] 	469d69116a1168ab7aa78e0f668d1dd0114e5f66	HEAD
+  INFO [ed98857a] Finished in 0.879 seconds with exit status 0 (successful).
+  INFO [b33061e6] Running /usr/bin/env mkdir -p /var/www/cartaomaispet/shared /var/www/cartaomaispet/releases as root@178.128.129.173
+ DEBUG [b33061e6] Command: /usr/bin/env mkdir -p /var/www/cartaomaispet/shared /var/www/cartaomaispet/releases
+  INFO [466a7701] Finished in 0.655 seconds with exit status 0 (successful).
+  INFO [f39b2489] Running /usr/bin/env mkdir -p /var/www/cartaomaispet/shared/log /var/www/cartaomaispet/shared/tmp/pids /var/www/cartaomaispet/shared/tmp/cache /var/www/cartaomaispet/shared/tmp/sockets /var/www/cartaomaispet/shared/public/system as root@178.128.129.173
+ DEBUG [f39b2489] Command: /usr/bin/env mkdir -p /var/www/cartaomaispet/shared/log /var/www/cartaomaispet/shared/tmp/pids /var/www/cartaomaispet/shared/tmp/cache /var/www/cartaomaispet/shared/tmp/sockets /var/www/cartaomaispet/shared/public/system
+  INFO [db5c346f] Finished in 0.597 seconds with exit status 0 (successful).
+  INFO [8dce62be] Running /usr/bin/env mkdir -p /var/www/cartaomaispet/shared/config as root@178.128.129.173
+ DEBUG [8dce62be] Command: /usr/bin/env mkdir -p /var/www/cartaomaispet/shared/config
+  INFO [bd888ea6] Finished in 0.962 seconds with exit status 0 (successful).
+ DEBUG [8a1d57a6] Running [ -f /var/www/cartaomaispet/shared/config/database.yml ] as root@178.128.129.173
+ DEBUG [8a1d57a6] Command: [ -f /var/www/cartaomaispet/shared/config/database.yml ]
+ DEBUG [7a270da2] Finished in 0.695 seconds with exit status 0 (successful).
+ DEBUG [3c71e9ea] Running [ -f /var/www/cartaomaispet/shared/config/master.key ] as root@178.128.129.173
+ DEBUG [3c71e9ea] Command: [ -f /var/www/cartaomaispet/shared/config/master.key ]
+ DEBUG [149aedab] Finished in 0.631 seconds with exit status 0 (successful).
+ DEBUG [61b2d9f0] Running [ -f /var/www/cartaomaispet/current/REVISION ] as root@178.128.129.173
+ DEBUG [61b2d9f0] Command: [ -f /var/www/cartaomaispet/current/REVISION ]
+ DEBUG [886bdbb8] Finished in 0.619 seconds with exit status 1 (failed).
+ DEBUG [3b511712] Running [ -f /var/www/cartaomaispet/repo/HEAD ] as root@178.128.129.173
+ DEBUG [3b511712] Command: [ -f /var/www/cartaomaispet/repo/HEAD ]
+ DEBUG [a7debacd] Finished in 0.996 seconds with exit status 1 (failed).
+ DEBUG [cf6887f7] Running if test ! -d /var/www/cartaomaispet; then echo "Directory does not exist '/var/www/cartaomaispet'" 1>&2; false; fi as root@178.128.129.173
+ DEBUG [cf6887f7] Command: if test ! -d /var/www/cartaomaispet; then echo "Directory does not exist '/var/www/cartaomaispet'" 1>&2; false; fi
+ DEBUG [c8900569] Finished in 0.704 seconds with exit status 0 (successful).
+  INFO [60acfb4e] Running /usr/bin/env git clone --mirror https://github.com/marviorocha/cartaomaispet.git /var/www/cartaomaispet/repo as root@178.128.129.173
+ DEBUG [60acfb4e] Command: cd /var/www/cartaomaispet && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cartaomaispet-production-marviorocha.sh" ; /usr/bin/env git clone --mirror https://github.com/marviorocha/cartaomaispet.git /var/www/cartaomaispet/repo )
+ DEBUG [9a48f4f0] 	Cloning into bare repository '/var/www/cartaomaispet/repo'...
+  INFO [9a48f4f0] Finished in 3.100 seconds with exit status 0 (successful).
+ DEBUG [92998f8a] Running if test ! -d /var/www/cartaomaispet/repo; then echo "Directory does not exist '/var/www/cartaomaispet/repo'" 1>&2; false; fi as root@178.128.129.173
+ DEBUG [92998f8a] Command: if test ! -d /var/www/cartaomaispet/repo; then echo "Directory does not exist '/var/www/cartaomaispet/repo'" 1>&2; false; fi
+ DEBUG [1a16b812] Finished in 0.730 seconds with exit status 0 (successful).
+  INFO [b06b75b7] Running /usr/bin/env git remote set-url origin https://github.com/marviorocha/cartaomaispet.git as root@178.128.129.173
+ DEBUG [b06b75b7] Command: cd /var/www/cartaomaispet/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cartaomaispet-production-marviorocha.sh" ; /usr/bin/env git remote set-url origin https://github.com/marviorocha/cartaomaispet.git )
+  INFO [7202ec04] Finished in 0.673 seconds with exit status 0 (successful).
+  INFO [a6b47a54] Running /usr/bin/env git remote update --prune as root@178.128.129.173
+ DEBUG [a6b47a54] Command: cd /var/www/cartaomaispet/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cartaomaispet-production-marviorocha.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [cde58351] 	Fetching origin
+  INFO [cde58351] Finished in 0.788 seconds with exit status 0 (successful).
+ DEBUG [d5caa116] Running if test ! -d /var/www/cartaomaispet/repo; then echo "Directory does not exist '/var/www/cartaomaispet/repo'" 1>&2; false; fi as root@178.128.129.173
+ DEBUG [d5caa116] Command: if test ! -d /var/www/cartaomaispet/repo; then echo "Directory does not exist '/var/www/cartaomaispet/repo'" 1>&2; false; fi
+ DEBUG [23e2e840] Finished in 0.752 seconds with exit status 0 (successful).
+  INFO [83a4e687] Running /usr/bin/env mkdir -p /var/www/cartaomaispet/releases/20181228194745 as root@178.128.129.173
+ DEBUG [83a4e687] Command: cd /var/www/cartaomaispet/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cartaomaispet-production-marviorocha.sh" ; /usr/bin/env mkdir -p /var/www/cartaomaispet/releases/20181228194745 )
+  INFO [f2921873] Finished in 1.554 seconds with exit status 0 (successful).
+  INFO [9f760bc5] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/cartaomaispet/releases/20181228194745 as root@178.128.129.173
+ DEBUG [9f760bc5] Command: cd /var/www/cartaomaispet/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cartaomaispet-production-marviorocha.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/cartaomaispet/releases/20181228194745 )
+  INFO [3777c451] Finished in 0.896 seconds with exit status 0 (successful).
+ DEBUG [055358d5] Running if test ! -d /var/www/cartaomaispet/repo; then echo "Directory does not exist '/var/www/cartaomaispet/repo'" 1>&2; false; fi as root@178.128.129.173
+ DEBUG [055358d5] Command: if test ! -d /var/www/cartaomaispet/repo; then echo "Directory does not exist '/var/www/cartaomaispet/repo'" 1>&2; false; fi
+ DEBUG [8f72e0c6] Finished in 1.105 seconds with exit status 0 (successful).
+ DEBUG [6eafcd6a] Running /usr/bin/env git rev-list --max-count=1 master as root@178.128.129.173
+ DEBUG [6eafcd6a] Command: cd /var/www/cartaomaispet/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cartaomaispet-production-marviorocha.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [9d5b8a2e] 	469d69116a1168ab7aa78e0f668d1dd0114e5f66
+ DEBUG [9d5b8a2e] Finished in 0.702 seconds with exit status 0 (successful).
+ DEBUG [2a7241bf] Running if test ! -d /var/www/cartaomaispet/releases/20181228194745; then echo "Directory does not exist '/var/www/cartaomaispet/releases/20181228194745'" 1>&2; false; fi as root@178.128.129.173
+ DEBUG [2a7241bf] Command: if test ! -d /var/www/cartaomaispet/releases/20181228194745; then echo "Directory does not exist '/var/www/cartaomaispet/releases/20181228194745'" 1>&2; false; fi
+ DEBUG [7cde59bb] Finished in 0.726 seconds with exit status 0 (successful).
+  INFO [bd8ebaf8] Running /usr/bin/env echo "469d69116a1168ab7aa78e0f668d1dd0114e5f66" > REVISION as root@178.128.129.173
+ DEBUG [bd8ebaf8] Command: cd /var/www/cartaomaispet/releases/20181228194745 && /usr/bin/env echo "469d69116a1168ab7aa78e0f668d1dd0114e5f66" > REVISION
+  INFO [a7345735] Finished in 0.628 seconds with exit status 0 (successful).
+  INFO [583c5b6f] Running /usr/bin/env mkdir -p /var/www/cartaomaispet/releases/20181228194745/config as root@178.128.129.173
+ DEBUG [583c5b6f] Command: /usr/bin/env mkdir -p /var/www/cartaomaispet/releases/20181228194745/config
+  INFO [8734ca93] Finished in 1.178 seconds with exit status 0 (successful).
+ DEBUG [c74e41f4] Running [ -L /var/www/cartaomaispet/releases/20181228194745/config/database.yml ] as root@178.128.129.173
+ DEBUG [c74e41f4] Command: [ -L /var/www/cartaomaispet/releases/20181228194745/config/database.yml ]
+ DEBUG [84958609] Finished in 0.785 seconds with exit status 1 (failed).
+ DEBUG [7feda192] Running [ -f /var/www/cartaomaispet/releases/20181228194745/config/database.yml ] as root@178.128.129.173
+ DEBUG [7feda192] Command: [ -f /var/www/cartaomaispet/releases/20181228194745/config/database.yml ]
+ DEBUG [5660ea4f] Finished in 0.734 seconds with exit status 0 (successful).
+  INFO [68809d07] Running /usr/bin/env rm /var/www/cartaomaispet/releases/20181228194745/config/database.yml as root@178.128.129.173
+ DEBUG [68809d07] Command: /usr/bin/env rm /var/www/cartaomaispet/releases/20181228194745/config/database.yml
+  INFO [8f3004db] Finished in 0.736 seconds with exit status 0 (successful).
+  INFO [ecd9f2e9] Running /usr/bin/env ln -s /var/www/cartaomaispet/shared/config/database.yml /var/www/cartaomaispet/releases/20181228194745/config/database.yml as root@178.128.129.173
+ DEBUG [ecd9f2e9] Command: /usr/bin/env ln -s /var/www/cartaomaispet/shared/config/database.yml /var/www/cartaomaispet/releases/20181228194745/config/database.yml
+  INFO [368568f0] Finished in 3.511 seconds with exit status 0 (successful).
+ DEBUG [bedf0397] Running [ -L /var/www/cartaomaispet/releases/20181228194745/config/master.key ] as root@178.128.129.173
+ DEBUG [bedf0397] Command: [ -L /var/www/cartaomaispet/releases/20181228194745/config/master.key ]
+ DEBUG [5374cda8] Finished in 1.669 seconds with exit status 1 (failed).
+ DEBUG [3564cf0a] Running [ -f /var/www/cartaomaispet/releases/20181228194745/config/master.key ] as root@178.128.129.173
+ DEBUG [3564cf0a] Command: [ -f /var/www/cartaomaispet/releases/20181228194745/config/master.key ]
+ DEBUG [c344594d] Finished in 0.857 seconds with exit status 1 (failed).
+  INFO [3c87b67e] Running /usr/bin/env ln -s /var/www/cartaomaispet/shared/config/master.key /var/www/cartaomaispet/releases/20181228194745/config/master.key as root@178.128.129.173
+ DEBUG [3c87b67e] Command: /usr/bin/env ln -s /var/www/cartaomaispet/shared/config/master.key /var/www/cartaomaispet/releases/20181228194745/config/master.key
+  INFO [49627019] Finished in 0.634 seconds with exit status 0 (successful).
+  INFO [05e04d7a] Running /usr/bin/env mkdir -p /var/www/cartaomaispet/releases/20181228194745 /var/www/cartaomaispet/releases/20181228194745/tmp /var/www/cartaomaispet/releases/20181228194745/public as root@178.128.129.173
+ DEBUG [05e04d7a] Command: /usr/bin/env mkdir -p /var/www/cartaomaispet/releases/20181228194745 /var/www/cartaomaispet/releases/20181228194745/tmp /var/www/cartaomaispet/releases/20181228194745/public
+  INFO [4c7a0e29] Finished in 0.962 seconds with exit status 0 (successful).
+ DEBUG [56380a78] Running [ -L /var/www/cartaomaispet/releases/20181228194745/log ] as root@178.128.129.173
+ DEBUG [56380a78] Command: [ -L /var/www/cartaomaispet/releases/20181228194745/log ]
+ DEBUG [182a81be] Finished in 0.607 seconds with exit status 1 (failed).
+ DEBUG [fdc40edb] Running [ -d /var/www/cartaomaispet/releases/20181228194745/log ] as root@178.128.129.173
+ DEBUG [fdc40edb] Command: [ -d /var/www/cartaomaispet/releases/20181228194745/log ]
+ DEBUG [4609f994] Finished in 0.596 seconds with exit status 0 (successful).
+  INFO [158e8f08] Running /usr/bin/env rm -rf /var/www/cartaomaispet/releases/20181228194745/log as root@178.128.129.173
+ DEBUG [158e8f08] Command: /usr/bin/env rm -rf /var/www/cartaomaispet/releases/20181228194745/log
+  INFO [15fbc40c] Finished in 0.591 seconds with exit status 0 (successful).
+  INFO [929840bf] Running /usr/bin/env ln -s /var/www/cartaomaispet/shared/log /var/www/cartaomaispet/releases/20181228194745/log as root@178.128.129.173
+ DEBUG [929840bf] Command: /usr/bin/env ln -s /var/www/cartaomaispet/shared/log /var/www/cartaomaispet/releases/20181228194745/log
+  INFO [44cc6338] Finished in 0.594 seconds with exit status 0 (successful).
+ DEBUG [ef438fb3] Running [ -L /var/www/cartaomaispet/releases/20181228194745/tmp/pids ] as root@178.128.129.173
+ DEBUG [ef438fb3] Command: [ -L /var/www/cartaomaispet/releases/20181228194745/tmp/pids ]
+ DEBUG [f51a9acf] Finished in 0.603 seconds with exit status 1 (failed).
+ DEBUG [ead49302] Running [ -d /var/www/cartaomaispet/releases/20181228194745/tmp/pids ] as root@178.128.129.173
+ DEBUG [ead49302] Command: [ -d /var/www/cartaomaispet/releases/20181228194745/tmp/pids ]
+ DEBUG [54f78851] Finished in 0.594 seconds with exit status 1 (failed).
+  INFO [81bbbd12] Running /usr/bin/env ln -s /var/www/cartaomaispet/shared/tmp/pids /var/www/cartaomaispet/releases/20181228194745/tmp/pids as root@178.128.129.173
+ DEBUG [81bbbd12] Command: /usr/bin/env ln -s /var/www/cartaomaispet/shared/tmp/pids /var/www/cartaomaispet/releases/20181228194745/tmp/pids
+  INFO [c78bc102] Finished in 0.598 seconds with exit status 0 (successful).
+ DEBUG [e339c71f] Running [ -L /var/www/cartaomaispet/releases/20181228194745/tmp/cache ] as root@178.128.129.173
+ DEBUG [e339c71f] Command: [ -L /var/www/cartaomaispet/releases/20181228194745/tmp/cache ]
+ DEBUG [3801fdf4] Finished in 0.604 seconds with exit status 1 (failed).
+ DEBUG [8034c3de] Running [ -d /var/www/cartaomaispet/releases/20181228194745/tmp/cache ] as root@178.128.129.173
+ DEBUG [8034c3de] Command: [ -d /var/www/cartaomaispet/releases/20181228194745/tmp/cache ]
+ DEBUG [fa34fb5b] Finished in 0.597 seconds with exit status 1 (failed).
+  INFO [fc66ab98] Running /usr/bin/env ln -s /var/www/cartaomaispet/shared/tmp/cache /var/www/cartaomaispet/releases/20181228194745/tmp/cache as root@178.128.129.173
+ DEBUG [fc66ab98] Command: /usr/bin/env ln -s /var/www/cartaomaispet/shared/tmp/cache /var/www/cartaomaispet/releases/20181228194745/tmp/cache
+  INFO [10143168] Finished in 0.611 seconds with exit status 0 (successful).
+ DEBUG [90123ccc] Running [ -L /var/www/cartaomaispet/releases/20181228194745/tmp/sockets ] as root@178.128.129.173
+ DEBUG [90123ccc] Command: [ -L /var/www/cartaomaispet/releases/20181228194745/tmp/sockets ]
+ DEBUG [6a94d4b4] Finished in 0.607 seconds with exit status 1 (failed).
+ DEBUG [29113e1c] Running [ -d /var/www/cartaomaispet/releases/20181228194745/tmp/sockets ] as root@178.128.129.173
+ DEBUG [29113e1c] Command: [ -d /var/www/cartaomaispet/releases/20181228194745/tmp/sockets ]
+ DEBUG [d2ebe764] Finished in 0.633 seconds with exit status 1 (failed).
+  INFO [91c04a47] Running /usr/bin/env ln -s /var/www/cartaomaispet/shared/tmp/sockets /var/www/cartaomaispet/releases/20181228194745/tmp/sockets as root@178.128.129.173
+ DEBUG [91c04a47] Command: /usr/bin/env ln -s /var/www/cartaomaispet/shared/tmp/sockets /var/www/cartaomaispet/releases/20181228194745/tmp/sockets
+  INFO [839716b0] Finished in 0.593 seconds with exit status 0 (successful).
+ DEBUG [77b7e552] Running [ -L /var/www/cartaomaispet/releases/20181228194745/public/system ] as root@178.128.129.173
+ DEBUG [77b7e552] Command: [ -L /var/www/cartaomaispet/releases/20181228194745/public/system ]
+ DEBUG [db1ade63] Finished in 0.600 seconds with exit status 1 (failed).
+ DEBUG [ee2003d5] Running [ -d /var/www/cartaomaispet/releases/20181228194745/public/system ] as root@178.128.129.173
+ DEBUG [ee2003d5] Command: [ -d /var/www/cartaomaispet/releases/20181228194745/public/system ]
+ DEBUG [83e041e3] Finished in 0.596 seconds with exit status 1 (failed).
+  INFO [033822b2] Running /usr/bin/env ln -s /var/www/cartaomaispet/shared/public/system /var/www/cartaomaispet/releases/20181228194745/public/system as root@178.128.129.173
+ DEBUG [033822b2] Command: /usr/bin/env ln -s /var/www/cartaomaispet/shared/public/system /var/www/cartaomaispet/releases/20181228194745/public/system
+  INFO [ba8e1e40] Finished in 0.787 seconds with exit status 0 (successful).
+  INFO [437874bf] Running /usr/bin/env ln -s /var/www/cartaomaispet/releases/20181228194745 /var/www/cartaomaispet/releases/current as root@178.128.129.173
+ DEBUG [437874bf] Command: /usr/bin/env ln -s /var/www/cartaomaispet/releases/20181228194745 /var/www/cartaomaispet/releases/current
+  INFO [d0fdeec9] Finished in 0.652 seconds with exit status 0 (successful).
+  INFO [bd7b986e] Running /usr/bin/env mv /var/www/cartaomaispet/releases/current /var/www/cartaomaispet as root@178.128.129.173
+ DEBUG [bd7b986e] Command: /usr/bin/env mv /var/www/cartaomaispet/releases/current /var/www/cartaomaispet
+  INFO [b2787299] Finished in 0.677 seconds with exit status 0 (successful).
+ DEBUG [4ca55e58] Running if test ! -d /var/www/cartaomaispet/releases/20181228194745; then echo "Directory does not exist '/var/www/cartaomaispet/releases/20181228194745'" 1>&2; false; fi as root@178.128.129.173
+ DEBUG [4ca55e58] Command: if test ! -d /var/www/cartaomaispet/releases/20181228194745; then echo "Directory does not exist '/var/www/cartaomaispet/releases/20181228194745'" 1>&2; false; fi
+ DEBUG [81f971bf] Finished in 0.682 seconds with exit status 0 (successful).
+ DEBUG [a0d41bdb] Running /usr/bin/env passenger -v as root@178.128.129.173
+ DEBUG [a0d41bdb] Command: cd /var/www/cartaomaispet/releases/20181228194745 && /usr/bin/env passenger -v
+ DEBUG [dd1597fc] 	Phusion Passenger 6.0.0
+ DEBUG [dd1597fc] Finished in 0.774 seconds with exit status 0 (successful).
+  INFO [85461fdf] Running /usr/bin/env passenger-config restart-app /var/www/cartaomaispet --ignore-app-not-running as root@178.128.129.173
+ DEBUG [85461fdf] Command: cd /var/www/cartaomaispet/releases/20181228194745 && /usr/bin/env passenger-config restart-app /var/www/cartaomaispet --ignore-app-not-running
+ DEBUG [24659c4d] 	*** Cleaning stale instance directory /tmp/passenger.VsRtyZi
+*** Cleaning stale instance directory /tmp/passenger.mYNF9g2
+*** Cleaning stale instance directory /tmp/passenger.JjEtpYB
+*** Cleaning stale instance directory /tmp/passenger.1XsEsXO
+*** Cleaning stale instance directory /tmp/passenger.hKt6qg9
+Restarting /var/www/cartaomaispet/current (production)
+  INFO [24659c4d] Finished in 1.203 seconds with exit status 0 (successful).
+ DEBUG [b3a0c43f] Running /usr/bin/env ls -x /var/www/cartaomaispet/releases as root@178.128.129.173
+ DEBUG [b3a0c43f] Command: /usr/bin/env ls -x /var/www/cartaomaispet/releases
+ DEBUG [314d5997] 	20181228194745
+ DEBUG [314d5997] Finished in 1.400 seconds with exit status 0 (successful).
+ DEBUG [e0a71ae5] Running if test ! -d /var/www/cartaomaispet/releases; then echo "Directory does not exist '/var/www/cartaomaispet/releases'" 1>&2; false; fi as root@178.128.129.173
+ DEBUG [e0a71ae5] Command: if test ! -d /var/www/cartaomaispet/releases; then echo "Directory does not exist '/var/www/cartaomaispet/releases'" 1>&2; false; fi
+ DEBUG [fc1f0782] Finished in 1.066 seconds with exit status 0 (successful).
+  INFO [4e6407ca] Running /usr/bin/env echo "Branch master (at 469d69116a1168ab7aa78e0f668d1dd0114e5f66) deployed as release 20181228194745 by marviorocha" >> /var/www/cartaomaispet/revisions.log as root@178.128.129.173
+ DEBUG [4e6407ca] Command: cd /var/www/cartaomaispet/releases && /usr/bin/env echo "Branch master (at 469d69116a1168ab7aa78e0f668d1dd0114e5f66) deployed as release 20181228194745 by marviorocha" >> /var/www/cartaomaispet/revisions.log
+  INFO [dc9def05] Finished in 1.381 seconds with exit status 0 (successful).
