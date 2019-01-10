@@ -709,3 +709,200 @@ Processing by Devise::RegistrationsController#create as HTML
 Completed 200 OK in 226ms (Views: 175.9ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/" for 127.0.0.1 at 2019-01-09 23:54:25 -0200
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#welcome as HTML
+Completed 401 Unauthorized in 23ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-01-09 23:54:25 -0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (8.2ms)
+Completed 500 Internal Server Error in 286ms (ActiveRecord: 4.6ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'jquery/dist/jquery' with type 'application/javascript'
+Checked in these paths: 
+  /home/marviorocha/www/cartaomaispet/app/assets/config
+  /home/marviorocha/www/cartaomaispet/app/assets/images
+  /home/marviorocha/www/cartaomaispet/app/assets/javascripts
+  /home/marviorocha/www/cartaomaispet/app/assets/stylesheets
+  /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/actioncable-5.2.2/lib/assets/compiled
+  /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activestorage-5.2.2/app/assets/javascripts
+  /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/actionview-5.2.2/lib/assets/compiled
+  /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /home/marviorocha/www/cartaomaispet/node_modules):
+     6:   <%= csp_meta_tag %>
+     7: 
+     8: <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+     9: <%= stylesheet_link_tag    "application", :media => "all" %>
+    10: <!-- Compiled and minified JavaScript -->
+    11: 
+    12: <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+app/assets/javascripts/application.js:12
+app/views/layouts/application.html.erb:9:in `_app_views_layouts_application_html_erb__3576447068236177652_70111454114800'
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-01-09 23:54:51 -0200
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (26.1ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-01-09 23:54:52 -0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.4ms)
+  Rendered layouts/parts/_menu.html.erb (7.7ms)
+  Rendered layouts/parts/_footer.html.erb (0.5ms)
+  Rendered layouts/parts/_menu.html.erb (6.9ms)
+  Rendered layouts/parts/_footer.html.erb (1.1ms)
+Completed 200 OK in 2564ms (Views: 2494.8ms | ActiveRecord: 7.8ms)
+
+
+Completed 200 OK in 1437ms (Views: 1434.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2019-01-09 23:55:02 -0200
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+jCBwG2aZbGqFXdwxaXR/DPjIvdWOyhyanBeIsL7xXuEJXsv+8MlXFR86l3JcoKJhx3b2NpB5QZD64xbvxYnjw==", "user"=>{"email"=>"marviorocha@marviorocha.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Fazer Login"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "marviorocha@marviorocha.com"], ["LIMIT", 1]]
+  ↳ /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://dev.local.me:3000/
+Completed 302 Found in 333ms (ActiveRecord: 6.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-09 23:55:02 -0200
+Processing by PagesController#welcome as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mPetshop Load (2.1ms)[0m  [1m[34mSELECT  "petshops".* FROM "petshops" LIMIT $1[0m  [["LIMIT", 10]]
+  ↳ app/controllers/pages_controller.rb:4
+  Rendering pages/welcome.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:23
+  [1m[36mActiveStorage::Blob Load (1.6ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:23
+  Rendered layouts/parts/_storenav.html.erb (68.2ms)
+  Rendered shered/_dashboard.html.erb (0.6ms)
+  Rendered pages/module/_liststore.html.erb (0.5ms)
+  Rendered pages/welcome.html.erb within layouts/application (72.3ms)
+  Rendered layouts/parts/_menu.html.erb (1.9ms)
+  Rendered layouts/parts/_footer.html.erb (1.2ms)
+Completed 200 OK in 144ms (Views: 117.4ms | ActiveRecord: 18.2ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f84d9e29f72c0d69d4452909e8ce91ab0a5b2e2b/o-que-levar-em-consideracao-na-hora-de-adotar-um-pet.jpg" for 127.0.0.1 at 2019-01-09 23:55:02 -0200
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f84d9e29f72c0d69d4452909e8ce91ab0a5b2e2b", "filename"=>"o-que-levar-em-consideracao-na-hora-de-adotar-um-pet"}
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (1.5ms) [0m[34mGenerated URL for file at key: DucpYdRKrpQBxs3dWpagpmVn (http://dev.local.me:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRSSFZqY0Zsa1VrdHljRkZDZUhNelpGZHdZV2R3YlZadUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSUJsbWx1YkdsdVpUc2dabWxzWlc1aGJXVTlJbTh0Y1hWbExXeGxkbUZ5TFdWdExXTnZibk5wWkdWeVlXTmhieTF1WVMxb2IzSmhMV1JsTFdGa2IzUmhjaTExYlMxd1pYUXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkdkxYRjFaUzFzWlhaaGNpMWxiUzFqYjI1emFXUmxjbUZqWVc4dGJtRXRhRzl5WVMxa1pTMWhaRzkwWVhJdGRXMHRjR1YwTG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMTktMDEtMTBUMDI6MDA6MDIuNjk0WiIsInB1ciI6ImJsb2Jfa2V5In19--34a0a77fabc2a04b98cb492977a6c5eb2f50aaa9/o-que-levar-em-consideracao-na-hora-de-adotar-um-pet.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22o-que-levar-em-consideracao-na-hora-de-adotar-um-pet.jpg%22%3B+filename%2A%3DUTF-8%27%27o-que-levar-em-consideracao-na-hora-de-adotar-um-pet.jpg)[0m
+Redirected to http://dev.local.me:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRSSFZqY0Zsa1VrdHljRkZDZUhNelpGZHdZV2R3YlZadUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSUJsbWx1YkdsdVpUc2dabWxzWlc1aGJXVTlJbTh0Y1hWbExXeGxkbUZ5TFdWdExXTnZibk5wWkdWeVlXTmhieTF1WVMxb2IzSmhMV1JsTFdGa2IzUmhjaTExYlMxd1pYUXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkdkxYRjFaUzFzWlhaaGNpMWxiUzFqYjI1emFXUmxjbUZqWVc4dGJtRXRhRzl5WVMxa1pTMWhaRzkwWVhJdGRXMHRjR1YwTG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMTktMDEtMTBUMDI6MDA6MDIuNjk0WiIsInB1ciI6ImJsb2Jfa2V5In19--34a0a77fabc2a04b98cb492977a6c5eb2f50aaa9/o-que-levar-em-consideracao-na-hora-de-adotar-um-pet.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22o-que-levar-em-consideracao-na-hora-de-adotar-um-pet.jpg%22%3B+filename%2A%3DUTF-8%27%27o-que-levar-em-consideracao-na-hora-de-adotar-um-pet.jpg
+Completed 302 Found in 7ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRSSFZqY0Zsa1VrdHljRkZDZUhNelpGZHdZV2R3YlZadUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSUJsbWx1YkdsdVpUc2dabWxzWlc1aGJXVTlJbTh0Y1hWbExXeGxkbUZ5TFdWdExXTnZibk5wWkdWeVlXTmhieTF1WVMxb2IzSmhMV1JsTFdGa2IzUmhjaTExYlMxd1pYUXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkdkxYRjFaUzFzWlhaaGNpMWxiUzFqYjI1emFXUmxjbUZqWVc4dGJtRXRhRzl5WVMxa1pTMWhaRzkwWVhJdGRXMHRjR1YwTG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMTktMDEtMTBUMDI6MDA6MDIuNjk0WiIsInB1ciI6ImJsb2Jfa2V5In19--34a0a77fabc2a04b98cb492977a6c5eb2f50aaa9/o-que-levar-em-consideracao-na-hora-de-adotar-um-pet.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22o-que-levar-em-consideracao-na-hora-de-adotar-um-pet.jpg%22%3B+filename%2A%3DUTF-8%27%27o-que-levar-em-consideracao-na-hora-de-adotar-um-pet.jpg" for 127.0.0.1 at 2019-01-09 23:55:02 -0200
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"o-que-levar-em-consideracao-na-hora-de-adotar-um-pet.jpg\"; filename*=UTF-8''o-que-levar-em-consideracao-na-hora-de-adotar-um-pet.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRSSFZqY0Zsa1VrdHljRkZDZUhNelpGZHdZV2R3YlZadUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSUJsbWx1YkdsdVpUc2dabWxzWlc1aGJXVTlJbTh0Y1hWbExXeGxkbUZ5TFdWdExXTnZibk5wWkdWeVlXTmhieTF1WVMxb2IzSmhMV1JsTFdGa2IzUmhjaTExYlMxd1pYUXVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkdkxYRjFaUzFzWlhaaGNpMWxiUzFqYjI1emFXUmxjbUZqWVc4dGJtRXRhRzl5WVMxa1pTMWhaRzkwWVhJdGRXMHRjR1YwTG1wd1p3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEMmx0WVdkbEwycHdaV2NHT3daVSIsImV4cCI6IjIwMTktMDEtMTBUMDI6MDA6MDIuNjk0WiIsInB1ciI6ImJsb2Jfa2V5In19--34a0a77fabc2a04b98cb492977a6c5eb2f50aaa9", "filename"=>"o-que-levar-em-consideracao-na-hora-de-adotar-um-pet"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-09 23:55:04 -0200
+Processing by PagesController#welcome as HTML
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mPetshop Load (1.1ms)[0m  [1m[34mSELECT  "petshops".* FROM "petshops" LIMIT $1[0m  [["LIMIT", 10]]
+  ↳ app/controllers/pages_controller.rb:4
+  Rendering pages/welcome.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (2.1ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:23
+  [1m[36mActiveStorage::Blob Load (1.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:23
+  Rendered layouts/parts/_storenav.html.erb (14.6ms)
+  Rendered shered/_dashboard.html.erb (0.5ms)
+  Rendered pages/module/_liststore.html.erb (0.4ms)
+  Rendered pages/welcome.html.erb within layouts/application (19.4ms)
+  Rendered layouts/parts/_menu.html.erb (2.4ms)
+  Rendered layouts/parts/_footer.html.erb (0.6ms)
+Completed 200 OK in 103ms (Views: 88.9ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2019-01-09 23:55:07 -0200
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (11.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:23
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:23
+  Rendered layouts/parts/_storenav.html.erb (8.2ms)
+  Rendered devise/registrations/edit.html.erb within layouts/application (22.1ms)
+  Rendered layouts/parts/_menu.html.erb (1.5ms)
+  Rendered layouts/parts/_footer.html.erb (0.3ms)
+Completed 200 OK in 99ms (Views: 79.4ms | ActiveRecord: 12.0ms)
+
+
+Started GET "/petshops" for 127.0.0.1 at 2019-01-09 23:55:07 -0200
+Processing by PetshopsController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://dev.local.me:3000/
+Completed 302 Found in 12ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-09 23:55:08 -0200
+Processing by PagesController#welcome as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mPetshop Load (1.1ms)[0m  [1m[34mSELECT  "petshops".* FROM "petshops" LIMIT $1[0m  [["LIMIT", 10]]
+  ↳ app/controllers/pages_controller.rb:4
+  Rendering pages/welcome.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (1.9ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:23
+  [1m[36mActiveStorage::Blob Load (1.0ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:23
+  Rendered layouts/parts/_storenav.html.erb (13.9ms)
+  Rendered shered/_dashboard.html.erb (0.5ms)
+  Rendered pages/module/_liststore.html.erb (0.5ms)
+  Rendered pages/welcome.html.erb within layouts/application (18.9ms)
+  Rendered layouts/parts/_menu.html.erb (1.5ms)
+  Rendered layouts/parts/_footer.html.erb (0.6ms)
+Completed 200 OK in 115ms (Views: 99.5ms | ActiveRecord: 4.8ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2019-01-09 23:55:09 -0200
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"PZUUMgL8Z97dqtLn7qXxua5f47FBNjQ+okrBatDeQFd3Q1Qtzc4MDzeD4iwX+mXaYiItb9JgTLjS9u4q9nmBQw=="}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://dev.local.me:3000/
+Completed 302 Found in 11ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-09 23:55:09 -0200
+Processing by PagesController#welcome as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-01-09 23:55:09 -0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.3ms)
+  Rendered layouts/parts/_menu.html.erb (3.3ms)
+  Rendered layouts/parts/_footer.html.erb (1.3ms)
+Completed 200 OK in 96ms (Views: 94.2ms | ActiveRecord: 0.0ms)
+
+
