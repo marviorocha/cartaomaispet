@@ -17,8 +17,7 @@ ENV PATH $GEM_HOME/bin:$GEM_HOME/gems/bin:$PATH
 
 RUN bundle install
 RUN bundle config --global frozen 1
-RUN gem update
-RUN gem update bundler
+RUN gem update --default
 
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
