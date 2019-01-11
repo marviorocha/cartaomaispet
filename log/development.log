@@ -12095,3 +12095,36 @@ Processing by RailsAdmin::MainController#index as HTML
 Completed 200 OK in 222ms (Views: 200.8ms | ActiveRecord: 7.2ms)
 
 
+Started GET "/admin/animal" for 127.0.0.1 at 2019-01-11 18:48:56 -0200
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"animal"}
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:9
+  Rendering /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/rails_admin-1.4.2/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application
+  [1m[36mAnimal Load (0.5ms)[0m  [1m[34mSELECT  "animals".* FROM "animals" ORDER BY animals.id desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendered /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/rails_admin-1.4.2/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (67.9ms)
+  Rendered /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_secondary_navigation.html.haml (22.2ms)
+  Rendered /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_navigation.html.haml (30.2ms)
+  Rendered /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (49.6ms)
+  Rendering /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/rails_admin-1.4.2/app/views/layouts/rails_admin/pjax.html.haml (12.3ms)
+Completed 200 OK in 2245ms (Views: 1367.7ms | ActiveRecord: 27.4ms)
+
+
+Started GET "/admin/user?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2019-01-11 18:49:03 -0200
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"user"}
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:9
+  Rendering /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/rails_admin-1.4.2/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY users.id desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendered /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/rails_admin-1.4.2/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (179.1ms)
+Completed 200 OK in 229ms (Views: 201.1ms | ActiveRecord: 8.2ms)
+
+
