@@ -10,4 +10,5 @@ class User < ApplicationRecord
 # User Rules
  ROLES = %i[admin user store banned]
 
+
 end

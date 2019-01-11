@@ -20,18 +20,18 @@ password_confirmation:'123456',
 role: "user")
 end
 
-# Send to petshop
-# 25.times do |i|
-# Petshop.create(
-#   title:  Faker::Lorem.sentence(3),
-#   address: Faker::Address.street_address,
-#   phone:  Faker::PhoneNumber.phone_number,
-#   cep:    Faker::Address.zip_code,
-#   estado: Faker::Address.state,
-#   descricao: Faker::Lorem.sentence(80),
-#   cidade: Faker::Address.city,
-#
-# )
+#Send to petshop
+25.times do |i|
+Petshop.create(
+  title:  Faker::Lorem.sentence(3),
+  address: Faker::Address.street_address,
+  phone:  Faker::PhoneNumber.phone_number,
+  cep:    Faker::Address.zip_code,
+  estado: Faker::Address.state,
+  descricao: Faker::Lorem.sentence(80),
+  cidade: Faker::Address.city,
+
+)
 
 # Send to categories
 
@@ -52,6 +52,5 @@ valor: Faker::Number.between(10, 70),
 petshop_id: Faker::Number.between(1, 25)
 )
 end
-
 
 end
