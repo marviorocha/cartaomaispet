@@ -34,4 +34,4 @@ reset:
 prod:
 				docker-compose -f prod-compose.yml up
 deploy:
-				$(RUN) cap production deploy
+				cap production deploy
