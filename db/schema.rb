@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_05_000559) do
+ActiveRecord::Schema.define(version: 2019_01_15_135327) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -99,6 +99,24 @@ ActiveRecord::Schema.define(version: 2018_12_05_000559) do
     t.index ["user_id"], name: "index_petshops_on_user_id"
   end
 
+  create_table "plan_selects", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "plan_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["plan_id"], name: "index_plan_selects_on_plan_id"
+    t.index ["user_id"], name: "index_plan_selects_on_user_id"
+  end
+
+  create_table "plans", force: :cascade do |t|
+    t.string "plan_name"
+    t.integer "plan_price"
+    t.string "plan_status"
+    t.string "plan_periodo"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -121,4 +139,6 @@ ActiveRecord::Schema.define(version: 2018_12_05_000559) do
   add_foreign_key "favorites", "petshops"
   add_foreign_key "favorites", "users"
   add_foreign_key "petshops", "users"
+  add_foreign_key "plan_selects", "plans"
+  add_foreign_key "plan_selects", "users"
 end

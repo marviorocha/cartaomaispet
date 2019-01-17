@@ -7,7 +7,7 @@ class PetshopsController < ApplicationController
 
     @petshops = Petshop.search(params[:cidade])
 
-  authorize! :read, Animal
+ 
   end
 
   # GET /petshops/1

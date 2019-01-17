@@ -2,29 +2,30 @@
 
 <% if current_user.role == "store" %>
 <!-- for store dashboard -->
-<div class="col s12 m6">
 
-    <div class="card cyan darken-2">
-        <div class="card-action  cyan darken-4 white-text">
-          <span class="card-title"><i class="material-icons">add</i> Total de Desconto</span>
-        </div>
-      <div class="card-content white-text">
-        <h3> R$151 Economía</h3>
-      </div>
-    </div>
-
-</div>
 
 <% end %> <!-- end current user store -->
 
 <% if current_user.role == "user" %>
+<!-- for User dashboard -->
 <div class="col s12 m6">
     <div class="card cyan darken-2">
         <div class="card-action  cyan darken-4 white-text">
           <span class="card-title"><i class="material-icons">add</i> Total de Desconto</span>
         </div>
       <div class="card-content white-text">
-        <h3> R$151 Economía</h3>
+        <h4> R$151 descontos</h4>
+      </div>
+    </div>
+</div>
+
+<div class="col s12 m6">
+    <div class="card  blue lighten-1">
+        <div class="card-action   blue darken-3 white-text">
+          <span class="card-title"> Total Em Economia</span>
+        </div>
+      <div class="card-content white-text">
+           <h4> R$5.215,00 Economía</h4>
       </div>
     </div>
 </div>

@@ -5,7 +5,7 @@ class AnimalsController < ApplicationController
   # GET /animals.json
   def index
     @animals = current_user.animals.take(5)
-    authorize! :read, Animal
+   
   end
 
   # GET /animals/1

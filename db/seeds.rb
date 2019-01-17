@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 user = User.create(name: 'Admin', last_name: 'Administrator', email: 'admin@admin.com', password: 'admin123',
-        password_confirmation: 'admin123', role: 'user')
+        password_confirmation: 'admin123', role: 'admin')
 
 # Send to users
 10.times do |i|

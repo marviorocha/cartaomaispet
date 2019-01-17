@@ -1,6 +1,6 @@
 class Petshop < ApplicationRecord
 
- 
+belongs_to :user
 
 
 
