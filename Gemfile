@@ -8,7 +8,7 @@ ruby '2.5.3'
 gem 'devise', '~> 4.5'
 gem 'cancancan', '~> 2.3'
 gem 'faker'
-
+gem 'pg_search'
 gem 'rails_admin'
 gem 'rails_admin_rollincode', '~> 1.0'
 

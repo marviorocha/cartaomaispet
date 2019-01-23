@@ -10,9 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_15_135327) do
+ActiveRecord::Schema.define(version: 2019_01_18_223439) do
 
   # These are extensions that must be enabled in order to support this database
+  enable_extension "fuzzystrmatch"
+  enable_extension "pg_trgm"
   enable_extension "plpgsql"
 
   create_table "active_storage_attachments", force: :cascade do |t|
@@ -68,11 +70,13 @@ ActiveRecord::Schema.define(version: 2019_01_15_135327) do
   end
 
   create_table "discounts", force: :cascade do |t|
-    t.integer "valor"
-    t.bigint "petshop_id"
+    t.string "discountable_type"
+    t.bigint "discountable_id"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["petshop_id"], name: "index_discounts_on_petshop_id"
+    t.index ["discountable_type", "discountable_id"], name: "index_discounts_on_discountable_type_and_discountable_id"
+    t.index ["user_id"], name: "index_discounts_on_user_id"
   end
 
   create_table "favorites", force: :cascade do |t|
@@ -97,6 +101,15 @@ ActiveRecord::Schema.define(version: 2019_01_15_135327) do
     t.datetime "updated_at", null: false
     t.bigint "user_id"
     t.index ["user_id"], name: "index_petshops_on_user_id"
+  end
+
+  create_table "pg_search_documents", force: :cascade do |t|
+    t.text "content"
+    t.string "searchable_type"
+    t.bigint "searchable_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["searchable_type", "searchable_id"], name: "index_pg_search_documents_on_searchable_type_and_searchable_id"
   end
 
   create_table "plan_selects", force: :cascade do |t|
@@ -135,7 +148,7 @@ ActiveRecord::Schema.define(version: 2019_01_15_135327) do
   add_foreign_key "animals", "users"
   add_foreign_key "calendars", "petshops"
   add_foreign_key "categories", "petshops"
-  add_foreign_key "discounts", "petshops"
+  add_foreign_key "discounts", "users"
   add_foreign_key "favorites", "petshops"
   add_foreign_key "favorites", "users"
   add_foreign_key "petshops", "users"

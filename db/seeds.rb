@@ -46,11 +46,11 @@ category = Category.create([
 ])
 
 # Send To Discount
-25.times do |i|
-Discount.create(
-valor: Faker::Number.between(10, 70),
-petshop_id: Faker::Number.between(1, 25)
-)
-end
+# 25.times do |i|
+# Discount.create(
+# valor: Faker::Number.between(10, 70),
+# petshop_id: Faker::Number.between(1, 25)
+# )
+# end
 
 end
