@@ -15,10 +15,10 @@ services:
     build: .
     container_name: ruby
     env_file: .env
-    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
+    command: bundle exec puma -C config/puma.rb
     environment:
-      - RAILS_ENV=development
-      - RAKE_ENV=development
+      - RAILS_ENV=production
+      - RAKE_ENV=production
     ports:
       - 3000:3000
     volumes:

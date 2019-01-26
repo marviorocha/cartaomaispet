@@ -85,4 +85,4 @@ production:
   <<: *default
   database: cartaomaispet_production
   username: <%= ENV['POSTGRES_USER'] %>
-  password: <%= ENV['POSTGRES_password'] %>
+  password: <%= ENV['POSTGRES_PASSWORD'] %>
