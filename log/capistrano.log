@@ -5252,3 +5252,357 @@ You can enable  auto-update  with:    echo rvm_autoupdate_flag=2 >> ~/.rvmrc
   INFO [21c2de1f] Running /usr/bin/env echo "Branch master (at a01d6e5d3dee1a5e884dcfa18ad08b070d9673c2) deployed as release 20190112014617 by marviorocha" >> ~/cartaomaispet/revisions.log as root@178.128.129.173
  DEBUG [21c2de1f] Command: cd ~/cartaomaispet/releases && /usr/bin/env echo "Branch master (at a01d6e5d3dee1a5e884dcfa18ad08b070d9673c2) deployed as release 20190112014617 by marviorocha" >> ~/cartaomaispet/revisions.log
   INFO [b7cd1023] Finished in 0.596 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-01-23 15:39:27 -0200 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [be490187] Running /usr/bin/env mkdir -p /tmp as root@178.128.129.173
+ DEBUG [be490187] Command: /usr/bin/env mkdir -p /tmp
+  INFO [68fa78a8] Finished in 8.741 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-cartaomaispet-production-marviorocha.sh 0.0%
+  INFO Uploading /tmp/git-ssh-cartaomaispet-production-marviorocha.sh 100.0%
+  INFO [2760d9e5] Running /usr/bin/env chmod 700 /tmp/git-ssh-cartaomaispet-production-marviorocha.sh as root@178.128.129.173
+ DEBUG [2760d9e5] Command: /usr/bin/env chmod 700 /tmp/git-ssh-cartaomaispet-production-marviorocha.sh
+  INFO [414f775b] Finished in 0.613 seconds with exit status 0 (successful).
+  INFO [b719f119] Running /usr/bin/env git ls-remote https://github.com/marviorocha/cartaomaispet.git HEAD as root@178.128.129.173
+ DEBUG [b719f119] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cartaomaispet-production-marviorocha.sh" ; /usr/bin/env git ls-remote https://github.com/marviorocha/cartaomaispet.git HEAD )
+ DEBUG [0c81a582] 	9c1052154fc6123c3f440ba421b7bf7fc65c8e70	HEAD
+  INFO [0c81a582] Finished in 0.992 seconds with exit status 0 (successful).
+  INFO [3332464f] Running /usr/bin/env mkdir -p ~/cartaomaispet/shared ~/cartaomaispet/releases as root@178.128.129.173
+ DEBUG [3332464f] Command: /usr/bin/env mkdir -p ~/cartaomaispet/shared ~/cartaomaispet/releases
+  INFO [ec286a7e] Finished in 0.658 seconds with exit status 0 (successful).
+  INFO [61f37fdb] Running /usr/bin/env mkdir -p ~/cartaomaispet/shared/log ~/cartaomaispet/shared/tmp/pids ~/cartaomaispet/shared/tmp/cache ~/cartaomaispet/shared/tmp/sockets ~/cartaomaispet/shared/public/system as root@178.128.129.173
+ DEBUG [61f37fdb] Command: /usr/bin/env mkdir -p ~/cartaomaispet/shared/log ~/cartaomaispet/shared/tmp/pids ~/cartaomaispet/shared/tmp/cache ~/cartaomaispet/shared/tmp/sockets ~/cartaomaispet/shared/public/system
+  INFO [098e606c] Finished in 0.599 seconds with exit status 0 (successful).
+  INFO [2155ea11] Running /usr/bin/env mkdir -p ~/cartaomaispet/shared/config as root@178.128.129.173
+ DEBUG [2155ea11] Command: /usr/bin/env mkdir -p ~/cartaomaispet/shared/config
+  INFO [d0c7a05c] Finished in 0.610 seconds with exit status 0 (successful).
+ DEBUG [de68d736] Running [ -f ~/cartaomaispet/shared/config/database.yml ] as root@178.128.129.173
+ DEBUG [de68d736] Command: [ -f ~/cartaomaispet/shared/config/database.yml ]
+ DEBUG [a40b695f] Finished in 0.596 seconds with exit status 0 (successful).
+ DEBUG [e6a8f3d9] Running [ -f ~/cartaomaispet/shared/config/master.key ] as root@178.128.129.173
+ DEBUG [e6a8f3d9] Command: [ -f ~/cartaomaispet/shared/config/master.key ]
+ DEBUG [e5f8fb1f] Finished in 0.620 seconds with exit status 0 (successful).
+ DEBUG [6a285182] Running [ -f ~/cartaomaispet/current/REVISION ] as root@178.128.129.173
+ DEBUG [6a285182] Command: [ -f ~/cartaomaispet/current/REVISION ]
+ DEBUG [2a981203] Finished in 0.621 seconds with exit status 0 (successful).
+ DEBUG [a3996652] Running /usr/bin/env cat ~/cartaomaispet/current/REVISION 2>/dev/null as root@178.128.129.173
+ DEBUG [a3996652] Command: /usr/bin/env cat ~/cartaomaispet/current/REVISION 2>/dev/null
+ DEBUG [cfde8f7c] 	a01d6e5d3dee1a5e884dcfa18ad08b070d9673c2
+ DEBUG [cfde8f7c] Finished in 0.604 seconds with exit status 0 (successful).
+ DEBUG [ea0c2872] Running [ -f ~/cartaomaispet/repo/HEAD ] as root@178.128.129.173
+ DEBUG [ea0c2872] Command: [ -f ~/cartaomaispet/repo/HEAD ]
+ DEBUG [c8e8f649] Finished in 0.608 seconds with exit status 0 (successful).
+  INFO The repository mirror is at ~/cartaomaispet/repo
+ DEBUG [f16fe8fe] Running if test ! -d ~/cartaomaispet/repo; then echo "Directory does not exist '~/cartaomaispet/repo'" 1>&2; false; fi as root@178.128.129.173
+ DEBUG [f16fe8fe] Command: if test ! -d ~/cartaomaispet/repo; then echo "Directory does not exist '~/cartaomaispet/repo'" 1>&2; false; fi
+ DEBUG [a5b41992] Finished in 0.623 seconds with exit status 0 (successful).
+  INFO [2e449997] Running /usr/bin/env git remote set-url origin https://github.com/marviorocha/cartaomaispet.git as root@178.128.129.173
+ DEBUG [2e449997] Command: cd ~/cartaomaispet/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cartaomaispet-production-marviorocha.sh" ; /usr/bin/env git remote set-url origin https://github.com/marviorocha/cartaomaispet.git )
+  INFO [9050ebc9] Finished in 0.604 seconds with exit status 0 (successful).
+  INFO [58ad6007] Running /usr/bin/env git remote update --prune as root@178.128.129.173
+ DEBUG [58ad6007] Command: cd ~/cartaomaispet/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cartaomaispet-production-marviorocha.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [c8d767cd] 	Fetching origin
+ DEBUG [c8d767cd] 	From https://github.com/marviorocha/cartaomaispet
+   a01d6e5..9c10521  master     -> master
+  INFO [c8d767cd] Finished in 1.283 seconds with exit status 0 (successful).
+ DEBUG [762b3b18] Running if test ! -d ~/cartaomaispet/repo; then echo "Directory does not exist '~/cartaomaispet/repo'" 1>&2; false; fi as root@178.128.129.173
+ DEBUG [762b3b18] Command: if test ! -d ~/cartaomaispet/repo; then echo "Directory does not exist '~/cartaomaispet/repo'" 1>&2; false; fi
+ DEBUG [71233a29] Finished in 0.596 seconds with exit status 0 (successful).
+  INFO [123484bb] Running /usr/bin/env mkdir -p ~/cartaomaispet/releases/20190123173943 as root@178.128.129.173
+ DEBUG [123484bb] Command: cd ~/cartaomaispet/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cartaomaispet-production-marviorocha.sh" ; /usr/bin/env mkdir -p ~/cartaomaispet/releases/20190123173943 )
+  INFO [76397962] Finished in 0.706 seconds with exit status 0 (successful).
+  INFO [e8f23201] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C ~/cartaomaispet/releases/20190123173943 as root@178.128.129.173
+ DEBUG [e8f23201] Command: cd ~/cartaomaispet/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cartaomaispet-production-marviorocha.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C ~/cartaomaispet/releases/20190123173943 )
+  INFO [61b39415] Finished in 0.814 seconds with exit status 0 (successful).
+ DEBUG [520815e5] Running if test ! -d ~/cartaomaispet/repo; then echo "Directory does not exist '~/cartaomaispet/repo'" 1>&2; false; fi as root@178.128.129.173
+ DEBUG [520815e5] Command: if test ! -d ~/cartaomaispet/repo; then echo "Directory does not exist '~/cartaomaispet/repo'" 1>&2; false; fi
+ DEBUG [6847aa59] Finished in 0.586 seconds with exit status 0 (successful).
+ DEBUG [514f8028] Running /usr/bin/env git rev-list --max-count=1 master as root@178.128.129.173
+ DEBUG [514f8028] Command: cd ~/cartaomaispet/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cartaomaispet-production-marviorocha.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [8c7604f9] 	9c1052154fc6123c3f440ba421b7bf7fc65c8e70
+ DEBUG [8c7604f9] Finished in 0.622 seconds with exit status 0 (successful).
+ DEBUG [ad7a6551] Running if test ! -d ~/cartaomaispet/releases/20190123173943; then echo "Directory does not exist '~/cartaomaispet/releases/20190123173943'" 1>&2; false; fi as root@178.128.129.173
+ DEBUG [ad7a6551] Command: if test ! -d ~/cartaomaispet/releases/20190123173943; then echo "Directory does not exist '~/cartaomaispet/releases/20190123173943'" 1>&2; false; fi
+ DEBUG [f9ee3ac8] Finished in 0.621 seconds with exit status 0 (successful).
+  INFO [3c7d7d7a] Running /usr/bin/env echo "9c1052154fc6123c3f440ba421b7bf7fc65c8e70" > REVISION as root@178.128.129.173
+ DEBUG [3c7d7d7a] Command: cd ~/cartaomaispet/releases/20190123173943 && /usr/bin/env echo "9c1052154fc6123c3f440ba421b7bf7fc65c8e70" > REVISION
+  INFO [e6bde53c] Finished in 0.603 seconds with exit status 0 (successful).
+  INFO [353b2448] Running /usr/bin/env mkdir -p ~/cartaomaispet/releases/20190123173943/config as root@178.128.129.173
+ DEBUG [353b2448] Command: /usr/bin/env mkdir -p ~/cartaomaispet/releases/20190123173943/config
+  INFO [857223f2] Finished in 0.614 seconds with exit status 0 (successful).
+ DEBUG [b7126aa1] Running [ -L ~/cartaomaispet/releases/20190123173943/config/database.yml ] as root@178.128.129.173
+ DEBUG [b7126aa1] Command: [ -L ~/cartaomaispet/releases/20190123173943/config/database.yml ]
+ DEBUG [be532c9b] Finished in 0.598 seconds with exit status 1 (failed).
+ DEBUG [7722f070] Running [ -f ~/cartaomaispet/releases/20190123173943/config/database.yml ] as root@178.128.129.173
+ DEBUG [7722f070] Command: [ -f ~/cartaomaispet/releases/20190123173943/config/database.yml ]
+ DEBUG [2eb270cd] Finished in 0.637 seconds with exit status 0 (successful).
+  INFO [20b4bfcd] Running /usr/bin/env rm ~/cartaomaispet/releases/20190123173943/config/database.yml as root@178.128.129.173
+ DEBUG [20b4bfcd] Command: /usr/bin/env rm ~/cartaomaispet/releases/20190123173943/config/database.yml
+  INFO [e92b4bf5] Finished in 0.604 seconds with exit status 0 (successful).
+  INFO [6312d1bc] Running /usr/bin/env ln -s ~/cartaomaispet/shared/config/database.yml ~/cartaomaispet/releases/20190123173943/config/database.yml as root@178.128.129.173
+ DEBUG [6312d1bc] Command: /usr/bin/env ln -s ~/cartaomaispet/shared/config/database.yml ~/cartaomaispet/releases/20190123173943/config/database.yml
+  INFO [e21248a0] Finished in 0.604 seconds with exit status 0 (successful).
+ DEBUG [30a9f78a] Running [ -L ~/cartaomaispet/releases/20190123173943/config/master.key ] as root@178.128.129.173
+ DEBUG [30a9f78a] Command: [ -L ~/cartaomaispet/releases/20190123173943/config/master.key ]
+ DEBUG [7add2b3a] Finished in 0.622 seconds with exit status 1 (failed).
+ DEBUG [75af93b6] Running [ -f ~/cartaomaispet/releases/20190123173943/config/master.key ] as root@178.128.129.173
+ DEBUG [75af93b6] Command: [ -f ~/cartaomaispet/releases/20190123173943/config/master.key ]
+ DEBUG [fb1a378a] Finished in 0.587 seconds with exit status 1 (failed).
+  INFO [5a0b030d] Running /usr/bin/env ln -s ~/cartaomaispet/shared/config/master.key ~/cartaomaispet/releases/20190123173943/config/master.key as root@178.128.129.173
+ DEBUG [5a0b030d] Command: /usr/bin/env ln -s ~/cartaomaispet/shared/config/master.key ~/cartaomaispet/releases/20190123173943/config/master.key
+  INFO [0409e997] Finished in 0.602 seconds with exit status 0 (successful).
+  INFO [c9c1345a] Running /usr/bin/env mkdir -p ~/cartaomaispet/releases/20190123173943 ~/cartaomaispet/releases/20190123173943/tmp ~/cartaomaispet/releases/20190123173943/public as root@178.128.129.173
+ DEBUG [c9c1345a] Command: /usr/bin/env mkdir -p ~/cartaomaispet/releases/20190123173943 ~/cartaomaispet/releases/20190123173943/tmp ~/cartaomaispet/releases/20190123173943/public
+  INFO [3f1df3d9] Finished in 0.593 seconds with exit status 0 (successful).
+ DEBUG [2f04a3d5] Running [ -L ~/cartaomaispet/releases/20190123173943/log ] as root@178.128.129.173
+ DEBUG [2f04a3d5] Command: [ -L ~/cartaomaispet/releases/20190123173943/log ]
+ DEBUG [d94115d3] Finished in 0.590 seconds with exit status 1 (failed).
+ DEBUG [c1df8977] Running [ -d ~/cartaomaispet/releases/20190123173943/log ] as root@178.128.129.173
+ DEBUG [c1df8977] Command: [ -d ~/cartaomaispet/releases/20190123173943/log ]
+ DEBUG [e7488fd5] Finished in 0.710 seconds with exit status 0 (successful).
+  INFO [5a5ca167] Running /usr/bin/env rm -rf ~/cartaomaispet/releases/20190123173943/log as root@178.128.129.173
+ DEBUG [5a5ca167] Command: /usr/bin/env rm -rf ~/cartaomaispet/releases/20190123173943/log
+  INFO [3bddefa2] Finished in 0.597 seconds with exit status 0 (successful).
+  INFO [4a0b6161] Running /usr/bin/env ln -s ~/cartaomaispet/shared/log ~/cartaomaispet/releases/20190123173943/log as root@178.128.129.173
+ DEBUG [4a0b6161] Command: /usr/bin/env ln -s ~/cartaomaispet/shared/log ~/cartaomaispet/releases/20190123173943/log
+  INFO [c2460198] Finished in 0.621 seconds with exit status 0 (successful).
+ DEBUG [633fb4dc] Running [ -L ~/cartaomaispet/releases/20190123173943/tmp/pids ] as root@178.128.129.173
+ DEBUG [633fb4dc] Command: [ -L ~/cartaomaispet/releases/20190123173943/tmp/pids ]
+ DEBUG [e39ab08d] Finished in 0.592 seconds with exit status 1 (failed).
+ DEBUG [b1110051] Running [ -d ~/cartaomaispet/releases/20190123173943/tmp/pids ] as root@178.128.129.173
+ DEBUG [b1110051] Command: [ -d ~/cartaomaispet/releases/20190123173943/tmp/pids ]
+ DEBUG [865ec314] Finished in 0.610 seconds with exit status 1 (failed).
+  INFO [a5d2a36f] Running /usr/bin/env ln -s ~/cartaomaispet/shared/tmp/pids ~/cartaomaispet/releases/20190123173943/tmp/pids as root@178.128.129.173
+ DEBUG [a5d2a36f] Command: /usr/bin/env ln -s ~/cartaomaispet/shared/tmp/pids ~/cartaomaispet/releases/20190123173943/tmp/pids
+  INFO [00493ccf] Finished in 0.589 seconds with exit status 0 (successful).
+ DEBUG [a941d733] Running [ -L ~/cartaomaispet/releases/20190123173943/tmp/cache ] as root@178.128.129.173
+ DEBUG [a941d733] Command: [ -L ~/cartaomaispet/releases/20190123173943/tmp/cache ]
+ DEBUG [3d7f70b4] Finished in 0.588 seconds with exit status 1 (failed).
+ DEBUG [f091d625] Running [ -d ~/cartaomaispet/releases/20190123173943/tmp/cache ] as root@178.128.129.173
+ DEBUG [f091d625] Command: [ -d ~/cartaomaispet/releases/20190123173943/tmp/cache ]
+ DEBUG [3444c313] Finished in 0.610 seconds with exit status 1 (failed).
+  INFO [dbd4a345] Running /usr/bin/env ln -s ~/cartaomaispet/shared/tmp/cache ~/cartaomaispet/releases/20190123173943/tmp/cache as root@178.128.129.173
+ DEBUG [dbd4a345] Command: /usr/bin/env ln -s ~/cartaomaispet/shared/tmp/cache ~/cartaomaispet/releases/20190123173943/tmp/cache
+  INFO [4e0f3cd0] Finished in 0.606 seconds with exit status 0 (successful).
+ DEBUG [39072bb4] Running [ -L ~/cartaomaispet/releases/20190123173943/tmp/sockets ] as root@178.128.129.173
+ DEBUG [39072bb4] Command: [ -L ~/cartaomaispet/releases/20190123173943/tmp/sockets ]
+ DEBUG [94034985] Finished in 0.596 seconds with exit status 1 (failed).
+ DEBUG [87d99cb8] Running [ -d ~/cartaomaispet/releases/20190123173943/tmp/sockets ] as root@178.128.129.173
+ DEBUG [87d99cb8] Command: [ -d ~/cartaomaispet/releases/20190123173943/tmp/sockets ]
+ DEBUG [50ca2b53] Finished in 0.596 seconds with exit status 1 (failed).
+  INFO [7b9d594f] Running /usr/bin/env ln -s ~/cartaomaispet/shared/tmp/sockets ~/cartaomaispet/releases/20190123173943/tmp/sockets as root@178.128.129.173
+ DEBUG [7b9d594f] Command: /usr/bin/env ln -s ~/cartaomaispet/shared/tmp/sockets ~/cartaomaispet/releases/20190123173943/tmp/sockets
+  INFO [f63514b2] Finished in 0.593 seconds with exit status 0 (successful).
+ DEBUG [d029db34] Running [ -L ~/cartaomaispet/releases/20190123173943/public/system ] as root@178.128.129.173
+ DEBUG [d029db34] Command: [ -L ~/cartaomaispet/releases/20190123173943/public/system ]
+ DEBUG [01ef1065] Finished in 0.636 seconds with exit status 1 (failed).
+ DEBUG [a8674467] Running [ -d ~/cartaomaispet/releases/20190123173943/public/system ] as root@178.128.129.173
+ DEBUG [a8674467] Command: [ -d ~/cartaomaispet/releases/20190123173943/public/system ]
+ DEBUG [f619e1db] Finished in 0.611 seconds with exit status 1 (failed).
+  INFO [74246f0e] Running /usr/bin/env ln -s ~/cartaomaispet/shared/public/system ~/cartaomaispet/releases/20190123173943/public/system as root@178.128.129.173
+ DEBUG [74246f0e] Command: /usr/bin/env ln -s ~/cartaomaispet/shared/public/system ~/cartaomaispet/releases/20190123173943/public/system
+  INFO [fd4a9c6e] Finished in 0.596 seconds with exit status 0 (successful).
+  INFO [89f07523] Running /usr/bin/env ln -s ~/cartaomaispet/releases/20190123173943 ~/cartaomaispet/releases/current as root@178.128.129.173
+ DEBUG [89f07523] Command: /usr/bin/env ln -s ~/cartaomaispet/releases/20190123173943 ~/cartaomaispet/releases/current
+  INFO [ee23d0dd] Finished in 0.602 seconds with exit status 0 (successful).
+  INFO [aeedce57] Running /usr/bin/env mv ~/cartaomaispet/releases/current ~/cartaomaispet as root@178.128.129.173
+ DEBUG [aeedce57] Command: /usr/bin/env mv ~/cartaomaispet/releases/current ~/cartaomaispet
+  INFO [43966324] Finished in 0.643 seconds with exit status 0 (successful).
+ DEBUG [254a6a79] Running /usr/bin/env ls -x ~/cartaomaispet/releases as root@178.128.129.173
+ DEBUG [254a6a79] Command: /usr/bin/env ls -x ~/cartaomaispet/releases
+ DEBUG [a657f882] 	20190111031824	20190111032634	20190111034105	20190111171643	20190112014617
+20190123173943
+ DEBUG [a657f882] Finished in 0.605 seconds with exit status 0 (successful).
+  INFO Keeping 5 of 6 deployed releases on 178.128.129.173
+ DEBUG [1df133bb] Running [ -d ~/cartaomaispet/current ] as root@178.128.129.173
+ DEBUG [1df133bb] Command: [ -d ~/cartaomaispet/current ]
+ DEBUG [ddb8d04c] Finished in 0.620 seconds with exit status 0 (successful).
+ DEBUG [0c96c066] Running /usr/bin/env readlink ~/cartaomaispet/current as root@178.128.129.173
+ DEBUG [0c96c066] Command: /usr/bin/env readlink ~/cartaomaispet/current
+ DEBUG [39ef27d6] 	/root/cartaomaispet/releases/20190123173943
+ DEBUG [39ef27d6] Finished in 0.606 seconds with exit status 0 (successful).
+  INFO [7270d0f9] Running /usr/bin/env rm -rf ~/cartaomaispet/releases/20190111031824 as root@178.128.129.173
+ DEBUG [7270d0f9] Command: /usr/bin/env rm -rf ~/cartaomaispet/releases/20190111031824
+  INFO [80aa41fd] Finished in 0.626 seconds with exit status 0 (successful).
+ DEBUG [47273b93] Running if test ! -d ~/cartaomaispet/releases; then echo "Directory does not exist '~/cartaomaispet/releases'" 1>&2; false; fi as root@178.128.129.173
+ DEBUG [47273b93] Command: if test ! -d ~/cartaomaispet/releases; then echo "Directory does not exist '~/cartaomaispet/releases'" 1>&2; false; fi
+ DEBUG [b88d12f1] Finished in 0.602 seconds with exit status 0 (successful).
+  INFO [6f84d076] Running /usr/bin/env echo "Branch master (at 9c1052154fc6123c3f440ba421b7bf7fc65c8e70) deployed as release 20190123173943 by marviorocha" >> ~/cartaomaispet/revisions.log as root@178.128.129.173
+ DEBUG [6f84d076] Command: cd ~/cartaomaispet/releases && /usr/bin/env echo "Branch master (at 9c1052154fc6123c3f440ba421b7bf7fc65c8e70) deployed as release 20190123173943 by marviorocha" >> ~/cartaomaispet/revisions.log
+  INFO [75322797] Finished in 0.615 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-01-25 21:25:47 -0200 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [83788bb1] Running /usr/bin/env mkdir -p /tmp as root@178.128.129.173
+ DEBUG [83788bb1] Command: /usr/bin/env mkdir -p /tmp
+  INFO [192f030a] Finished in 7.936 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-cartaomaispet-production-marviorocha.sh 0.0%
+  INFO Uploading /tmp/git-ssh-cartaomaispet-production-marviorocha.sh 100.0%
+  INFO [85b8ca97] Running /usr/bin/env chmod 700 /tmp/git-ssh-cartaomaispet-production-marviorocha.sh as root@178.128.129.173
+ DEBUG [85b8ca97] Command: /usr/bin/env chmod 700 /tmp/git-ssh-cartaomaispet-production-marviorocha.sh
+  INFO [6527894d] Finished in 0.605 seconds with exit status 0 (successful).
+  INFO [66b582c4] Running /usr/bin/env git ls-remote https://github.com/marviorocha/cartaomaispet.git HEAD as root@178.128.129.173
+ DEBUG [66b582c4] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cartaomaispet-production-marviorocha.sh" ; /usr/bin/env git ls-remote https://github.com/marviorocha/cartaomaispet.git HEAD )
+ DEBUG [9a758001] 	9c1052154fc6123c3f440ba421b7bf7fc65c8e70	HEAD
+  INFO [9a758001] Finished in 0.910 seconds with exit status 0 (successful).
+  INFO [3058e7bf] Running /usr/bin/env mkdir -p ~/cartaomaispet/shared ~/cartaomaispet/releases as root@178.128.129.173
+ DEBUG [3058e7bf] Command: /usr/bin/env mkdir -p ~/cartaomaispet/shared ~/cartaomaispet/releases
+  INFO [d9c9ea13] Finished in 0.613 seconds with exit status 0 (successful).
+  INFO [2f05e345] Running /usr/bin/env mkdir -p ~/cartaomaispet/shared/log ~/cartaomaispet/shared/tmp/pids ~/cartaomaispet/shared/tmp/cache ~/cartaomaispet/shared/tmp/sockets ~/cartaomaispet/shared/public/system as root@178.128.129.173
+ DEBUG [2f05e345] Command: /usr/bin/env mkdir -p ~/cartaomaispet/shared/log ~/cartaomaispet/shared/tmp/pids ~/cartaomaispet/shared/tmp/cache ~/cartaomaispet/shared/tmp/sockets ~/cartaomaispet/shared/public/system
+  INFO [05dc286b] Finished in 0.588 seconds with exit status 0 (successful).
+  INFO [fdb041c1] Running /usr/bin/env mkdir -p ~/cartaomaispet/shared/config as root@178.128.129.173
+ DEBUG [fdb041c1] Command: /usr/bin/env mkdir -p ~/cartaomaispet/shared/config
+  INFO [31564c7f] Finished in 0.595 seconds with exit status 0 (successful).
+ DEBUG [d078661a] Running [ -f ~/cartaomaispet/shared/config/database.yml ] as root@178.128.129.173
+ DEBUG [d078661a] Command: [ -f ~/cartaomaispet/shared/config/database.yml ]
+ DEBUG [4a987c22] Finished in 0.588 seconds with exit status 0 (successful).
+ DEBUG [cd1b3078] Running [ -f ~/cartaomaispet/shared/config/master.key ] as root@178.128.129.173
+ DEBUG [cd1b3078] Command: [ -f ~/cartaomaispet/shared/config/master.key ]
+ DEBUG [a71d82ef] Finished in 0.593 seconds with exit status 0 (successful).
+ DEBUG [31a09b73] Running [ -f ~/cartaomaispet/current/REVISION ] as root@178.128.129.173
+ DEBUG [31a09b73] Command: [ -f ~/cartaomaispet/current/REVISION ]
+ DEBUG [693986af] Finished in 0.608 seconds with exit status 0 (successful).
+ DEBUG [01186480] Running /usr/bin/env cat ~/cartaomaispet/current/REVISION 2>/dev/null as root@178.128.129.173
+ DEBUG [01186480] Command: /usr/bin/env cat ~/cartaomaispet/current/REVISION 2>/dev/null
+ DEBUG [99788145] 	9c1052154fc6123c3f440ba421b7bf7fc65c8e70
+ DEBUG [99788145] Finished in 0.622 seconds with exit status 0 (successful).
+ DEBUG [6d45bec5] Running [ -f ~/cartaomaispet/repo/HEAD ] as root@178.128.129.173
+ DEBUG [6d45bec5] Command: [ -f ~/cartaomaispet/repo/HEAD ]
+ DEBUG [234f76be] Finished in 0.615 seconds with exit status 0 (successful).
+  INFO The repository mirror is at ~/cartaomaispet/repo
+ DEBUG [f3894e8e] Running if test ! -d ~/cartaomaispet/repo; then echo "Directory does not exist '~/cartaomaispet/repo'" 1>&2; false; fi as root@178.128.129.173
+ DEBUG [f3894e8e] Command: if test ! -d ~/cartaomaispet/repo; then echo "Directory does not exist '~/cartaomaispet/repo'" 1>&2; false; fi
+ DEBUG [0a99ce89] Finished in 0.599 seconds with exit status 0 (successful).
+  INFO [7ae6060b] Running /usr/bin/env git remote set-url origin https://github.com/marviorocha/cartaomaispet.git as root@178.128.129.173
+ DEBUG [7ae6060b] Command: cd ~/cartaomaispet/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cartaomaispet-production-marviorocha.sh" ; /usr/bin/env git remote set-url origin https://github.com/marviorocha/cartaomaispet.git )
+  INFO [403105d2] Finished in 0.638 seconds with exit status 0 (successful).
+  INFO [68df3d1c] Running /usr/bin/env git remote update --prune as root@178.128.129.173
+ DEBUG [68df3d1c] Command: cd ~/cartaomaispet/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cartaomaispet-production-marviorocha.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [ffa57fc4] 	Fetching origin
+  INFO [ffa57fc4] Finished in 0.860 seconds with exit status 0 (successful).
+ DEBUG [7e6b008c] Running if test ! -d ~/cartaomaispet/repo; then echo "Directory does not exist '~/cartaomaispet/repo'" 1>&2; false; fi as root@178.128.129.173
+ DEBUG [7e6b008c] Command: if test ! -d ~/cartaomaispet/repo; then echo "Directory does not exist '~/cartaomaispet/repo'" 1>&2; false; fi
+ DEBUG [55c08dce] Finished in 0.604 seconds with exit status 0 (successful).
+  INFO [e98352ff] Running /usr/bin/env mkdir -p ~/cartaomaispet/releases/20190125232602 as root@178.128.129.173
+ DEBUG [e98352ff] Command: cd ~/cartaomaispet/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cartaomaispet-production-marviorocha.sh" ; /usr/bin/env mkdir -p ~/cartaomaispet/releases/20190125232602 )
+  INFO [e659466f] Finished in 0.612 seconds with exit status 0 (successful).
+  INFO [1f38d39b] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C ~/cartaomaispet/releases/20190125232602 as root@178.128.129.173
+ DEBUG [1f38d39b] Command: cd ~/cartaomaispet/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cartaomaispet-production-marviorocha.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C ~/cartaomaispet/releases/20190125232602 )
+  INFO [e4907de7] Finished in 0.820 seconds with exit status 0 (successful).
+ DEBUG [44806265] Running if test ! -d ~/cartaomaispet/repo; then echo "Directory does not exist '~/cartaomaispet/repo'" 1>&2; false; fi as root@178.128.129.173
+ DEBUG [44806265] Command: if test ! -d ~/cartaomaispet/repo; then echo "Directory does not exist '~/cartaomaispet/repo'" 1>&2; false; fi
+ DEBUG [271d7834] Finished in 0.643 seconds with exit status 0 (successful).
+ DEBUG [366e5ff0] Running /usr/bin/env git rev-list --max-count=1 master as root@178.128.129.173
+ DEBUG [366e5ff0] Command: cd ~/cartaomaispet/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cartaomaispet-production-marviorocha.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [db31f0e6] 	9c1052154fc6123c3f440ba421b7bf7fc65c8e70
+ DEBUG [db31f0e6] Finished in 0.614 seconds with exit status 0 (successful).
+ DEBUG [f5c21ce0] Running if test ! -d ~/cartaomaispet/releases/20190125232602; then echo "Directory does not exist '~/cartaomaispet/releases/20190125232602'" 1>&2; false; fi as root@178.128.129.173
+ DEBUG [f5c21ce0] Command: if test ! -d ~/cartaomaispet/releases/20190125232602; then echo "Directory does not exist '~/cartaomaispet/releases/20190125232602'" 1>&2; false; fi
+ DEBUG [60baf4fe] Finished in 0.603 seconds with exit status 0 (successful).
+  INFO [2055e685] Running /usr/bin/env echo "9c1052154fc6123c3f440ba421b7bf7fc65c8e70" > REVISION as root@178.128.129.173
+ DEBUG [2055e685] Command: cd ~/cartaomaispet/releases/20190125232602 && /usr/bin/env echo "9c1052154fc6123c3f440ba421b7bf7fc65c8e70" > REVISION
+  INFO [7cbaa260] Finished in 0.599 seconds with exit status 0 (successful).
+  INFO [644c4b5f] Running /usr/bin/env mkdir -p ~/cartaomaispet/releases/20190125232602/config as root@178.128.129.173
+ DEBUG [644c4b5f] Command: /usr/bin/env mkdir -p ~/cartaomaispet/releases/20190125232602/config
+  INFO [fc56f34a] Finished in 0.597 seconds with exit status 0 (successful).
+ DEBUG [c8a1af32] Running [ -L ~/cartaomaispet/releases/20190125232602/config/database.yml ] as root@178.128.129.173
+ DEBUG [c8a1af32] Command: [ -L ~/cartaomaispet/releases/20190125232602/config/database.yml ]
+ DEBUG [c4be8341] Finished in 0.593 seconds with exit status 1 (failed).
+ DEBUG [c7df243a] Running [ -f ~/cartaomaispet/releases/20190125232602/config/database.yml ] as root@178.128.129.173
+ DEBUG [c7df243a] Command: [ -f ~/cartaomaispet/releases/20190125232602/config/database.yml ]
+ DEBUG [b094b059] Finished in 0.604 seconds with exit status 0 (successful).
+  INFO [3ffa21fb] Running /usr/bin/env rm ~/cartaomaispet/releases/20190125232602/config/database.yml as root@178.128.129.173
+ DEBUG [3ffa21fb] Command: /usr/bin/env rm ~/cartaomaispet/releases/20190125232602/config/database.yml
+  INFO [c2522404] Finished in 0.612 seconds with exit status 0 (successful).
+  INFO [09634920] Running /usr/bin/env ln -s ~/cartaomaispet/shared/config/database.yml ~/cartaomaispet/releases/20190125232602/config/database.yml as root@178.128.129.173
+ DEBUG [09634920] Command: /usr/bin/env ln -s ~/cartaomaispet/shared/config/database.yml ~/cartaomaispet/releases/20190125232602/config/database.yml
+  INFO [baeffb29] Finished in 0.595 seconds with exit status 0 (successful).
+ DEBUG [dd62d1b5] Running [ -L ~/cartaomaispet/releases/20190125232602/config/master.key ] as root@178.128.129.173
+ DEBUG [dd62d1b5] Command: [ -L ~/cartaomaispet/releases/20190125232602/config/master.key ]
+ DEBUG [81c01131] Finished in 0.587 seconds with exit status 1 (failed).
+ DEBUG [e889a0ca] Running [ -f ~/cartaomaispet/releases/20190125232602/config/master.key ] as root@178.128.129.173
+ DEBUG [e889a0ca] Command: [ -f ~/cartaomaispet/releases/20190125232602/config/master.key ]
+ DEBUG [5755dc9a] Finished in 0.597 seconds with exit status 1 (failed).
+  INFO [178869cc] Running /usr/bin/env ln -s ~/cartaomaispet/shared/config/master.key ~/cartaomaispet/releases/20190125232602/config/master.key as root@178.128.129.173
+ DEBUG [178869cc] Command: /usr/bin/env ln -s ~/cartaomaispet/shared/config/master.key ~/cartaomaispet/releases/20190125232602/config/master.key
+  INFO [924453a4] Finished in 0.605 seconds with exit status 0 (successful).
+  INFO [e32e2584] Running /usr/bin/env mkdir -p ~/cartaomaispet/releases/20190125232602 ~/cartaomaispet/releases/20190125232602/tmp ~/cartaomaispet/releases/20190125232602/public as root@178.128.129.173
+ DEBUG [e32e2584] Command: /usr/bin/env mkdir -p ~/cartaomaispet/releases/20190125232602 ~/cartaomaispet/releases/20190125232602/tmp ~/cartaomaispet/releases/20190125232602/public
+  INFO [0fe208fe] Finished in 0.591 seconds with exit status 0 (successful).
+ DEBUG [281bc728] Running [ -L ~/cartaomaispet/releases/20190125232602/log ] as root@178.128.129.173
+ DEBUG [281bc728] Command: [ -L ~/cartaomaispet/releases/20190125232602/log ]
+ DEBUG [b7d81f9a] Finished in 0.597 seconds with exit status 1 (failed).
+ DEBUG [24723bab] Running [ -d ~/cartaomaispet/releases/20190125232602/log ] as root@178.128.129.173
+ DEBUG [24723bab] Command: [ -d ~/cartaomaispet/releases/20190125232602/log ]
+ DEBUG [78ca2482] Finished in 0.600 seconds with exit status 0 (successful).
+  INFO [d155ec8e] Running /usr/bin/env rm -rf ~/cartaomaispet/releases/20190125232602/log as root@178.128.129.173
+ DEBUG [d155ec8e] Command: /usr/bin/env rm -rf ~/cartaomaispet/releases/20190125232602/log
+  INFO [06dfe05c] Finished in 0.602 seconds with exit status 0 (successful).
+  INFO [01fc9312] Running /usr/bin/env ln -s ~/cartaomaispet/shared/log ~/cartaomaispet/releases/20190125232602/log as root@178.128.129.173
+ DEBUG [01fc9312] Command: /usr/bin/env ln -s ~/cartaomaispet/shared/log ~/cartaomaispet/releases/20190125232602/log
+  INFO [e58df850] Finished in 0.600 seconds with exit status 0 (successful).
+ DEBUG [4f2197af] Running [ -L ~/cartaomaispet/releases/20190125232602/tmp/pids ] as root@178.128.129.173
+ DEBUG [4f2197af] Command: [ -L ~/cartaomaispet/releases/20190125232602/tmp/pids ]
+ DEBUG [3d4fe378] Finished in 0.605 seconds with exit status 1 (failed).
+ DEBUG [4771954e] Running [ -d ~/cartaomaispet/releases/20190125232602/tmp/pids ] as root@178.128.129.173
+ DEBUG [4771954e] Command: [ -d ~/cartaomaispet/releases/20190125232602/tmp/pids ]
+ DEBUG [133e8036] Finished in 0.590 seconds with exit status 1 (failed).
+  INFO [00ca01e9] Running /usr/bin/env ln -s ~/cartaomaispet/shared/tmp/pids ~/cartaomaispet/releases/20190125232602/tmp/pids as root@178.128.129.173
+ DEBUG [00ca01e9] Command: /usr/bin/env ln -s ~/cartaomaispet/shared/tmp/pids ~/cartaomaispet/releases/20190125232602/tmp/pids
+  INFO [1d32a70b] Finished in 0.596 seconds with exit status 0 (successful).
+ DEBUG [83d27c04] Running [ -L ~/cartaomaispet/releases/20190125232602/tmp/cache ] as root@178.128.129.173
+ DEBUG [83d27c04] Command: [ -L ~/cartaomaispet/releases/20190125232602/tmp/cache ]
+ DEBUG [d31858a8] Finished in 0.629 seconds with exit status 1 (failed).
+ DEBUG [70ee9e4b] Running [ -d ~/cartaomaispet/releases/20190125232602/tmp/cache ] as root@178.128.129.173
+ DEBUG [70ee9e4b] Command: [ -d ~/cartaomaispet/releases/20190125232602/tmp/cache ]
+ DEBUG [17f6ced4] Finished in 0.599 seconds with exit status 1 (failed).
+  INFO [c9fbe78f] Running /usr/bin/env ln -s ~/cartaomaispet/shared/tmp/cache ~/cartaomaispet/releases/20190125232602/tmp/cache as root@178.128.129.173
+ DEBUG [c9fbe78f] Command: /usr/bin/env ln -s ~/cartaomaispet/shared/tmp/cache ~/cartaomaispet/releases/20190125232602/tmp/cache
+  INFO [c444423a] Finished in 0.615 seconds with exit status 0 (successful).
+ DEBUG [0568bf85] Running [ -L ~/cartaomaispet/releases/20190125232602/tmp/sockets ] as root@178.128.129.173
+ DEBUG [0568bf85] Command: [ -L ~/cartaomaispet/releases/20190125232602/tmp/sockets ]
+ DEBUG [b6094539] Finished in 0.607 seconds with exit status 1 (failed).
+ DEBUG [2ecbff9e] Running [ -d ~/cartaomaispet/releases/20190125232602/tmp/sockets ] as root@178.128.129.173
+ DEBUG [2ecbff9e] Command: [ -d ~/cartaomaispet/releases/20190125232602/tmp/sockets ]
+ DEBUG [3c0c9b39] Finished in 0.643 seconds with exit status 1 (failed).
+  INFO [16ee4dba] Running /usr/bin/env ln -s ~/cartaomaispet/shared/tmp/sockets ~/cartaomaispet/releases/20190125232602/tmp/sockets as root@178.128.129.173
+ DEBUG [16ee4dba] Command: /usr/bin/env ln -s ~/cartaomaispet/shared/tmp/sockets ~/cartaomaispet/releases/20190125232602/tmp/sockets
+  INFO [2c604d44] Finished in 0.607 seconds with exit status 0 (successful).
+ DEBUG [c70366dc] Running [ -L ~/cartaomaispet/releases/20190125232602/public/system ] as root@178.128.129.173
+ DEBUG [c70366dc] Command: [ -L ~/cartaomaispet/releases/20190125232602/public/system ]
+ DEBUG [5bf7dbe3] Finished in 0.601 seconds with exit status 1 (failed).
+ DEBUG [041835fc] Running [ -d ~/cartaomaispet/releases/20190125232602/public/system ] as root@178.128.129.173
+ DEBUG [041835fc] Command: [ -d ~/cartaomaispet/releases/20190125232602/public/system ]
+ DEBUG [e917c7ec] Finished in 0.595 seconds with exit status 1 (failed).
+  INFO [b8e3e44d] Running /usr/bin/env ln -s ~/cartaomaispet/shared/public/system ~/cartaomaispet/releases/20190125232602/public/system as root@178.128.129.173
+ DEBUG [b8e3e44d] Command: /usr/bin/env ln -s ~/cartaomaispet/shared/public/system ~/cartaomaispet/releases/20190125232602/public/system
+  INFO [6ecda463] Finished in 0.600 seconds with exit status 0 (successful).
+  INFO [1c229c00] Running /usr/bin/env ln -s ~/cartaomaispet/releases/20190125232602 ~/cartaomaispet/releases/current as root@178.128.129.173
+ DEBUG [1c229c00] Command: /usr/bin/env ln -s ~/cartaomaispet/releases/20190125232602 ~/cartaomaispet/releases/current
+  INFO [60da4e78] Finished in 0.597 seconds with exit status 0 (successful).
+  INFO [947c10cd] Running /usr/bin/env mv ~/cartaomaispet/releases/current ~/cartaomaispet as root@178.128.129.173
+ DEBUG [947c10cd] Command: /usr/bin/env mv ~/cartaomaispet/releases/current ~/cartaomaispet
+  INFO [5044c0eb] Finished in 0.611 seconds with exit status 0 (successful).
+ DEBUG [d406395b] Running /usr/bin/env ls -x ~/cartaomaispet/releases as root@178.128.129.173
+ DEBUG [d406395b] Command: /usr/bin/env ls -x ~/cartaomaispet/releases
+ DEBUG [a707073a] 	20190111032634	20190111034105	20190111171643	20190112014617	20190123173943
+20190125232602
+ DEBUG [a707073a] Finished in 0.600 seconds with exit status 0 (successful).
+  INFO Keeping 5 of 6 deployed releases on 178.128.129.173
+ DEBUG [81449cc2] Running [ -d ~/cartaomaispet/current ] as root@178.128.129.173
+ DEBUG [81449cc2] Command: [ -d ~/cartaomaispet/current ]
+ DEBUG [33f48c60] Finished in 0.599 seconds with exit status 0 (successful).
+ DEBUG [67caadb3] Running /usr/bin/env readlink ~/cartaomaispet/current as root@178.128.129.173
+ DEBUG [67caadb3] Command: /usr/bin/env readlink ~/cartaomaispet/current
+ DEBUG [60103d61] 	/root/cartaomaispet/releases/20190125232602
+ DEBUG [60103d61] Finished in 0.600 seconds with exit status 0 (successful).
+  INFO [8c94a692] Running /usr/bin/env rm -rf ~/cartaomaispet/releases/20190111032634 as root@178.128.129.173
+ DEBUG [8c94a692] Command: /usr/bin/env rm -rf ~/cartaomaispet/releases/20190111032634
+  INFO [907e4d01] Finished in 0.637 seconds with exit status 0 (successful).
+ DEBUG [9a58f73b] Running if test ! -d ~/cartaomaispet/releases; then echo "Directory does not exist '~/cartaomaispet/releases'" 1>&2; false; fi as root@178.128.129.173
+ DEBUG [9a58f73b] Command: if test ! -d ~/cartaomaispet/releases; then echo "Directory does not exist '~/cartaomaispet/releases'" 1>&2; false; fi
+ DEBUG [511a4558] Finished in 0.602 seconds with exit status 0 (successful).
+  INFO [1d0f84f9] Running /usr/bin/env echo "Branch master (at 9c1052154fc6123c3f440ba421b7bf7fc65c8e70) deployed as release 20190125232602 by marviorocha" >> ~/cartaomaispet/revisions.log as root@178.128.129.173
+ DEBUG [1d0f84f9] Command: cd ~/cartaomaispet/releases && /usr/bin/env echo "Branch master (at 9c1052154fc6123c3f440ba421b7bf7fc65c8e70) deployed as release 20190125232602 by marviorocha" >> ~/cartaomaispet/revisions.log
+  INFO [0e605f08] Finished in 0.599 seconds with exit status 0 (successful).
