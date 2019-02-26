@@ -2,15 +2,15 @@ Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
 
-  # config.action_mailer.delivery_method = :smtp
-  # config.action_mailer.smtp_settings = {
-  #   :user_name => 'cbd856ef229331',
-  #   :password => 'f0f0ae3254678f',
-  #   :address => 'smtp.mailtrap.io',
-  #   :domain => 'smtp.mailtrap.io',
-  #   :port => '2525',
-  #   :authentication => :cram_md5
-  # }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    :user_name => 'cbd856ef229331',
+    :password => 'f0f0ae3254678f',
+    :address => 'smtp.mailtrap.io',
+    :domain => 'smtp.mailtrap.io',
+    :port => '2525',
+    :authentication => :cram_md5
+  }
 
   # config.action_mailer.delivery_method = :smtp
   # config.action_mailer.raise_delivery_errors = true
