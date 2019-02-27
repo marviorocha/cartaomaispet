@@ -86,7 +86,7 @@ RailsAdmin.config do |config|
     config.model 'Plan' do
       label "Plano"
       label_plural "Planos"
-      navigation_icon 'icon-plan'
+      navigation_icon 'fa fa-users'
       weight 6
     end
     config.model 'User' do
@@ -114,7 +114,7 @@ RailsAdmin.config do |config|
           label "Criado em:"
           strftime_format "%d de %b de %Y às %H:%M:%p"
         end
-       
+
       end #end list view
     #Edit User
     edit do
