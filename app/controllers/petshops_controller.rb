@@ -7,7 +7,7 @@ class PetshopsController < ApplicationController
 
     @petshops = Petshop.search(params[:cidade])
 
- 
+
   end
 
   # GET /petshops/1
@@ -32,7 +32,7 @@ class PetshopsController < ApplicationController
 
     respond_to do |format|
       if @petshop.save
-        format.html { redirect_to @petshop, notice: 'Petshop was successfully created.' }
+        format.html { redirect_to @petshop, notice: 'Sua loja foi adicionado com sucesso!' }
         format.json { render :show, status: :created, location: @petshop }
       else
         format.html { render :new }
@@ -46,7 +46,7 @@ class PetshopsController < ApplicationController
   def update
     respond_to do |format|
       if @petshop.update(petshop_params)
-        format.html { redirect_to @petshop, notice: 'Petshop was successfully updated.' }
+        format.html { redirect_to @petshop, notice: 'Sua loja foi atualizada com sucesso' }
         format.json { render :show, status: :ok, location: @petshop }
       else
         format.html { render :edit }
@@ -60,7 +60,7 @@ class PetshopsController < ApplicationController
   def destroy
     @petshop.destroy
     respond_to do |format|
-      format.html { redirect_to petshops_url, notice: 'Petshop was successfully destroyed.' }
+      format.html { redirect_to petshops_url, notice: 'Sua loja foi apagado do sistema' }
       format.json { head :no_content }
     end
   end

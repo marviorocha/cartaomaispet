@@ -27,8 +27,12 @@ else
   image_tag("https://www.gravatar.com/avatar/#{hash}?d=mp", size:"150x150", class: "responsive circle align-center")
 end
 
-
 end
+
+def petshop
+   @petshop = Petshop.current_user.id
+end
+
 
 
 
