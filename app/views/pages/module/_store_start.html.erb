@@ -1,0 +1,43 @@
+<p>
+Você precisa completar o cadastre de sua loja para ser exebido em nossa busca.
+</p>
+<table class="striped">
+  <thead>
+    <tr>
+      <th data-field="titulo"> Sua petshop</th>
+
+    </tr>
+  </thead>
+
+  <tbody>
+
+    <tr>
+      <td> <b>Titulo de sua Loja:</b></td>
+      <td><%= @store.title %></td>
+    </tr>
+    <tr>
+      <td> <b>Endereço:</b></td>
+      <td><%= @store.address %>  </td>
+      </tr>
+    <tr>
+      <td>
+        <b> CEP:</b>
+      </td>
+        <td> <%= @store.cep %> </td>
+    </tr>
+    <tr>
+      <td> <b>Estado:</b></td>
+      <td><%= @store.estado %></td>
+    </tr>
+    <tr>
+      <td> <b>Cidade:</b></td>
+      <td><%= @store.cidade %></td>
+    </tr>
+    <tr>
+      <td> <b>Telefone:</b></td>
+      <td><%= @store.phone %></td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="col s6 m6 l6"> <button type="button" class="btn weves-effect waves-light blue lighten-2"><i class="material-icons left">create</i> Editar</button> </div>
