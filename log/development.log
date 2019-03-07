@@ -6074,3 +6074,1253 @@ Processing by PagesController#welcome as HTML
 Completed 200 OK in 129ms (Views: 110.9ms | ActiveRecord: 2.7ms)
 
 
+Started GET "/" for 127.0.0.1 at 2019-03-07 10:33:17 -0300
+  [1m[35m (3.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#welcome as HTML
+Completed 401 Unauthorized in 14ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-03-07 10:33:17 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper.devise_error_messages!`
+is deprecated and it will be removed in the next major version.
+To customize the errors styles please run `rails g devise:views` and modify the
+`devise/shared/error_messages` partial.
+ (called from _app_views_devise_sessions_new_html_erb___4593484502320406745_70237786785380 at /home/marviorocha/www/cartaomaispet/app/views/devise/sessions/new.html.erb:3)
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (10.0ms)
+  Rendered layouts/parts/_menu.html.erb (2.9ms)
+  Rendered layouts/parts/_footer.html.erb (0.4ms)
+Completed 200 OK in 1087ms (Views: 1057.7ms | ActiveRecord: 12.3ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2019-03-07 10:33:45 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"I39Rdp+6HLuzHb1+5naeUuwvtujx+8Rvi30KAJNCbP64XvZiiLVP7ehA1jxIvl4SnXLSJFbDJ5LX1ug4IRJ8Qw==", "user"=>{"email"=>"showbiz@showbiz.mus.br", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Fazer Login"}
+  [1m[36mUser Load (8.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "showbiz@showbiz.mus.br"], ["LIMIT", 1]]
+  ↳ /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://dev.local.me:3000/
+Completed 302 Found in 203ms (ActiveRecord: 11.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-07 10:33:45 -0300
+Processing by PagesController#welcome as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mPetshop Load (7.7ms)[0m  [1m[34mSELECT  "petshops".* FROM "petshops" LIMIT $1[0m  [["LIMIT", 10]]
+  ↳ app/controllers/pages_controller.rb:4
+  [1m[36mPetshop Load (0.3ms)[0m  [1m[34mSELECT  "petshops".* FROM "petshops" WHERE "petshops"."user_id" = $1 LIMIT $2[0m  [["user_id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:5
+  Rendering pages/welcome.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (4.8ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 25], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:22
+  Rendered layouts/parts/_storenav.html.erb (12.3ms)
+  Rendered pages/module/_store_start.html.erb (0.9ms)
+  Rendered shered/_dashboard.html.erb (3.7ms)
+  Rendered pages/welcome.html.erb within layouts/application (24.3ms)
+  Rendered layouts/parts/_menu.html.erb (4.1ms)
+  Rendered layouts/parts/_footer.html.erb (1.6ms)
+Completed 200 OK in 113ms (Views: 58.8ms | ActiveRecord: 23.4ms)
+
+
+Started GET "/petshops/1" for 127.0.0.1 at 2019-03-07 10:34:28 -0300
+Processing by PetshopsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mPetshop Load (0.3ms)[0m  [1m[34mSELECT  "petshops".* FROM "petshops" WHERE "petshops"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/petshops_controller.rb:71
+  Rendering petshops/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 25], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:22
+  Rendered layouts/parts/_storenav.html.erb (5.7ms)
+  Rendered petshops/module/_show.html.erb (0.8ms)
+  Rendered petshops/show.html.erb within layouts/application (10.8ms)
+  Rendered layouts/parts/_menu.html.erb (2.4ms)
+  Rendered layouts/parts/_footer.html.erb (0.4ms)
+Completed 200 OK in 57ms (Views: 49.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/petshops/2" for 127.0.0.1 at 2019-03-07 10:34:42 -0300
+Processing by PetshopsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mPetshop Load (0.4ms)[0m  [1m[34mSELECT  "petshops".* FROM "petshops" WHERE "petshops"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/petshops_controller.rb:71
+  Rendering petshops/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 25], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:22
+  Rendered layouts/parts/_storenav.html.erb (4.1ms)
+  Rendered petshops/module/_show.html.erb (1.4ms)
+  Rendered petshops/show.html.erb within layouts/application (8.3ms)
+  Rendered layouts/parts/_menu.html.erb (2.1ms)
+  Rendered layouts/parts/_footer.html.erb (0.7ms)
+Completed 200 OK in 58ms (Views: 51.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/petshops/edit/1" for 127.0.0.1 at 2019-03-07 10:35:14 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/petshops/edit/1"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/petshops/1/edit" for 127.0.0.1 at 2019-03-07 10:35:31 -0300
+Processing by PetshopsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mPetshop Load (0.4ms)[0m  [1m[34mSELECT  "petshops".* FROM "petshops" WHERE "petshops"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/petshops_controller.rb:71
+  Rendering petshops/edit.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.8ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 25], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:22
+  Rendered layouts/parts/_storenav.html.erb (7.0ms)
+  Rendered petshops/_form.html.erb (9.1ms)
+  Rendered petshops/edit.html.erb within layouts/application (19.1ms)
+  Rendered layouts/parts/_menu.html.erb (1.8ms)
+  Rendered layouts/parts/_footer.html.erb (1.1ms)
+Completed 200 OK in 75ms (Views: 63.8ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-07 10:35:42 -0300
+Processing by PagesController#welcome as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mPetshop Load (0.4ms)[0m  [1m[34mSELECT  "petshops".* FROM "petshops" LIMIT $1[0m  [["LIMIT", 10]]
+  ↳ app/controllers/pages_controller.rb:4
+  [1m[36mPetshop Load (0.3ms)[0m  [1m[34mSELECT  "petshops".* FROM "petshops" WHERE "petshops"."user_id" = $1 LIMIT $2[0m  [["user_id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:5
+  Rendering pages/welcome.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 25], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:22
+  Rendered layouts/parts/_storenav.html.erb (3.5ms)
+  Rendered pages/module/_store_start.html.erb (0.8ms)
+  Rendered shered/_dashboard.html.erb (2.4ms)
+  Rendered pages/welcome.html.erb within layouts/application (8.5ms)
+  Rendered layouts/parts/_menu.html.erb (1.3ms)
+  Rendered layouts/parts/_footer.html.erb (0.3ms)
+Completed 200 OK in 52ms (Views: 44.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-07 10:39:56 -0300
+Processing by PagesController#welcome as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mPetshop Load (0.5ms)[0m  [1m[34mSELECT  "petshops".* FROM "petshops" LIMIT $1[0m  [["LIMIT", 10]]
+  ↳ app/controllers/pages_controller.rb:4
+  [1m[36mPetshop Load (0.4ms)[0m  [1m[34mSELECT  "petshops".* FROM "petshops" WHERE "petshops"."user_id" = $1 LIMIT $2[0m  [["user_id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:5
+  Rendering pages/welcome.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (1.1ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 25], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:22
+  Rendered layouts/parts/_storenav.html.erb (5.1ms)
+  Rendered pages/module/_store_start.html.erb (0.9ms)
+  Rendered shered/_dashboard.html.erb (2.1ms)
+  Rendered pages/welcome.html.erb within layouts/application (10.2ms)
+  Rendered layouts/parts/_menu.html.erb (1.3ms)
+  Rendered layouts/parts/_footer.html.erb (0.3ms)
+Completed 200 OK in 49ms (Views: 41.7ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-07 10:40:42 -0300
+Processing by PagesController#welcome as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mPetshop Load (0.3ms)[0m  [1m[34mSELECT  "petshops".* FROM "petshops" LIMIT $1[0m  [["LIMIT", 10]]
+  ↳ app/controllers/pages_controller.rb:4
+  [1m[36mPetshop Load (0.2ms)[0m  [1m[34mSELECT  "petshops".* FROM "petshops" WHERE "petshops"."user_id" = $1 LIMIT $2[0m  [["user_id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:5
+  Rendering pages/welcome.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.8ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 25], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:22
+  Rendered layouts/parts/_storenav.html.erb (4.7ms)
+  Rendered pages/module/_store_start.html.erb (0.5ms)
+  Rendered shered/_dashboard.html.erb (1.3ms)
+  Rendered pages/welcome.html.erb within layouts/application (9.0ms)
+  Rendered layouts/parts/_menu.html.erb (1.7ms)
+  Rendered layouts/parts/_footer.html.erb (0.3ms)
+Completed 200 OK in 53ms (Views: 46.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/petshops/2/edit" for 127.0.0.1 at 2019-03-07 10:40:53 -0300
+Processing by PetshopsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mPetshop Load (0.7ms)[0m  [1m[34mSELECT  "petshops".* FROM "petshops" WHERE "petshops"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/petshops_controller.rb:71
+  Rendering petshops/edit.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 25], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:22
+  Rendered layouts/parts/_storenav.html.erb (4.2ms)
+  Rendered petshops/_form.html.erb (10.8ms)
+  Rendered petshops/edit.html.erb within layouts/application (17.9ms)
+  Rendered layouts/parts/_menu.html.erb (1.6ms)
+  Rendered layouts/parts/_footer.html.erb (0.3ms)
+Completed 200 OK in 76ms (Views: 69.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-07 10:40:59 -0300
+Processing by PagesController#welcome as HTML
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mPetshop Load (1.2ms)[0m  [1m[34mSELECT  "petshops".* FROM "petshops" LIMIT $1[0m  [["LIMIT", 10]]
+  ↳ app/controllers/pages_controller.rb:4
+  [1m[36mPetshop Load (1.0ms)[0m  [1m[34mSELECT  "petshops".* FROM "petshops" WHERE "petshops"."user_id" = $1 LIMIT $2[0m  [["user_id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:5
+  Rendering pages/welcome.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 25], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:22
+  Rendered layouts/parts/_storenav.html.erb (3.7ms)
+  Rendered pages/module/_store_start.html.erb (5.4ms)
+  Rendered shered/_dashboard.html.erb (9.9ms)
+  Rendered pages/welcome.html.erb within layouts/application (26.1ms)
+  Rendered layouts/parts/_menu.html.erb (9.9ms)
+  Rendered layouts/parts/_footer.html.erb (0.8ms)
+Completed 200 OK in 161ms (Views: 135.1ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-07 10:42:29 -0300
+Processing by PagesController#welcome as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mPetshop Load (0.2ms)[0m  [1m[34mSELECT  "petshops".* FROM "petshops" LIMIT $1[0m  [["LIMIT", 10]]
+  ↳ app/controllers/pages_controller.rb:4
+  [1m[36mPetshop Load (0.2ms)[0m  [1m[34mSELECT  "petshops".* FROM "petshops" WHERE "petshops"."user_id" = $1 LIMIT $2[0m  [["user_id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:5
+  Rendering pages/welcome.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (1.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 25], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:22
+  Rendered layouts/parts/_storenav.html.erb (4.8ms)
+  Rendered pages/module/_store_start.html.erb (0.6ms)
+  Rendered shered/_dashboard.html.erb (1.6ms)
+  Rendered pages/welcome.html.erb within layouts/application (8.4ms)
+  Rendered layouts/parts/_menu.html.erb (1.2ms)
+  Rendered layouts/parts/_footer.html.erb (0.3ms)
+Completed 200 OK in 56ms (Views: 49.8ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-07 10:42:43 -0300
+Processing by PagesController#welcome as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mPetshop Load (0.3ms)[0m  [1m[34mSELECT  "petshops".* FROM "petshops" LIMIT $1[0m  [["LIMIT", 10]]
+  ↳ app/controllers/pages_controller.rb:4
+  [1m[36mPetshop Load (0.2ms)[0m  [1m[34mSELECT  "petshops".* FROM "petshops" WHERE "petshops"."user_id" = $1 LIMIT $2[0m  [["user_id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:5
+  Rendering pages/welcome.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 25], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:22
+  Rendered layouts/parts/_storenav.html.erb (6.0ms)
+  Rendered pages/module/_store_start.html.erb (0.6ms)
+  Rendered shered/_dashboard.html.erb (1.8ms)
+  Rendered pages/welcome.html.erb within layouts/application (10.4ms)
+  Rendered layouts/parts/_menu.html.erb (1.4ms)
+  Rendered layouts/parts/_footer.html.erb (0.3ms)
+Completed 200 OK in 71ms (Views: 65.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/petshops/2/edit" for 127.0.0.1 at 2019-03-07 10:42:46 -0300
+Processing by PetshopsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mPetshop Load (0.4ms)[0m  [1m[34mSELECT  "petshops".* FROM "petshops" WHERE "petshops"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/petshops_controller.rb:71
+  Rendering petshops/edit.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (1.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 25], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:22
+  Rendered layouts/parts/_storenav.html.erb (4.7ms)
+  Rendered petshops/_form.html.erb (7.0ms)
+  Rendered petshops/edit.html.erb within layouts/application (15.7ms)
+  Rendered layouts/parts/_menu.html.erb (1.2ms)
+  Rendered layouts/parts/_footer.html.erb (0.3ms)
+Completed 200 OK in 81ms (Views: 73.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-07 10:42:55 -0300
+Processing by PagesController#welcome as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mPetshop Load (0.5ms)[0m  [1m[34mSELECT  "petshops".* FROM "petshops" LIMIT $1[0m  [["LIMIT", 10]]
+  ↳ app/controllers/pages_controller.rb:4
+  [1m[36mPetshop Load (0.3ms)[0m  [1m[34mSELECT  "petshops".* FROM "petshops" WHERE "petshops"."user_id" = $1 LIMIT $2[0m  [["user_id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:5
+  Rendering pages/welcome.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 25], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:22
+  Rendered layouts/parts/_storenav.html.erb (4.7ms)
+  Rendered pages/module/_store_start.html.erb (1.2ms)
+  Rendered shered/_dashboard.html.erb (3.1ms)
+  Rendered pages/welcome.html.erb within layouts/application (12.3ms)
+  Rendered layouts/parts/_menu.html.erb (2.5ms)
+  Rendered layouts/parts/_footer.html.erb (0.6ms)
+Completed 200 OK in 105ms (Views: 95.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-07 10:43:29 -0300
+Processing by PagesController#welcome as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mPetshop Load (0.4ms)[0m  [1m[34mSELECT  "petshops".* FROM "petshops" LIMIT $1[0m  [["LIMIT", 10]]
+  ↳ app/controllers/pages_controller.rb:4
+  [1m[36mPetshop Load (0.6ms)[0m  [1m[34mSELECT  "petshops".* FROM "petshops" WHERE "petshops"."user_id" = $1 LIMIT $2[0m  [["user_id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:5
+  Rendering pages/welcome.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (1.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 25], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:22
+  Rendered layouts/parts/_storenav.html.erb (4.1ms)
+  Rendered pages/module/_store_start.html.erb (0.8ms)
+  Rendered shered/_dashboard.html.erb (3.0ms)
+  Rendered pages/welcome.html.erb within layouts/application (11.2ms)
+  Rendered layouts/parts/_menu.html.erb (2.6ms)
+  Rendered layouts/parts/_footer.html.erb (0.7ms)
+Completed 200 OK in 81ms (Views: 69.9ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/petshops/2/edit" for 127.0.0.1 at 2019-03-07 10:44:06 -0300
+Processing by PetshopsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mPetshop Load (8.6ms)[0m  [1m[34mSELECT  "petshops".* FROM "petshops" WHERE "petshops"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/petshops_controller.rb:71
+  Rendering petshops/edit.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 25], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:22
+  Rendered layouts/parts/_storenav.html.erb (4.2ms)
+  Rendered petshops/_form.html.erb (5.7ms)
+  Rendered petshops/edit.html.erb within layouts/application (12.3ms)
+  Rendered layouts/parts/_menu.html.erb (1.1ms)
+  Rendered layouts/parts/_footer.html.erb (0.3ms)
+Completed 200 OK in 59ms (Views: 40.6ms | ActiveRecord: 13.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-07 10:45:32 -0300
+Processing by PagesController#welcome as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mPetshop Load (0.9ms)[0m  [1m[34mSELECT  "petshops".* FROM "petshops" LIMIT $1[0m  [["LIMIT", 10]]
+  ↳ app/controllers/pages_controller.rb:4
+  [1m[36mPetshop Load (0.8ms)[0m  [1m[34mSELECT  "petshops".* FROM "petshops" WHERE "petshops"."user_id" = $1 LIMIT $2[0m  [["user_id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:5
+  Rendering pages/welcome.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.8ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 25], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:22
+  Rendered layouts/parts/_storenav.html.erb (6.6ms)
+  Rendered pages/module/_store_start.html.erb (1.5ms)
+  Rendered shered/_dashboard.html.erb (4.6ms)
+  Rendered pages/welcome.html.erb within layouts/application (19.2ms)
+  Rendered layouts/parts/_menu.html.erb (2.3ms)
+  Rendered layouts/parts/_footer.html.erb (0.6ms)
+Completed 200 OK in 108ms (Views: 98.3ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-07 10:46:43 -0300
+Processing by PagesController#welcome as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mPetshop Load (0.3ms)[0m  [1m[34mSELECT  "petshops".* FROM "petshops" LIMIT $1[0m  [["LIMIT", 10]]
+  ↳ app/controllers/pages_controller.rb:4
+  [1m[36mPetshop Load (0.2ms)[0m  [1m[34mSELECT  "petshops".* FROM "petshops" WHERE "petshops"."user_id" = $1 LIMIT $2[0m  [["user_id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:5
+  Rendering pages/welcome.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 25], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:22
+  Rendered layouts/parts/_storenav.html.erb (2.7ms)
+  Rendered pages/module/_store_start.html.erb (0.9ms)
+  Rendered shered/_dashboard.html.erb (3.1ms)
+  Rendered pages/welcome.html.erb within layouts/application (8.3ms)
+  Rendered layouts/parts/_menu.html.erb (2.5ms)
+  Rendered layouts/parts/_footer.html.erb (0.7ms)
+Completed 200 OK in 50ms (Views: 43.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-07 10:46:54 -0300
+Processing by PagesController#welcome as HTML
+  [1m[36mUser Load (5.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mPetshop Load (0.6ms)[0m  [1m[34mSELECT  "petshops".* FROM "petshops" LIMIT $1[0m  [["LIMIT", 10]]
+  ↳ app/controllers/pages_controller.rb:4
+  [1m[36mPetshop Load (0.3ms)[0m  [1m[34mSELECT  "petshops".* FROM "petshops" WHERE "petshops"."user_id" = $1 LIMIT $2[0m  [["user_id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:5
+  Rendering pages/welcome.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (1.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 25], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:22
+  Rendered layouts/parts/_storenav.html.erb (6.9ms)
+  Rendered pages/module/_store_start.html.erb (0.9ms)
+  Rendered shered/_dashboard.html.erb (3.5ms)
+  Rendered pages/welcome.html.erb within layouts/application (24.8ms)
+  Rendered layouts/parts/_menu.html.erb (2.8ms)
+  Rendered layouts/parts/_footer.html.erb (0.6ms)
+Completed 200 OK in 79ms (Views: 61.2ms | ActiveRecord: 7.6ms)
+
+
+Started GET "/descontos" for 127.0.0.1 at 2019-03-07 10:46:55 -0300
+Processing by DescontosController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering descontos/index.html.erb within layouts/application
+  Rendered descontos/index.html.erb within layouts/application (2.2ms)
+  Rendered layouts/parts/_menu.html.erb (2.0ms)
+  Rendered layouts/parts/_footer.html.erb (0.4ms)
+Completed 200 OK in 68ms (Views: 61.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-07 10:46:59 -0300
+Processing by PagesController#welcome as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mPetshop Load (0.4ms)[0m  [1m[34mSELECT  "petshops".* FROM "petshops" LIMIT $1[0m  [["LIMIT", 10]]
+  ↳ app/controllers/pages_controller.rb:4
+  [1m[36mPetshop Load (0.7ms)[0m  [1m[34mSELECT  "petshops".* FROM "petshops" WHERE "petshops"."user_id" = $1 LIMIT $2[0m  [["user_id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:5
+  Rendering pages/welcome.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (1.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 25], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:22
+  Rendered layouts/parts/_storenav.html.erb (14.5ms)
+  Rendered pages/module/_store_start.html.erb (1.5ms)
+  Rendered shered/_dashboard.html.erb (4.1ms)
+  Rendered pages/welcome.html.erb within layouts/application (28.2ms)
+  Rendered layouts/parts/_menu.html.erb (2.5ms)
+  Rendered layouts/parts/_footer.html.erb (2.3ms)
+Completed 200 OK in 120ms (Views: 98.3ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-07 10:46:59 -0300
+Processing by PagesController#welcome as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mPetshop Load (0.6ms)[0m  [1m[34mSELECT  "petshops".* FROM "petshops" LIMIT $1[0m  [["LIMIT", 10]]
+  ↳ app/controllers/pages_controller.rb:4
+  [1m[36mPetshop Load (0.5ms)[0m  [1m[34mSELECT  "petshops".* FROM "petshops" WHERE "petshops"."user_id" = $1 LIMIT $2[0m  [["user_id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:5
+  Rendering pages/welcome.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 25], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:22
+  Rendered layouts/parts/_storenav.html.erb (3.9ms)
+  Rendered pages/module/_store_start.html.erb (3.5ms)
+  Rendered shered/_dashboard.html.erb (5.8ms)
+  Rendered pages/welcome.html.erb within layouts/application (12.7ms)
+  Rendered layouts/parts/_menu.html.erb (2.7ms)
+  Rendered layouts/parts/_footer.html.erb (0.6ms)
+Completed 200 OK in 98ms (Views: 86.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/animals" for 127.0.0.1 at 2019-03-07 10:47:01 -0300
+Processing by AnimalsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mAnimal Load (1.2ms)[0m  [1m[34mSELECT  "animals".* FROM "animals" WHERE "animals"."user_id" = $1 LIMIT $2[0m  [["user_id", 25], ["LIMIT", 5]]
+  ↳ app/controllers/animals_controller.rb:7
+  Rendering animals/index.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 25], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:22
+  Rendered layouts/parts/_storenav.html.erb (2.9ms)
+  Rendered animals/index.html.erb within layouts/application (4.4ms)
+  Rendered layouts/parts/_menu.html.erb (1.4ms)
+  Rendered layouts/parts/_footer.html.erb (0.3ms)
+Completed 200 OK in 77ms (Views: 45.1ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/petshops" for 127.0.0.1 at 2019-03-07 10:47:02 -0300
+Processing by PetshopsController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering petshops/index.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (1.1ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 25], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:22
+  Rendered layouts/parts/_storenav.html.erb (5.0ms)
+  Rendered shered/_search.html.erb (0.8ms)
+  [1m[36mPetshop Load (0.9ms)[0m  [1m[34mSELECT "petshops".* FROM "petshops"[0m
+  ↳ app/views/petshops/index.html.erb:24
+  Rendered petshops/index.html.erb within layouts/application (13.1ms)
+  Rendered layouts/parts/_menu.html.erb (1.7ms)
+  Rendered layouts/parts/_footer.html.erb (0.4ms)
+Completed 200 OK in 81ms (Views: 65.1ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/agendamentos" for 127.0.0.1 at 2019-03-07 10:47:13 -0300
+Processing by AgendamentosController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering agendamentos/index.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 25], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:22
+  Rendered layouts/parts/_usernav.html.erb (4.2ms)
+  Rendered agendamentos/index.html.erb within layouts/application (6.8ms)
+  Rendered layouts/parts/_menu.html.erb (1.3ms)
+  Rendered layouts/parts/_footer.html.erb (0.4ms)
+Completed 200 OK in 59ms (Views: 44.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-07 10:47:24 -0300
+Processing by PagesController#welcome as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mPetshop Load (0.5ms)[0m  [1m[34mSELECT  "petshops".* FROM "petshops" LIMIT $1[0m  [["LIMIT", 10]]
+  ↳ app/controllers/pages_controller.rb:4
+  [1m[36mPetshop Load (2.1ms)[0m  [1m[34mSELECT  "petshops".* FROM "petshops" WHERE "petshops"."user_id" = $1 LIMIT $2[0m  [["user_id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:5
+  Rendering pages/welcome.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 25], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:22
+  Rendered layouts/parts/_storenav.html.erb (4.5ms)
+  Rendered pages/module/_store_start.html.erb (1.1ms)
+  Rendered shered/_dashboard.html.erb (4.1ms)
+  Rendered pages/welcome.html.erb within layouts/application (11.3ms)
+  Rendered layouts/parts/_menu.html.erb (7.7ms)
+  Rendered layouts/parts/_footer.html.erb (0.8ms)
+Completed 200 OK in 134ms (Views: 118.2ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-07 10:48:26 -0300
+Processing by PagesController#welcome as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mPetshop Load (0.3ms)[0m  [1m[34mSELECT  "petshops".* FROM "petshops" LIMIT $1[0m  [["LIMIT", 10]]
+  ↳ app/controllers/pages_controller.rb:4
+  [1m[36mPetshop Load (0.2ms)[0m  [1m[34mSELECT  "petshops".* FROM "petshops" WHERE "petshops"."user_id" = $1 LIMIT $2[0m  [["user_id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:5
+  Rendering pages/welcome.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 25], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:22
+  Rendered layouts/parts/_storenav.html.erb (5.2ms)
+  Rendered pages/module/_store_start.html.erb (0.7ms)
+  Rendered shered/_dashboard.html.erb (1.8ms)
+  Rendered pages/welcome.html.erb within layouts/application (10.9ms)
+  Rendered layouts/parts/_menu.html.erb (2.0ms)
+  Rendered layouts/parts/_footer.html.erb (0.4ms)
+Completed 200 OK in 78ms (Views: 69.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2019-03-07 10:48:29 -0300
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 25], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:22
+  Rendered layouts/parts/_storenav.html.erb (2.6ms)
+DEPRECATION WARNING: [Devise] `DeviseHelper.devise_error_messages!`
+is deprecated and it will be removed in the next major version.
+To customize the errors styles please run `rails g devise:views` and modify the
+`devise/shared/error_messages` partial.
+ (called from block in _app_views_devise_registrations_edit_html_erb___3639196786601980891_70237807027640 at /home/marviorocha/www/cartaomaispet/app/views/devise/registrations/edit.html.erb:26)
+  Rendered devise/registrations/edit.html.erb within layouts/application (9.7ms)
+  Rendered layouts/parts/_menu.html.erb (1.5ms)
+  Rendered layouts/parts/_footer.html.erb (0.4ms)
+Completed 200 OK in 45ms (Views: 42.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-07 10:48:42 -0300
+Processing by PagesController#welcome as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mPetshop Load (0.4ms)[0m  [1m[34mSELECT  "petshops".* FROM "petshops" LIMIT $1[0m  [["LIMIT", 10]]
+  ↳ app/controllers/pages_controller.rb:4
+  [1m[36mPetshop Load (0.3ms)[0m  [1m[34mSELECT  "petshops".* FROM "petshops" WHERE "petshops"."user_id" = $1 LIMIT $2[0m  [["user_id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:5
+  Rendering pages/welcome.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 25], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:22
+  Rendered layouts/parts/_storenav.html.erb (4.5ms)
+  Rendered pages/module/_store_start.html.erb (1.1ms)
+  Rendered shered/_dashboard.html.erb (3.0ms)
+  Rendered pages/welcome.html.erb within layouts/application (19.1ms)
+  Rendered layouts/parts/_menu.html.erb (10.6ms)
+  Rendered layouts/parts/_footer.html.erb (0.6ms)
+Completed 200 OK in 165ms (Views: 150.8ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/animals" for 127.0.0.1 at 2019-03-07 10:48:58 -0300
+Processing by AnimalsController#index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mAnimal Load (0.6ms)[0m  [1m[34mSELECT  "animals".* FROM "animals" WHERE "animals"."user_id" = $1 LIMIT $2[0m  [["user_id", 25], ["LIMIT", 5]]
+  ↳ app/controllers/animals_controller.rb:7
+  Rendering animals/index.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.9ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 25], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:22
+  Rendered layouts/parts/_storenav.html.erb (5.6ms)
+  Rendered animals/index.html.erb within layouts/application (8.6ms)
+  Rendered layouts/parts/_menu.html.erb (1.5ms)
+  Rendered layouts/parts/_footer.html.erb (0.6ms)
+Completed 200 OK in 91ms (Views: 74.6ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-07 10:49:02 -0300
+Processing by PagesController#welcome as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mPetshop Load (0.4ms)[0m  [1m[34mSELECT  "petshops".* FROM "petshops" LIMIT $1[0m  [["LIMIT", 10]]
+  ↳ app/controllers/pages_controller.rb:4
+  [1m[36mPetshop Load (0.5ms)[0m  [1m[34mSELECT  "petshops".* FROM "petshops" WHERE "petshops"."user_id" = $1 LIMIT $2[0m  [["user_id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:5
+  Rendering pages/welcome.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (1.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 25], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:22
+  Rendered layouts/parts/_storenav.html.erb (9.2ms)
+  Rendered pages/module/_store_start.html.erb (3.0ms)
+  Rendered shered/_dashboard.html.erb (5.4ms)
+  Rendered pages/welcome.html.erb within layouts/application (18.5ms)
+  Rendered layouts/parts/_menu.html.erb (5.6ms)
+  Rendered layouts/parts/_footer.html.erb (0.8ms)
+Completed 200 OK in 112ms (Views: 101.5ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/petshops/2/edit" for 127.0.0.1 at 2019-03-07 10:49:05 -0300
+Processing by PetshopsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mPetshop Load (0.3ms)[0m  [1m[34mSELECT  "petshops".* FROM "petshops" WHERE "petshops"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/petshops_controller.rb:71
+  Rendering petshops/edit.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 25], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:22
+  Rendered layouts/parts/_storenav.html.erb (5.8ms)
+  Rendered petshops/_form.html.erb (7.4ms)
+  Rendered petshops/edit.html.erb within layouts/application (16.7ms)
+  Rendered layouts/parts/_menu.html.erb (1.4ms)
+  Rendered layouts/parts/_footer.html.erb (0.4ms)
+Completed 200 OK in 64ms (Views: 58.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/agendamentos" for 127.0.0.1 at 2019-03-07 10:49:09 -0300
+Processing by AgendamentosController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering agendamentos/index.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 25], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:22
+  Rendered layouts/parts/_usernav.html.erb (6.0ms)
+  Rendered agendamentos/index.html.erb within layouts/application (10.6ms)
+  Rendered layouts/parts/_menu.html.erb (2.2ms)
+  Rendered layouts/parts/_footer.html.erb (0.6ms)
+Completed 200 OK in 84ms (Views: 72.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-07 10:51:01 -0300
+Processing by PagesController#welcome as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mPetshop Load (1.5ms)[0m  [1m[34mSELECT  "petshops".* FROM "petshops" LIMIT $1[0m  [["LIMIT", 10]]
+  ↳ app/controllers/pages_controller.rb:4
+  [1m[36mPetshop Load (0.3ms)[0m  [1m[34mSELECT  "petshops".* FROM "petshops" WHERE "petshops"."user_id" = $1 LIMIT $2[0m  [["user_id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:5
+  Rendering pages/welcome.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (5.7ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 25], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:22
+  Rendered layouts/parts/_storenav.html.erb (11.7ms)
+  Rendered pages/module/_store_start.html.erb (4.6ms)
+  Rendered shered/_dashboard.html.erb (9.9ms)
+  Rendered pages/welcome.html.erb within layouts/application (24.9ms)
+  Rendered layouts/parts/_menu.html.erb (7.5ms)
+  Rendered layouts/parts/_footer.html.erb (0.6ms)
+Completed 200 OK in 140ms (Views: 122.3ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-07 10:51:02 -0300
+Processing by PagesController#welcome as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mPetshop Load (0.3ms)[0m  [1m[34mSELECT  "petshops".* FROM "petshops" LIMIT $1[0m  [["LIMIT", 10]]
+  ↳ app/controllers/pages_controller.rb:4
+  [1m[36mPetshop Load (0.2ms)[0m  [1m[34mSELECT  "petshops".* FROM "petshops" WHERE "petshops"."user_id" = $1 LIMIT $2[0m  [["user_id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:5
+  Rendering pages/welcome.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 25], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:22
+  Rendered layouts/parts/_storenav.html.erb (2.7ms)
+  Rendered pages/module/_store_start.html.erb (0.7ms)
+  Rendered shered/_dashboard.html.erb (2.0ms)
+  Rendered pages/welcome.html.erb within layouts/application (7.6ms)
+  Rendered layouts/parts/_menu.html.erb (1.4ms)
+  Rendered layouts/parts/_footer.html.erb (0.4ms)
+Completed 200 OK in 47ms (Views: 39.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/agendamentos" for 127.0.0.1 at 2019-03-07 10:51:04 -0300
+Processing by AgendamentosController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering agendamentos/index.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (1.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 25], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:22
+  Rendered layouts/parts/_storenav.html.erb (5.3ms)
+  Rendered agendamentos/index.html.erb within layouts/application (6.9ms)
+  Rendered layouts/parts/_menu.html.erb (1.4ms)
+  Rendered layouts/parts/_footer.html.erb (0.9ms)
+Completed 200 OK in 71ms (Views: 61.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/animals" for 127.0.0.1 at 2019-03-07 10:51:07 -0300
+Processing by AnimalsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mAnimal Load (0.7ms)[0m  [1m[34mSELECT  "animals".* FROM "animals" WHERE "animals"."user_id" = $1 LIMIT $2[0m  [["user_id", 25], ["LIMIT", 5]]
+  ↳ app/controllers/animals_controller.rb:7
+  Rendering animals/index.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 25], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:22
+  Rendered layouts/parts/_storenav.html.erb (4.1ms)
+  Rendered animals/index.html.erb within layouts/application (6.3ms)
+  Rendered layouts/parts/_menu.html.erb (2.9ms)
+  Rendered layouts/parts/_footer.html.erb (1.3ms)
+Completed 200 OK in 76ms (Views: 64.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/petshops" for 127.0.0.1 at 2019-03-07 10:51:08 -0300
+Processing by PetshopsController#index as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering petshops/index.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (1.1ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 25], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:22
+  Rendered layouts/parts/_storenav.html.erb (6.5ms)
+  Rendered shered/_search.html.erb (1.4ms)
+  [1m[36mPetshop Load (0.4ms)[0m  [1m[34mSELECT "petshops".* FROM "petshops"[0m
+  ↳ app/views/petshops/index.html.erb:24
+  Rendered petshops/index.html.erb within layouts/application (14.4ms)
+  Rendered layouts/parts/_menu.html.erb (1.4ms)
+  Rendered layouts/parts/_footer.html.erb (0.7ms)
+Completed 200 OK in 91ms (Views: 77.1ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/descontos" for 127.0.0.1 at 2019-03-07 10:51:10 -0300
+Processing by DescontosController#index as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering descontos/index.html.erb within layouts/application
+  Rendered descontos/index.html.erb within layouts/application (0.6ms)
+  Rendered layouts/parts/_menu.html.erb (7.0ms)
+  Rendered layouts/parts/_footer.html.erb (1.7ms)
+Completed 200 OK in 97ms (Views: 90.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/petshops" for 127.0.0.1 at 2019-03-07 10:51:11 -0300
+Processing by PetshopsController#index as HTML
+  [1m[36mUser Load (4.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering petshops/index.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (1.0ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 25], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:22
+  Rendered layouts/parts/_storenav.html.erb (30.1ms)
+  Rendered shered/_search.html.erb (1.2ms)
+  [1m[36mPetshop Load (0.5ms)[0m  [1m[34mSELECT "petshops".* FROM "petshops"[0m
+  ↳ app/views/petshops/index.html.erb:24
+  Rendered petshops/index.html.erb within layouts/application (58.7ms)
+  Rendered layouts/parts/_menu.html.erb (7.8ms)
+  Rendered layouts/parts/_footer.html.erb (0.7ms)
+Completed 200 OK in 175ms (Views: 156.3ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/petshops" for 127.0.0.1 at 2019-03-07 10:51:12 -0300
+Processing by PetshopsController#index as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering petshops/index.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 25], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:22
+  Rendered layouts/parts/_storenav.html.erb (4.5ms)
+  Rendered shered/_search.html.erb (1.1ms)
+  [1m[36mPetshop Load (0.4ms)[0m  [1m[34mSELECT "petshops".* FROM "petshops"[0m
+  ↳ app/views/petshops/index.html.erb:24
+  Rendered petshops/index.html.erb within layouts/application (12.4ms)
+  Rendered layouts/parts/_menu.html.erb (3.2ms)
+  Rendered layouts/parts/_footer.html.erb (0.6ms)
+Completed 200 OK in 115ms (Views: 106.2ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/petshops" for 127.0.0.1 at 2019-03-07 10:51:12 -0300
+Processing by PetshopsController#index as HTML
+  [1m[36mUser Load (7.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering petshops/index.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (2.8ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 25], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:22
+  Rendered layouts/parts/_storenav.html.erb (17.4ms)
+  Rendered shered/_search.html.erb (4.2ms)
+  [1m[36mPetshop Load (1.1ms)[0m  [1m[34mSELECT "petshops".* FROM "petshops"[0m
+  ↳ app/views/petshops/index.html.erb:24
+  Rendered petshops/index.html.erb within layouts/application (38.2ms)
+  Rendered layouts/parts/_menu.html.erb (18.7ms)
+  Rendered layouts/parts/_footer.html.erb (0.8ms)
+Completed 200 OK in 165ms (Views: 136.0ms | ActiveRecord: 23.4ms)
+
+
+Started GET "/petshops" for 127.0.0.1 at 2019-03-07 10:51:12 -0300
+Processing by PetshopsController#index as HTML
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering petshops/index.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 25], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:22
+  Rendered layouts/parts/_storenav.html.erb (3.9ms)
+  Rendered shered/_search.html.erb (5.6ms)
+  [1m[36mPetshop Load (1.7ms)[0m  [1m[34mSELECT "petshops".* FROM "petshops"[0m
+  ↳ app/views/petshops/index.html.erb:24
+  Rendered petshops/index.html.erb within layouts/application (26.0ms)
+  Rendered layouts/parts/_menu.html.erb (12.4ms)
+  Rendered layouts/parts/_footer.html.erb (0.7ms)
+Completed 200 OK in 152ms (Views: 141.1ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-07 10:51:12 -0300
+Processing by PagesController#welcome as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mPetshop Load (3.8ms)[0m  [1m[34mSELECT  "petshops".* FROM "petshops" LIMIT $1[0m  [["LIMIT", 10]]
+  ↳ app/controllers/pages_controller.rb:4
+  [1m[36mPetshop Load (1.7ms)[0m  [1m[34mSELECT  "petshops".* FROM "petshops" WHERE "petshops"."user_id" = $1 LIMIT $2[0m  [["user_id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:5
+  Rendering pages/welcome.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 25], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:22
+  Rendered layouts/parts/_storenav.html.erb (5.6ms)
+  Rendered pages/module/_store_start.html.erb (3.2ms)
+  Rendered shered/_dashboard.html.erb (9.2ms)
+  Rendered pages/welcome.html.erb within layouts/application (19.3ms)
+  Rendered layouts/parts/_menu.html.erb (3.7ms)
+  Rendered layouts/parts/_footer.html.erb (0.5ms)
+Completed 200 OK in 165ms (Views: 137.5ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2019-03-07 10:51:30 -0300
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 25], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:22
+  Rendered layouts/parts/_storenav.html.erb (4.0ms)
+DEPRECATION WARNING: [Devise] `DeviseHelper.devise_error_messages!`
+is deprecated and it will be removed in the next major version.
+To customize the errors styles please run `rails g devise:views` and modify the
+`devise/shared/error_messages` partial.
+ (called from block in _app_views_devise_registrations_edit_html_erb___3639196786601980891_70237715018500 at /home/marviorocha/www/cartaomaispet/app/views/devise/registrations/edit.html.erb:26)
+  Rendered devise/registrations/edit.html.erb within layouts/application (13.1ms)
+  Rendered layouts/parts/_menu.html.erb (1.7ms)
+  Rendered layouts/parts/_footer.html.erb (0.3ms)
+Completed 200 OK in 55ms (Views: 50.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/descontos" for 127.0.0.1 at 2019-03-07 10:51:32 -0300
+Processing by DescontosController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering descontos/index.html.erb within layouts/application
+  Rendered descontos/index.html.erb within layouts/application (1.8ms)
+  Rendered layouts/parts/_menu.html.erb (2.9ms)
+  Rendered layouts/parts/_footer.html.erb (8.4ms)
+Completed 200 OK in 81ms (Views: 75.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-07 10:51:34 -0300
+Processing by PagesController#welcome as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mPetshop Load (1.4ms)[0m  [1m[34mSELECT  "petshops".* FROM "petshops" LIMIT $1[0m  [["LIMIT", 10]]
+  ↳ app/controllers/pages_controller.rb:4
+  [1m[36mPetshop Load (0.5ms)[0m  [1m[34mSELECT  "petshops".* FROM "petshops" WHERE "petshops"."user_id" = $1 LIMIT $2[0m  [["user_id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:5
+  Rendering pages/welcome.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 25], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:22
+  Rendered layouts/parts/_storenav.html.erb (4.6ms)
+  Rendered pages/module/_store_start.html.erb (1.7ms)
+  Rendered shered/_dashboard.html.erb (4.5ms)
+  Rendered pages/welcome.html.erb within layouts/application (13.3ms)
+  Rendered layouts/parts/_menu.html.erb (3.2ms)
+  Rendered layouts/parts/_footer.html.erb (2.5ms)
+Completed 200 OK in 93ms (Views: 73.9ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/petshops" for 127.0.0.1 at 2019-03-07 10:51:36 -0300
+Processing by PetshopsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering petshops/index.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 25], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:22
+  Rendered layouts/parts/_storenav.html.erb (4.3ms)
+  Rendered shered/_search.html.erb (1.2ms)
+  [1m[36mPetshop Load (4.5ms)[0m  [1m[34mSELECT "petshops".* FROM "petshops"[0m
+  ↳ app/views/petshops/index.html.erb:24
+  Rendered petshops/index.html.erb within layouts/application (15.7ms)
+  Rendered layouts/parts/_menu.html.erb (3.9ms)
+  Rendered layouts/parts/_footer.html.erb (11.6ms)
+Completed 200 OK in 121ms (Views: 111.7ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/petshops/new" for 127.0.0.1 at 2019-03-07 10:51:46 -0300
+Processing by PetshopsController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering petshops/new.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 25], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:22
+  Rendered layouts/parts/_storenav.html.erb (5.2ms)
+  Rendered petshops/_form.html.erb (8.3ms)
+  Rendered petshops/new.html.erb within layouts/application (18.6ms)
+  Rendered layouts/parts/_menu.html.erb (2.1ms)
+  Rendered layouts/parts/_footer.html.erb (0.8ms)
+Completed 200 OK in 72ms (Views: 66.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/petshops" for 127.0.0.1 at 2019-03-07 10:51:55 -0300
+Processing by PetshopsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering petshops/index.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 25], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:22
+  Rendered layouts/parts/_storenav.html.erb (4.1ms)
+  Rendered shered/_search.html.erb (2.7ms)
+  [1m[36mPetshop Load (3.9ms)[0m  [1m[34mSELECT "petshops".* FROM "petshops"[0m
+  ↳ app/views/petshops/index.html.erb:24
+  Rendered petshops/index.html.erb within layouts/application (22.2ms)
+  Rendered layouts/parts/_menu.html.erb (2.4ms)
+  Rendered layouts/parts/_footer.html.erb (0.7ms)
+Completed 200 OK in 101ms (Views: 91.4ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-07 10:53:17 -0300
+Processing by PagesController#welcome as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mPetshop Load (0.5ms)[0m  [1m[34mSELECT  "petshops".* FROM "petshops" LIMIT $1[0m  [["LIMIT", 10]]
+  ↳ app/controllers/pages_controller.rb:4
+  [1m[36mPetshop Load (0.4ms)[0m  [1m[34mSELECT  "petshops".* FROM "petshops" WHERE "petshops"."user_id" = $1 LIMIT $2[0m  [["user_id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:5
+  Rendering pages/welcome.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 25], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:22
+  Rendered layouts/parts/_storenav.html.erb (3.9ms)
+  Rendered pages/module/_store_start.html.erb (0.8ms)
+  Rendered shered/_dashboard.html.erb (2.3ms)
+  Rendered pages/welcome.html.erb within layouts/application (9.6ms)
+  Rendered layouts/parts/_menu.html.erb (2.8ms)
+  Rendered layouts/parts/_footer.html.erb (0.8ms)
+Completed 200 OK in 168ms (Views: 157.5ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2019-03-07 10:53:20 -0300
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (7.0ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 25], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:22
+  Rendered layouts/parts/_storenav.html.erb (10.9ms)
+DEPRECATION WARNING: [Devise] `DeviseHelper.devise_error_messages!`
+is deprecated and it will be removed in the next major version.
+To customize the errors styles please run `rails g devise:views` and modify the
+`devise/shared/error_messages` partial.
+ (called from block in _app_views_devise_registrations_edit_html_erb___3639196786601980891_70237693699780 at /home/marviorocha/www/cartaomaispet/app/views/devise/registrations/edit.html.erb:26)
+  Rendered devise/registrations/edit.html.erb within layouts/application (34.0ms)
+  Rendered layouts/parts/_menu.html.erb (7.2ms)
+  Rendered layouts/parts/_footer.html.erb (0.6ms)
+Completed 200 OK in 135ms (Views: 115.2ms | ActiveRecord: 9.7ms)
+
+
+Started GET "/descontos" for 127.0.0.1 at 2019-03-07 10:53:23 -0300
+Processing by DescontosController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering descontos/index.html.erb within layouts/application
+  Rendered descontos/index.html.erb within layouts/application (0.5ms)
+  Rendered layouts/parts/_menu.html.erb (3.8ms)
+  Rendered layouts/parts/_footer.html.erb (0.7ms)
+Completed 200 OK in 81ms (Views: 74.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2019-03-07 10:53:25 -0300
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 25], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:22
+  Rendered layouts/parts/_storenav.html.erb (3.8ms)
+DEPRECATION WARNING: [Devise] `DeviseHelper.devise_error_messages!`
+is deprecated and it will be removed in the next major version.
+To customize the errors styles please run `rails g devise:views` and modify the
+`devise/shared/error_messages` partial.
+ (called from block in _app_views_devise_registrations_edit_html_erb___3639196786601980891_70237715768960 at /home/marviorocha/www/cartaomaispet/app/views/devise/registrations/edit.html.erb:26)
+  Rendered devise/registrations/edit.html.erb within layouts/application (13.4ms)
+  Rendered layouts/parts/_menu.html.erb (3.5ms)
+  Rendered layouts/parts/_footer.html.erb (0.8ms)
+Completed 200 OK in 102ms (Views: 98.6ms | ActiveRecord: 1.2ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2019-03-07 10:53:37 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"TGaPL8EPwSx42vgiRDMbisGYR78+mnincq/NlL2UgBsUOmi+uAgKKH34wkWpbQ28qBhaUZ+0h6PJhU9nUYvfNg=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://dev.local.me:3000/
+Completed 302 Found in 27ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-07 10:53:37 -0300
+Processing by PagesController#welcome as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-03-07 10:53:37 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper.devise_error_messages!`
+is deprecated and it will be removed in the next major version.
+To customize the errors styles please run `rails g devise:views` and modify the
+`devise/shared/error_messages` partial.
+ (called from _app_views_devise_sessions_new_html_erb___4593484502320406745_70237682415320 at /home/marviorocha/www/cartaomaispet/app/views/devise/sessions/new.html.erb:3)
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.3ms)
+  Rendered layouts/parts/_menu.html.erb (2.8ms)
+  Rendered layouts/parts/_footer.html.erb (0.4ms)
+Completed 200 OK in 38ms (Views: 36.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2019-03-07 10:53:41 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper.devise_error_messages!`
+is deprecated and it will be removed in the next major version.
+To customize the errors styles please run `rails g devise:views` and modify the
+`devise/shared/error_messages` partial.
+ (called from _app_views_devise_registrations_new_html_erb___3214263613887179909_70237807136460 at /home/marviorocha/www/cartaomaispet/app/views/devise/registrations/new.html.erb:5)
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (9.1ms)
+  Rendered layouts/parts/_menu.html.erb (1.6ms)
+  Rendered layouts/parts/_footer.html.erb (0.4ms)
+Completed 200 OK in 80ms (Views: 77.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-03-07 10:53:59 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"domesB3S/puazD4zAyQEBqFKn4gfIUPuYevMFoZP5h1O8nK/CwKWpMRzSn8V9A7B33LCKBuzlj+O9T1oAhkmVw==", "user"=>{"name"=>"Root", "last_name"=>"Data", "email"=>"root@data.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role"=>"user"}}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "root@data.com"], ["LIMIT", 1]]
+  ↳ /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Create (3.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "last_name", "role") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "root@data.com"], ["encrypted_password", "$2a$11$f2uJ9swEVTbp.WfShh85eO9S4E7ak4P6WD.YDX.AKsGM7bCGemV9W"], ["created_at", "2019-03-07 13:53:59.590213"], ["updated_at", "2019-03-07 13:53:59.590213"], ["name", "Root"], ["last_name", "Data"], ["role", "user"]]
+  ↳ /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering welcome_mailer/welcome_send.html.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_send.html.erb within layouts/mailer (0.5ms)
+WelcomeMailer#welcome_send: processed outbound mail in 38.1ms
+Sent mail to root@data.com (3.8ms)
+Date: Thu, 07 Mar 2019 10:53:59 -0300
+From: contato@cartoamaispet.com.br
+To: root@data.com
+Message-ID: <5c812277b9c36_1df62af14f514e688793a@marviorocha-os.mail>
+Subject: =?UTF-8?Q?Bem-vindo_ao_Cart=C3=A3o_Mais_Pet?=
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>=0D
+<html>=0D
+  <head>=0D
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8" />=0D
+    <style>=0D
+      /* Email styles need to be inline */=0D
+    </style>=0D
+  </head>=0D
+=0D
+  <body>=0D
+    <h1> Ol=C3=A1  Root</h1>=0D
+=0D
+Bem-vindo ao Cart=C3=A3o Mais Pet, Meu nome =C3=A9 Marvio Rocha <br>=0D
+e voc=C3=AA est=C3=A1 recebendo um email de test de um desenvolvedor<br>=0D=
+
+ninja apaixonado por programa=C3=A7=C3=A3o. <p></p> Vamos colocar seu sis=
+tema online o mais breve poss=C3=ADvel<br>=0D
+Sei que as minhas possibilidade depende de todos n=C3=B3s!. <p></p> Mais=0D=
+
+podemos fazer coisas super legais! Pesso a voc=C3=AAs muitas <br>=0D
+desculpas pelo tempo=0D
+<p></p>=0D
+Nos falomos em breve!=0D
+<p></p>=0D
+Abra=C3=A7o a todos...=0D
+<p></p>=0D
+Com Carinho =E2=9D=A4 <br>=0D
+Marvio Rocha=0D
+=0D
+  </body>=0D
+</html>=0D
+
+  [1m[35m (8.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://dev.local.me:3000/
+Completed 302 Found in 362ms (ActiveRecord: 12.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-07 10:53:59 -0300
+Processing by PagesController#welcome as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mPetshop Load (1.1ms)[0m  [1m[34mSELECT  "petshops".* FROM "petshops" LIMIT $1[0m  [["LIMIT", 10]]
+  ↳ app/controllers/pages_controller.rb:4
+  [1m[36mPetshop Load (0.3ms)[0m  [1m[34mSELECT  "petshops".* FROM "petshops" WHERE "petshops"."user_id" = $1 LIMIT $2[0m  [["user_id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:5
+  Rendering pages/welcome.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 26], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:22
+  Rendered layouts/parts/_usernav.html.erb (3.0ms)
+  Rendered shered/_dashboard.html.erb (0.5ms)
+  Rendered pages/welcome.html.erb within layouts/application (5.5ms)
+  Rendered layouts/parts/_menu.html.erb (2.0ms)
+  Rendered layouts/parts/_footer.html.erb (0.4ms)
+Completed 200 OK in 55ms (Views: 45.1ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2019-03-07 10:54:07 -0300
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (2.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 26], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:22
+  Rendered layouts/parts/_usernav.html.erb (8.2ms)
+DEPRECATION WARNING: [Devise] `DeviseHelper.devise_error_messages!`
+is deprecated and it will be removed in the next major version.
+To customize the errors styles please run `rails g devise:views` and modify the
+`devise/shared/error_messages` partial.
+ (called from block in _app_views_devise_registrations_edit_html_erb___3639196786601980891_70237795672220 at /home/marviorocha/www/cartaomaispet/app/views/devise/registrations/edit.html.erb:26)
+  Rendered devise/registrations/edit.html.erb within layouts/application (15.8ms)
+  Rendered layouts/parts/_menu.html.erb (2.4ms)
+  Rendered layouts/parts/_footer.html.erb (0.4ms)
+Completed 200 OK in 59ms (Views: 53.5ms | ActiveRecord: 2.9ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2019-03-07 10:54:16 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"HzG1NO1kA3t82tkn6YbtEHge/+wPyOhePiYCO3IRssHoXpT4jDfU6t5SgqKf0Zq8rnjq1uzL4hSXTNzkt6QGSQ=="}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (4.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://dev.local.me:3000/
+Completed 302 Found in 16ms (ActiveRecord: 6.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-07 10:54:16 -0300
+Processing by PagesController#welcome as HTML
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-03-07 10:54:16 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper.devise_error_messages!`
+is deprecated and it will be removed in the next major version.
+To customize the errors styles please run `rails g devise:views` and modify the
+`devise/shared/error_messages` partial.
+ (called from _app_views_devise_sessions_new_html_erb___4593484502320406745_70237783835000 at /home/marviorocha/www/cartaomaispet/app/views/devise/sessions/new.html.erb:3)
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (12.1ms)
+  Rendered layouts/parts/_menu.html.erb (4.3ms)
+  Rendered layouts/parts/_footer.html.erb (0.5ms)
+Completed 200 OK in 91ms (Views: 89.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2019-03-07 10:55:06 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vAVv4f/XY7ccev0Pj9HvSCyipKj+1OeOEDoBqt1nYiwO/PGp9Fclyn8N5Riqp7Cunv1EqMNpmuMmBSy+YdqI7g==", "user"=>{"email"=>"showbiz@showbiz.mus.br", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Fazer Login"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "showbiz@showbiz.mus.br"], ["LIMIT", 1]]
+  ↳ /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://dev.local.me:3000/
+Completed 302 Found in 174ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-07 10:55:06 -0300
+Processing by PagesController#welcome as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mPetshop Load (0.2ms)[0m  [1m[34mSELECT  "petshops".* FROM "petshops" LIMIT $1[0m  [["LIMIT", 10]]
+  ↳ app/controllers/pages_controller.rb:4
+  [1m[36mPetshop Load (0.3ms)[0m  [1m[34mSELECT  "petshops".* FROM "petshops" WHERE "petshops"."user_id" = $1 LIMIT $2[0m  [["user_id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:5
+  Rendering pages/welcome.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 25], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:22
+  Rendered layouts/parts/_storenav.html.erb (3.4ms)
+  Rendered pages/module/_store_start.html.erb (1.5ms)
+  Rendered shered/_dashboard.html.erb (3.4ms)
+  Rendered pages/welcome.html.erb within layouts/application (8.8ms)
+  Rendered layouts/parts/_menu.html.erb (2.1ms)
+  Rendered layouts/parts/_footer.html.erb (0.8ms)
+Completed 200 OK in 61ms (Views: 55.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/descontos" for 127.0.0.1 at 2019-03-07 10:55:20 -0300
+Processing by DescontosController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering descontos/index.html.erb within layouts/application
+  Rendered descontos/index.html.erb within layouts/application (1.7ms)
+  Rendered layouts/parts/_menu.html.erb (2.2ms)
+  Rendered layouts/parts/_footer.html.erb (0.5ms)
+Completed 200 OK in 83ms (Views: 72.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-07 10:55:22 -0300
+Processing by PagesController#welcome as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mPetshop Load (1.6ms)[0m  [1m[34mSELECT  "petshops".* FROM "petshops" LIMIT $1[0m  [["LIMIT", 10]]
+  ↳ app/controllers/pages_controller.rb:4
+  [1m[36mPetshop Load (0.8ms)[0m  [1m[34mSELECT  "petshops".* FROM "petshops" WHERE "petshops"."user_id" = $1 LIMIT $2[0m  [["user_id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:5
+  Rendering pages/welcome.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 25], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:22
+  Rendered layouts/parts/_storenav.html.erb (4.6ms)
+  Rendered pages/module/_store_start.html.erb (1.8ms)
+  Rendered shered/_dashboard.html.erb (3.9ms)
+  Rendered pages/welcome.html.erb within layouts/application (11.3ms)
+  Rendered layouts/parts/_menu.html.erb (2.5ms)
+  Rendered layouts/parts/_footer.html.erb (0.7ms)
+Completed 200 OK in 120ms (Views: 98.6ms | ActiveRecord: 3.6ms)
+
+

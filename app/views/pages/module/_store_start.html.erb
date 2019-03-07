@@ -1,6 +1,4 @@
-<p>
-Você precisa completar o cadastre de sua loja para ser exebido em nossa busca.
-</p>
+ 
 <table class="striped">
   <thead>
     <tr>
@@ -40,4 +38,7 @@ Você precisa completar o cadastre de sua loja para ser exebido em nossa busca.
   </tbody>
 </table>
 
-<div class="col s6 m6 l6"> <button type="button" class="btn weves-effect waves-light blue lighten-2"><i class="material-icons left">create</i> Editar</button> </div>
+<div class="col s6 m6 l6">
+
+<%= link_to "<i class='material-icons left'>create</i> Editar".html_safe, edit_petshop_path(@store.id), class: "btn weves-effect waves-light blue lighten-2" %>
+</div>
