@@ -1,7 +1,7 @@
 <%= form_with(model: petshop, local: true) do |form| %>
   <% if petshop.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(petshop.errors.count, "error") %> prohibited this petshop from being saved:</h2>
+      <h2><%= pluralize(petshop.errors.count, "error") %> não foi possível de ser salvo:</h2>
 
       <ul>
       <% petshop.errors.full_messages.each do |message| %>
@@ -22,11 +22,12 @@
   </div>
 
   <div class="input-field">
-    <%= form.number_field :phone %>
+    <%= form.text_field :phone %>
     <%= form.label :phone %>
   </div>
 
   <div class="input-field">
+
     <%= form.number_field :cep %>
     <%= form.label :cep %>
   </div>
@@ -48,6 +49,6 @@
 
 
   <div class="actions">
-    <%= form.submit class: "btn green dar waves-effect waves-light" %>
+    <%= form.submit class: "waves-effect waves-light btn green" %>
   </div>
 <% end %>

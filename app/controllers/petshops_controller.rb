@@ -6,8 +6,7 @@ class PetshopsController < ApplicationController
   def index
 
     @petshops = Petshop.search(params[:cidade])
-
-
+ 
   end
 
   # GET /petshops/1
@@ -46,7 +45,7 @@ class PetshopsController < ApplicationController
   def update
     respond_to do |format|
       if @petshop.update(petshop_params)
-        format.html { redirect_to @petshop, notice: 'Sua loja foi atualizada com sucesso' }
+        format.html { redirect_to root_path, notice: 'Sua loja foi atualizada com sucesso' }
         format.json { render :show, status: :ok, location: @petshop }
       else
         format.html { render :edit }
