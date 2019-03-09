@@ -1,9 +1,12 @@
- 
+
 <table class="striped">
   <thead>
     <tr>
       <th data-field="titulo"> Sua petshop</th>
 
+<% if @store.cidade.blank? %>
+<span class="red-text">Por favor, preencha o campo: <b>CIDADE</b>.</span>
+<% end %>
     </tr>
   </thead>
 

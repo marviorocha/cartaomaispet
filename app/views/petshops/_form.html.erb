@@ -13,7 +13,7 @@
 
   <div class="input-field">
     <%= form.text_field :title %>
-    <%= form.label :title %>
+    <%= form.label 'Titulo' %>
   </div>
 
   <div class="input-field">
@@ -22,7 +22,7 @@
   </div>
 
   <div class="input-field">
-    <%= form.text_field :phone %>
+    <%= form.text_field :phone, class: 'phone_with_ddd' %>
     <%= form.label :phone %>
   </div>
 

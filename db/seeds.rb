@@ -6,8 +6,13 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-user = User.create(name: 'Admin', last_name: 'Administrator', email: 'admin@admin.com', password: 'admin123',
-        password_confirmation: 'admin123', role: 'admin')
+users = User.create(
+  [{name: 'Admin', last_name: 'Administrator', email: 'admin@admin.com', password: 'admin123',
+        password_confirmation: 'admin123', role: 'admin' },
+    {name: 'Shop', last_name: 'Stores', email: 'store@store.com', password: 'store123',
+          password_confirmation: 'store123', role: 'store'}
+  ]
+)
 
 # Send to users
 10.times do |i|

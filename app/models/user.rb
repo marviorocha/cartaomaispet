@@ -10,11 +10,15 @@ class User < ApplicationRecord
 # User Rules
  ROLES = %i[admin user store banned]
 
-
  after_create :welcome_send
 
   def welcome_send
+    @user = User.last
+    @user.create_petshop(title: 'Titulo de sua loja')
     WelcomeMailer.welcome_send(self).deliver
   end
+
+
+
 
 end

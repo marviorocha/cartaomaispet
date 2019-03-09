@@ -3,7 +3,6 @@ module PagesHelper
 def saudacao
 
   time = Time.now
-
   if time > time.at_beginning_of_day
     "Bom dia! " + current_user.name.capitalize
   end
@@ -14,6 +13,8 @@ def saudacao
    "Boa Noite! " + current_user.name.capitalize
   end
 end
+
+ 
 
 
 end

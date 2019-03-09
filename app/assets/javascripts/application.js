@@ -15,3 +15,4 @@
 //= require turbolinks
 //= require jquery/dist/jquery
 //= require jquery-mask-plugin/dist/jquery.mask.min
+//= require mask
