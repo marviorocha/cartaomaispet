@@ -12,6 +12,20 @@
 
   <tbody>
 
+
+<tr>
+
+ <td rowspan="5" ><%  if @store.logo.attached? %>
+
+                <%=  image_tag(@store.logo, size:"280x180", class: "responsive") %>
+                       <%=  link_to('Deletar', destroy_logo_path) %>
+                  <%  else %>
+                      Ainda sem imagem
+                    <%  end %></td>
+
+
+</tr>
+
     <tr>
       <td> <b>Titulo de sua Loja:</b></td>
       <td><%= @store.title %></td>
@@ -40,7 +54,7 @@
     </tr>
   </tbody>
 </table>
-
+<p></p>
 <div class="col s6 m6 l6">
 
 <%= link_to "<i class='material-icons left'>create</i> Editar".html_safe, edit_petshop_path(@store.id), class: "btn weves-effect waves-light blue lighten-2" %>

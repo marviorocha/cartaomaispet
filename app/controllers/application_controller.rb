@@ -2,7 +2,7 @@ class ApplicationController < ActionController::Base
 
 
 before_action :authenticate_user!
- 
+
 
 #  CanCanCan Autorization
  rescue_from CanCan::AccessDenied do |exception|
@@ -10,8 +10,7 @@ before_action :authenticate_user!
    redirect_to root_url
  end
 
-
- helper :all
+helper :all
 before_action :configure_permitted_parameters, if: :devise_controller?
 
 protected

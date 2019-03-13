@@ -6,7 +6,7 @@ class PetshopsController < ApplicationController
   def index
 
     @petshops = Petshop.search(params[:cidade])
- 
+
   end
 
   # GET /petshops/1
@@ -40,6 +40,8 @@ class PetshopsController < ApplicationController
     end
   end
 
+
+
   # PATCH/PUT /petshops/1
   # PATCH/PUT /petshops/1.json
   def update
@@ -54,9 +56,11 @@ class PetshopsController < ApplicationController
     end
   end
 
+
   # DELETE /petshops/1
   # DELETE /petshops/1.json
   def destroy
+
     @petshop.destroy
     respond_to do |format|
       format.html { redirect_to petshops_url, notice: 'Sua loja foi apagado do sistema' }
@@ -72,6 +76,6 @@ class PetshopsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def petshop_params
-      params.require(:petshop).permit(:title, :address, :phone, :cep, :estado, :cidade, :descricao)
+      params.require(:petshop).permit(:title, :address, :phone, :cep, :estado, :cidade, :descricao, :logo)
     end
 end
