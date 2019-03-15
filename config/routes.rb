@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   root to: "pages#welcome"
 
   get 'destroy-logo', action: :destroy_logo, controller: 'pages'
+  resources :store_steps
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

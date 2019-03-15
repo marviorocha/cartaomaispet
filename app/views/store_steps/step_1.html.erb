@@ -1,0 +1,27 @@
+<%= form_for store_step_path do |form| %>
+
+
+  <div class="input-field">
+    <%= form.text_field :title %>
+    <%= form.label 'Titulo' %>
+  </div>
+
+
+    <div class="file-field input-field">
+      <div class="btn blue">
+        <span><i class="material-icons white-text">image</i> Add Logo</span>
+        <%= form.file_field :logo, autofocus: true, autocomplete: "logo", class:"validate" %>
+      </div>
+      <div class="file-path-wrapper">
+        <input class="file-path validate" type="text">
+      </div>
+    </div>
+
+      <div class="input-field">
+        <%= form.text_field :descricao %>
+        <%= form.label :descricao %>
+      </div>
+
+
+
+<% end  %>

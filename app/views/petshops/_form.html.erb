@@ -1,3 +1,5 @@
+
+
 <%= form_with(model: petshop, local: true) do |form| %>
   <% if petshop.errors.any? %>
     <div id="error_explanation">
@@ -12,9 +14,15 @@
   <% end %>
 
 
-  <div class="file-field input-field">
+  <div class="input-field">
+    <%= form.text_field :title %>
+    <%= form.label 'Titulo' %>
+  </div>
+
+
+    <div class="file-field input-field">
       <div class="btn blue">
-        <span>Logo</span>
+        <span><i class="material-icons white-text">image</i> Add Logo</span>
         <%= form.file_field :logo, autofocus: true, autocomplete: "logo", class:"validate" %>
       </div>
       <div class="file-path-wrapper">
@@ -22,12 +30,14 @@
       </div>
     </div>
 
-
-
+      <div class="input-field">
+        <%= form.text_field :descricao %>
+        <%= form.label :descricao %>
+      </div>
 
   <div class="input-field">
-    <%= form.text_field :title %>
-    <%= form.label 'Titulo' %>
+    <%= form.text_field :cep %>
+    <%= form.label :cep %>
   </div>
 
   <div class="input-field">
@@ -36,30 +46,22 @@
   </div>
 
   <div class="input-field">
-    <%= form.text_field :phone, class: 'phone_with_ddd' %>
-    <%= form.label :phone %>
-  </div>
-
-  <div class="input-field">
-
-    <%= form.number_field :cep %>
-    <%= form.label :cep %>
-  </div>
-
-  <div class="input-field">
     <%= form.text_field :estado %>
     <%= form.label :estado %>
   </div>
-
   <div class="input-field">
     <%= form.text_field :cidade %>
     <%= form.label :cidade %>
   </div>
 
+  <h3>Contatos e Informações</h3>
+
   <div class="input-field">
-    <%= form.text_field :descricao %>
-    <%= form.label :descricao %>
+    <%= form.text_field :phone, class: 'phone_with_ddd' %>
+    <%= form.label :phone %>
   </div>
+
+
 
 
   <div class="actions">
